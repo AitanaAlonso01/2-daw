@@ -122,3 +122,32 @@ switch(puntuacion){
     console.log("Sobresaliente");
 }
 
+// ARRAYS...
+let array1 = [];
+console.log(array1);
+
+let colores = ["Rojo", "Verde", "Azul", "Amarillo"];
+console.log(colores);
+console.log(colores[0]);
+
+let numeros = [1, 2, 3, 4, 5];
+console.log(numeros);
+console.log(numeros[3]);
+
+let varios = ["Hola", 2, true, null, undefined, "Adios"];
+console.log(varios);
+
+varios.push("Manolito"); //Añadir un elemento al final del array
+console.log(varios);
+
+varios.pop(); //Eliminar el último elemento del array
+console.log(varios);
+
+varios.unshift("Inicio"); //Agregar un elemento al principio del array
+console.log(varios);
+
+varios.shift(); //Eliminar el primer elemento del array
+console.log(varios);
+
+console.log(numeros.sort()); //Ordenar un array
+console.log(varios.sort()); 
