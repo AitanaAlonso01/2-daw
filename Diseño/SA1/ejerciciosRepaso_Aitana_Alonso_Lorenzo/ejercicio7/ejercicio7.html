@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla simple</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+      td,
+      th {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+      }
+      .amarillo {
+        background-color: #ffffc7;
+      }
+      .centrado {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td>1</td>
+          <td class="amarillo">2</td>
+          <td rowspan="4">3</td>
+          <td class="centrado" colspan="2" rowspan="2">4</td>
+        </tr>
+        <tr>
+          <td class="amarillo centrado" colspan="2">5</td>
+        </tr>
+        <tr>
+          <td class="centrado" colspan="2" rowspan="2">9</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+      </thead>
+    </table>
+  </body>
+</html>

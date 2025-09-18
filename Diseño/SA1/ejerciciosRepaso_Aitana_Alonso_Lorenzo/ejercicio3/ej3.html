@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3 - Rutas relativas</title>
+    <style>
+      body {
+        font-family: 'sans-serif';
+        margin: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        background-color: #f5f5f5;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid #ccc;
+      }
+      th {
+        border: 1px solid #ccc;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(68, 21, 129);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table align="center" border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>DONDE ESTOY</th>
+          <th>DONDE VOY</th>
+          <th>SOLUCIÓN RELATIVA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>arrel.html</td>
+          <td>textual.html</td>
+          <td>subdir/direct/textual.html</td>
+        </tr>
+        <tr>
+          <td>docu.html</td>
+          <td>llista.html</td>
+          <td>llista.html</td>
+        </tr>
+        <tr>
+          <td>arrel.html</td>
+          <td>llista.html</td>
+          <td>llista.html</td>
+        </tr>
+        <tr>
+          <td>carta.html</td>
+          <td>prova.html</td>
+          <td>../prova/prova.html</td>
+        </tr>
+        <tr>
+          <td>carta.html</td>
+          <td>docu.html</td>
+          <td>../docu.html</td>
+        </tr>
+        <tr>
+          <td>textual.html</td>
+          <td>arrel.html</td>
+          <td>../../arrel.html</td>
+        </tr>
+        <tr>
+          <td>textual.html</td>
+          <td>subdir (carpeta)</td>
+          <td>../..</td>
+        </tr>
+        <tr>
+          <td>textual.html</td>
+          <td>prova (carpeta)</td>
+          <td>../../prova/</td>
+        </tr>
+        <tr>
+          <td>textual.html</td>
+          <td>prova.html</td>
+          <td>../../prova/prova.html</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
