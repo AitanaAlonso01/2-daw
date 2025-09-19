@@ -1,2 +1,88 @@
 {
+  // --- Apariencia ---
+  // "workbench.iconTheme": "material-icon-theme",
+  // "material-icon-theme.hidesExplorerArrows": true,
+  // "workbench.activityBar.location": "bottom",
+  "workbench.startupEditor": "none",
+  "workbench.tree.enableStickyScroll": true,
+  // "workbench.tree.renderIndentGuides": "none",
+  // "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmPasteNative": false,
+  "window.commandCenter": false,
+  "window.nativeTabs": true,
+  "window.zoomLevel": 1,
+
+  // --- Editor: Fuente y estilos ---
+  "editor.fontFamily": "FiraCode Nerd Font, monospace",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "on",
+  "editor.codeLens": false,
+  "editor.minimap.enabled": false,
+  // "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": "off",
+  "breadcrumbs.enabled": false,
+  "editor.hover.enabled": false, // Quita los tooltips de GitLens, pero también la ayuda de cualquier elemento de la UI
+
+  // --- Editor: Formato y Prettier ---
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // "prettier.prettierPath": "node_modules/prettier", // Usar esta línea si se quiere usar la versión de prettier del proyecto instalada en node_modules
+
+  // --- Prettier global ---
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.arrowParens": "avoid",
+
+  // --- Editor: Colores y tokens ---
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      { "scope": "comment", "settings": { "fontStyle": "italic" } }
+    ]
+  },
+
+  // --- Archivos ---
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // --- Git y GitHub ---
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // --- GitLens ---
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gemini-2.0-flash",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.graph.minimap.enabled": false,
+
+  // --- Terminal ---
+  "terminal.integrated.defaultProfile.windows": "zsh",
+  "terminal.integrated.env.osx": {},
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font'",
+  "terminal.integrated.suggest.enabled": true,
+
+  // --- Lenguajes ---
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": true,
+
+  // --- Otros ---
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.ignoreRecommendations": true,
+  "diffEditor.ignoreTrimWhitespace": false
+  // "errorLens.excludeBySource": ["ts(2345)", "ts(2339)"]
 }
