@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Cambiar estilo con .style - Ejercicio 5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cambiar estilo con .style - Ejercicio 5</title>
+  </head>
+  <body>
+    <!-- 1. Cambiar color de texto a rojo -->
+    <h2>1. Cambiar color a rojo</h2>
+    <p id="textoRojo">Este texto cambiará a rojo</p>
+    <button onclick="document.getElementById('textoRojo').style.color = 'red'">
+      Cambiar color
+    </button>
 
-  <!-- 1. Cambiar color de texto a rojo -->
-  <h2>1. Cambiar color a rojo</h2>
-  <p id="textoRojo">Este texto cambiará a rojo</p>
-  <button onclick="document.getElementById('textoRojo').style.color = 'red'">Cambiar color</button>
+    <!-- 2. Cambiar tamaño de letra a 30px -->
+    <h2>2. Cambiar tamaño de letra</h2>
+    <p id="textoGrande">Este texto se hará más grande</p>
+    <button
+      onclick="document.getElementById('textoGrande').style.fontSize = '30px'"
+    >
+      Agrandar texto
+    </button>
 
-  <!-- 2. Cambiar tamaño de letra a 30px -->
-  <h2>2. Cambiar tamaño de letra</h2>
-  <p id="textoGrande">Este texto se hará más grande</p>
-  <button onclick="document.getElementById('textoGrande').style.fontSize = '30px'">Agrandar texto</button>
-
-  <!-- 3. Cambiar fondo a amarillo -->
-  <h2>3. Cambiar fondo del párrafo</h2>
-  <p id="fondoAmarillo">Este fondo se volverá amarillo</p>
-  <button onclick="document.getElementById('fondoAmarillo').style.backgroundColor = 'yellow'">Cambiar fondo</button>
-
-</body>
+    <!-- 3. Cambiar fondo a amarillo -->
+    <h2>3. Cambiar fondo del párrafo</h2>
+    <p id="fondoAmarillo">Este fondo se volverá amarillo</p>
+    <button
+      onclick="document.getElementById('fondoAmarillo').style.backgroundColor = 'yellow'"
+    >
+      Cambiar fondo
+    </button>
+  </body>
 </html>

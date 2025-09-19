@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Cambiar contenido (innerHTML) - Ejercicio 3</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cambiar contenido (innerHTML) - Ejercicio 3</title>
+  </head>
+  <body>
+    <!-- 1. Cambiar "Hola" por "Bienvenido" -->
+    <h2>1. Cambiar texto</h2>
+    <p id="saludo">Hola</p>
+    <button
+      onclick="document.getElementById('saludo').innerHTML = 'Bienvenido'"
+    >
+      Cambiar a Bienvenido
+    </button>
 
-  <!-- 1. Cambiar "Hola" por "Bienvenido" -->
-  <h2>1. Cambiar texto</h2>
-  <p id="saludo">Hola</p>
-  <button onclick="document.getElementById('saludo').innerHTML = 'Bienvenido'">Cambiar a Bienvenido</button>
+    <!-- 2. Mostrar "¡Has hecho clic!" en un párrafo vacío -->
+    <h2>2. Mostrar mensaje al hacer clic</h2>
+    <p id="mensaje"></p>
+    <button
+      onclick="document.getElementById('mensaje').innerHTML = '¡Has hecho clic!'"
+    >
+      Mostrar mensaje
+    </button>
 
-  <!-- 2. Mostrar "¡Has hecho clic!" en un párrafo vacío -->
-  <h2>2. Mostrar mensaje al hacer clic</h2>
-  <p id="mensaje"></p>
-  <button onclick="document.getElementById('mensaje').innerHTML = '¡Has hecho clic!'">Mostrar mensaje</button>
-
-  <!-- 3. Cambiar "Naranja" por "Manzana" -->
-  <h2>3. Cambiar fruta</h2>
-  <p id="fruta">Naranja</p>
-  <button onclick="document.getElementById('fruta').innerHTML = 'Manzana'">Cambiar a Manzana</button>
-
-</body>
+    <!-- 3. Cambiar "Naranja" por "Manzana" -->
+    <h2>3. Cambiar fruta</h2>
+    <p id="fruta">Naranja</p>
+    <button onclick="document.getElementById('fruta').innerHTML = 'Manzana'">
+      Cambiar a Manzana
+    </button>
+  </body>
 </html>
