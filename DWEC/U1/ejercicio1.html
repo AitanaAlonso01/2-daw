@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript dentro del propio HTML - Ejercicio 1</title>
+  <style>
+    .azul {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Botón con alerta -->
+  <h2>1. Alerta al hacer clic</h2>
+  <button onclick="alert('¡Hola desde JavaScript!')">Mostrar alerta</button>
+
+  <!-- 2. Cambiar texto del párrafo -->
+  <h2>2. Cambiar texto</h2>
+  <p id="parrafoTexto">Texto original</p>
+  <button onclick="document.getElementById('parrafoTexto').innerText = 'Texto cambiado'">Cambiar texto</button>
+
+  <!-- 3. Cambiar color del texto -->
+  <h2>3. Cambiar color del texto</h2>
+  <p id="parrafoColor">Este texto cambiará de color</p>
+  <button onclick="document.getElementById('parrafoColor').classList.add('azul')">Cambiar color a azul</button>
+
+</body>
+</html>
