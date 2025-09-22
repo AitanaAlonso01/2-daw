@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios - Ejercicio 8</title>
+  </head>
+  <body>
+    <h1>¿TIENES ALGO QUE DECIR?</h1>
+    <p>
+      A través de este formulario puedes enviarme un mensaje para ayudarme a
+      corregir errores, a mejorar mi blog, o simplemente para decir hola.
+      <br />
+      Cualquier cosa que tengas para decir es bienvenida, así que no lo dudes y
+      déjame un mensaje. Estaré feliz de contestarte!
+    </p>
+    <form action="https://formspree.io/f/xbjbgjuv" method="POST">
+      <fieldset>
+        <legend>Mensaje</legend>
+        <br />
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" name="nombre" id="nombre" /><br />
+        <br />
+
+        <label for="email">Tu correo electrónico:</label>
+        <input type="email" name="email" id="email" /><br />
+        <br />
+
+        <label for="mensaje">Tu mensaje:</label><br />
+        <textarea name="mensaje" id="mensaje"></textarea><br />
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend>Nuevos temas</legend>
+        <br />
+        <label for="tema"
+          >¿Qué tema te gustaría que trate más en mi sitio?</label
+        ><br />
+        <input type="checkbox" name="tema" id="tema" />
+        <label for="tema">HTML</label>
+
+        <input type="checkbox" name="tema" id="tema" />
+        <label for="tema">Gráficos</label>
+
+        <input type="checkbox" name="tema" id="tema" />
+        <label for="tema">Videojuegos</label>
+
+        <input type="checkbox" name="tema" id="tema" />
+        <label for="tema">Arte</label>
+
+        <input type="checkbox" name="tema" id="tema" />
+        <label for="tema">Música</label><br />
+        <br />
+      </fieldset>
+      <br />
+      <button type="submit">Enviar</button>
+      <button type="reset">Comenzar de nuevo</button>
+    </form>
+  </body>
+</html>
