@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(221, 221, 221);
+}
+
+figure {
+  text-align: center;
+  margin: 50px auto;
+  width: 100%;
+}
+
+a[class*='logo-'] {
+  width: 100px;
+  padding: 8px 4px;
+  margin: 50px;
+
+  display: inline-block;
+
+  font-size: 80px;
+  color: #6e0c0c;
+  text-decoration: none;
+}
+
+a[class*='logo-'] span {
+  color: #000000;
+}
+
+a.logo-1 {
+  font-family: 'Shizuru', cursive;
+}
+
+a.logo-2 {
+  font-family: 'Train One', cursive;
+}
+
+a.logo-3 {
+  font-family: 'Darumadrop One', cursive;
+}
+
+a.logo-4 {
+  font-family: 'Rock 3D', cursive;
+}
