@@ -6,7 +6,6 @@ body {
   margin: 20px auto;
   width: 100%;
   max-width: 652px;
-  border: 1px solid red;
 }
 
 div[class*='color-'] {
