@@ -5,19 +5,19 @@ let b = false
 
 //AND (&&)
 if (a && b) {
-  console.log('son verdaderos')
+  console.log('AND(&&): son verdaderos')
 }
 
 //OR (||)
 if (a || b) {
-  console.log('son verdaderos')
+  console.log('OR(||): son verdaderos')
 }
 
 //NOT (!)
 if (!a) {
-  console.log('es falso')
+  console.log('!a es falso')
 }
 
 if (!b) {
-  console.log('es falso')
+  console.log('!b es falso')
 }
