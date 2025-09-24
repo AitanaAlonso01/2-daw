@@ -12,3 +12,6 @@ const fullnames = [
 
 let firstnames = fullnames.map(item => item.first)
 console.log(firstnames)
+
+//Forma sin variable y mas sencilla
+console.log(fullnames.map(item => item.first))
