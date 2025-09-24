@@ -190,3 +190,47 @@ const everyName = nombres2.every(item => item.includes('o'))
 console.log(everyName)
 const someName = nombres2.some(item => item.toUpperCase().includes('L'))
 console.log(someName)
+
+console.log(
+  '------------------------------------------------------------------------------'
+)
+
+// Operador ternario
+let edad = 21
+if (edad >= 18) {
+  console.log('Eres mayor de edad')
+} else {
+  console.log('Eres menor de edad')
+}
+
+edad >= 18 // condición
+  ? console.log('Eres mayor de edad') // if
+  : console.log('Eres menor de edad') // else
+
+// Parámetros por defecto
+function multiplicarDefecto(a = 0, b = 0) {
+  console.log(a * b)
+}
+multiplicarDefecto(2, 4)
+multiplicarDefecto()
+
+const numeros1 = [1, 2, 3]
+const numeros2 = [4, 5, 6]
+// ... Operador Spread o Rest
+const resultadoNum = ['Paco', 'Juan', ...numeros1, ...numeros2, 7, 8, 9]
+console.log(resultadoNum)
+
+// function sumaTotal1(a, b, c) {}
+// function sumaTotal1(a, b, c, d, e) {}
+
+// Número indefinido de parámetros
+// Alternativa a la sobrecarga de operadores o polimorfismo
+function sumaTotal(...numeros) {
+  let total = 0
+  for (let n of numeros) {
+    total += n
+  }
+  console.log(total)
+}
+sumaTotal(1, 2, 3)
+sumaTotal(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
