@@ -76,4 +76,41 @@ colorNuevo.prototype.imprimirColor2 = () =>
 colorAzul.imprimirColor2()
 
 //4 - P.O.O. JS
-class Animal {}
+class Animal {
+  //Constructor
+  //Atributos
+  constructor(nombre, edad) {
+    this.nombre = nombre
+    this.edad = edad
+  }
+  //Métodos
+  dormir() {
+    return `El ${this.nombre} duerme`
+  }
+  comer() {
+    return `El ${this.nombre} come`
+  }
+  hablar() {
+    return `El ${this.nombre} habla`
+  }
+}
+const a1 = new Animal('Buitre', 10)
+console.log(a1.dormir())
+console.log(a1.comer())
+console.log(a1.hablar())
+
+class Perro extends Animal {
+  //Herencia
+  constructor(nombre, edad, raza, edadMedia = 13) {
+    super(nombre, edad) //Llama al constructor padre
+    this.raza = raza
+    this.edadMedia = edadMedia
+  }
+  //Sobrecarga de funciones - Polimorfismo
+  hablar() {
+    return `${this.nombre}: guau guau`
+  }
+}
+
+const laika = new Perro('Laika', 7, 'Mestiza')
+console.log(laika.hablar())
