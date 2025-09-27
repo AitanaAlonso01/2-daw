@@ -1,0 +1,33 @@
+@startuml drink_storage
+title Task 1 - Drink storage
+
+class Almacen {
+  - codigo: int
+  - bebidas: ArrayList<Bebida>
+  + obtenerTotalBebidas()
+  + mostrarBebidas()
+}
+
+class Bebida {
+  - codigo: int
+  - marca: String
+  - precio: float
+  + mostrarPrecio()
+  + obtenerCodigo()
+}
+
+class Refresco {
+  - azucar: double
+  - jarabeFructosa: double
+}
+
+class Cerveza {
+  - grados: double
+  - origen: String
+}
+
+Almacen --> Bebida
+Refresco --|> Bebida
+Cerveza --|> Bebida
+
+@enduml
