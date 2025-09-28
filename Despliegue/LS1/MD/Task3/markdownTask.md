@@ -133,5 +133,3 @@ A YouTube video using an embedded link. -->
 ### Youtube video
 
 [YouTube video](https://www.youtube.com/watch?v=MN4DQ_Vd0nE)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MN4DQ_Vd0nE?si=Efx_2rR3jvJPTU8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
