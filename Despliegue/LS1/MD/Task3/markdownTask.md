@@ -106,9 +106,9 @@ One cell must contain a link and another a small image. -->
 
 # Advanced table
 
-| Left Aligned                                |                                Center Aligned                                |                                                            Right Aligned |
-| :------------------------------------------ | :--------------------------------------------------------------------------: | -----------------------------------------------------------------------: |
-| [GitHub](https://github.com/AitanaAlonso01) | ![Image](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png) | [Link](https://github.com/AitanaAlonso01/2-daw/tree/main/Despliegue/LS1) |
+| Left Aligned                                        |                                Center Aligned                                |                                                                         Right Aligned |
+| :-------------------------------------------------- | :--------------------------------------------------------------------------: | ------------------------------------------------------------------------------------: |
+| [GitHub Profile](https://github.com/AitanaAlonso01) | ![Image](https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png) | [Github Repository](https://github.com/AitanaAlonso01/2-daw/tree/main/Despliegue/LS1) |
 
 ---
 
