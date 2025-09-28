@@ -75,13 +75,26 @@
 ## Syntax-highlighted code (Python)
 
 ```python
-print("Hello, world!")
+# Suma de los primeros N números naturales
+def suma_numeros(n):
+    return sum(range(1, n + 1))
+
+print(suma_numeros(10))
 ```
 
 ## Syntax-highlighted code (JS)
 
 ```js
-console.log('Hello, world!')
+// Suma de los primeros N números naturales
+function sumaNumeros(n) {
+  let total = 0
+  for (let i = 1; i <= n; i++) {
+    total += i
+  }
+  return total
+}
+
+console.log(sumaNumeros(10))
 ```
 
 ---
@@ -133,3 +146,7 @@ A YouTube video using an embedded link. -->
 ### Youtube video
 
 [YouTube video](https://www.youtube.com/watch?v=MN4DQ_Vd0nE)
+
+```
+
+```
