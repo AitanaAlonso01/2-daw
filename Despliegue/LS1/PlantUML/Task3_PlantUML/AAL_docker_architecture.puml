@@ -1,0 +1,28 @@
+@startuml
+title Esquema de Docker: Aitana Alonso Lorenzo - Hosts, Engine, Images, Containers, Volumes y Registry
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+file "Dockerfile: web_app/Dockerfile" as Dockerfile
+file "Image: web_app:latest" as Image
+file "Image: worker:latest" as Image2
+
+cloud "Docker Registry (Docker Hub /Private Registry)" as Registry{
+  [Repository: postgres]
+  [Dockerfile] --> [Image] : build
+  [Image] --> [Repository: web_app] : push
+  [Image2] --> [Repository: worker] : push
+
+}
+
+
+note right of [Dockerfile]
+Dockerfile ejemplo:
+FROM node:18
+COPY . /app
+RUN npm install
+CMD ["node","index.js"]
+end note
+
+@enduml
