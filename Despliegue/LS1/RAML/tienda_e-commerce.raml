@@ -1,0 +1,106 @@
+#%RAML 1.0
+title: Clothing E-commerce API
+version: v2
+baseUri: https://api.tiendaropa.com/{version}
+mediaType: application/json
+
+types:
+  Producto:
+    type: object
+    properties:
+      nombre: string
+      descripcion: string
+      precio: number
+      tallasDisponibles:
+        type: string
+        enum: [XS, S, M, L, XL]
+      colores:
+        type: string
+        enum: [rosa, amarillo, verde]
+      categoria:
+        type: string
+        enum: [hombre, mujer, niños]
+
+  Cliente:
+    type: object
+    properties:
+      nombre: string
+      email: string
+      contraseña: string
+      direccionEnvio:
+        type: Direccion
+
+  Direccion:
+    type: object
+    properties:
+      calle: string
+      ciudad: string
+      codigoPostal: string
+      pais: string
+
+/productos:
+  get:
+    description: Obtener listado de productos disponibles.
+    responses:
+      200:
+        body:
+          application/json:
+            type: Producto[]
+
+  post:
+    description: Agregar un nuevo producto al catálogo.
+    body:
+      application/json:
+        type: Producto
+    responses:
+      201:
+        description: Producto creado correctamente.
+
+/productos/{nombre}:
+  get:
+    description: Obtener detalles de un producto por su nombre.
+    responses:
+      200:
+        body:
+          application/json:
+            type: Producto
+
+/clientes:
+  post:
+    description: Registrar un nuevo cliente.
+    body:
+      application/json:
+        type: Cliente
+    responses:
+      201:
+        description: Cliente registrado correctamente.
+
+/clientes/login:
+  post:
+    description: Iniciar sesión de cliente.
+    body:
+      application/json:
+        properties:
+          email: string
+          contraseña: string
+    responses:
+      200:
+        description: Inicio de sesión exitoso.
+
+/clientes/{email}:
+  get:
+    description: Obtener perfil del cliente por email.
+    responses:
+      200:
+        body:
+          application/json:
+            type: Cliente
+
+  put:
+    description: Actualizar perfil del cliente.
+    body:
+      application/json:
+        type: Cliente
+    responses:
+      200:
+        description: Perfil actualizado correctamente.

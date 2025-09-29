@@ -1,0 +1,113 @@
+#%RAML 1.0
+title: School library management API
+version: v1
+baseUri: https://api.biblioteca.edu/{version}
+mediaType: application/json
+
+types:
+  Libro:
+    type: object
+    properties:
+      titulo: string
+      autor: string
+      isbn: integer
+      categoria: string
+      estado:
+        type: string
+        enum: [disponible, prestado]
+
+  Estudiante:
+    type: object
+    properties:
+      nombre: string
+      id: integer
+      email: string
+      carrera: string
+
+/libros:
+  get:
+    description: Gestión del catálogo de libros. Permite obtener el listado con filtros opcionales.
+    queryParameters:
+      area:
+        description: Filtrar por área temática (literatura, ciencia, historia, arte)
+        required: false
+        type: string
+      autor:
+        description: Buscar por nombre de autor
+        required: false
+        type: string
+    responses:
+      200:
+        description: Listado de libros
+        body:
+          application/json:
+            type: Libro[]
+
+  post:
+    description: Registrar nuevo estudiante. Crea un nuevo registro en el sistema.
+    body:
+      application/json:
+        type: Libro
+    responses:
+      201:
+        description: Libro creado exitosamente
+        body:
+          application/json:
+            type: Libro
+
+/libros/{isbn}:
+  get:
+    description: Obtener detalles de un libro por su ISBN
+    responses:
+      200:
+        body:
+          application/json:
+            type: Libro
+
+  put:
+    description: Actualizar información de un libro
+    body:
+      application/json:
+        type: Libro
+    responses:
+      200:
+        description: Libro actualizado correctamente
+
+/estudiantes:
+  get:
+    description: Listado de estudiantes registrados.
+    responses:
+      200:
+        body:
+          application/json:
+            type: Estudiante[]
+
+  post:
+    description: Registrar nuevo estudiante
+    body:
+      application/json:
+        type: Estudiante
+    responses:
+      201:
+        description: Estudiante creado correctamente
+
+/estudiantes/{id}:
+  uriParameters:
+    id:
+      type: integer
+  get:
+    description: Obtener datos de un estudiante por su ID
+    responses:
+      200:
+        body:
+          application/json:
+            type: Estudiante
+
+  put:
+    description: Actualizar datos de un estudiante
+    body:
+      application/json:
+        type: Estudiante
+    responses:
+      200:
+        description: Estudiante actualizado correctamente
