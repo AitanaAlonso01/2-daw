@@ -1,4 +1,4 @@
-@startuml
+@startuml AAL_docker_architecture
 title Esquema de Docker: Aitana Alonso Lorenzo - Hosts, Engine, Images, Containers, Volumes y Registry
 skinparam componentStyle rectangle
 skinparam shadowing false
