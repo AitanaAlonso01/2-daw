@@ -9,7 +9,7 @@
 
 <!-- Your name in italics aligned to the right. -->
 
-<p align="right"><i>Aitana Alonso Lorenzo</i></p>
+<p style="text-align: right;"><i>Aitana Alonso Lorenzo</i></p>
 
 ---
 
@@ -56,7 +56,7 @@
 
 ## Text
 
-<p><b>Bold</b> <i>Italics</i> <s>Strikethrough</s></p>
+**bold** _italics_ ~~strikethrough~~
 
 <!-- Insert a multi-line quote using -->
 
