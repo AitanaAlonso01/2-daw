@@ -1,0 +1,188 @@
+#%RAML 1.0
+title: API AitanaAlonsoLorenzo
+version: v1
+baseUri: https://api.{environment}.com
+mediaType: [application/json, application/xml]
+
+types:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        required: true
+      name:
+        type: string
+        required: true
+        minLength: 3
+      email:
+        type: string
+        required: true
+        pattern: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+      createdAt:
+        type: datetime
+  Post:
+    type: object
+    properties:
+      id: integer
+      title: string
+      content: string
+      authorId: integer
+
+/users:
+  get:
+    description: Obtener la lista de todos los usuarios.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "name": "Aitana",
+                  "email": "aitana@example.com",
+                  "createdAt": "2025-09-30T12:00:00Z"
+                }
+              ]
+      500:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Error interno del servidor"
+              }
+
+  post:
+    description: Crear un nuevo usuario.
+    body:
+      application/json:
+        type: User
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 2,
+                "name": "Carla",
+                "email": "carla@example.com",
+                "createdAt": "2025-09-30T12:30:00Z"
+              }
+      400:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Datos de entrada inválidos"
+              }
+
+/users/{userId}:
+  uriParameters:
+    userId:
+      type: integer
+  get:
+    description: Obtener los datos de un usuario por su ID.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 1,
+                "name": "Aitana",
+                "email": "aitana@example.com",
+                "createdAt": "2025-09-30T12:00:00Z"
+              }
+      404:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Usuario no encontrado"
+              }
+
+  put:
+    description: Actualizar la información de un usuario.
+    body:
+      application/json:
+        type: User
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 1,
+                "name": "Aitana Actualizada",
+                "email": "aitana.new@example.com",
+                "createdAt": "2025-09-30T12:00:00Z"
+              }
+      400:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Datos inválidos para actualización"
+              }
+
+  delete:
+    description: Eliminar un usuario del sistema.
+    responses:
+      204:
+        description: Usuario eliminado correctamente.
+      404:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Usuario no encontrado"
+              }
+
+/posts:
+  get:
+    description: Obtener la lista de publicaciones.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 101,
+                  "title": "Bienvenida",
+                  "content": "¡Hola a todos!",
+                  "authorId": 1
+                }
+              ]
+      500:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Error al obtener publicaciones"
+              }
+
+  post:
+    description: Crear una nueva publicación.
+    body:
+      application/json:
+        type: Post
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 102,
+                "title": "Nueva entrada",
+                "content": "Contenido de prueba",
+                "authorId": 2
+              }
+      400:
+        body:
+          application/json:
+            example: |
+              {
+                "error": "Datos de publicación inválidos"
+              }
