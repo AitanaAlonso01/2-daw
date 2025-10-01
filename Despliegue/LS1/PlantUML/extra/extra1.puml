@@ -1,0 +1,25 @@
+@startuml extra1
+title Extra 1 - Sequence Diagram
+
+actor Cliente
+participant "BookingSystem" as Sistema
+participant "PaymentGateway" as PasarelaPago
+participant "Database" as BaseDatos
+participant "EmailService" as ServicioCorreo
+
+Cliente -> Sistema : seleccionaPaquete()
+activate Sistema
+Sistema -> PasarelaPago : solicitaPago()
+deactivate Sistema
+activate PasarelaPago
+PasarelaPago --> Sistema : pagoExitoso()
+deactivate PasarelaPago
+Sistema -> BaseDatos : guardaReserva()
+activate Sistema
+Sistema -> ServicioCorreo : envíaConfirmación()
+deactivate Sistema
+activate ServicioCorreo
+ServicioCorreo --> Cliente : recibeConfirmación()
+deactivate ServicioCorreo
+
+@enduml

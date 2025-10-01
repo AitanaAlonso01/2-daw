@@ -1,0 +1,90 @@
+@startuml extra2
+title Extra 2 - Sequence Diagram
+
+'==========================
+' Actores
+'==========================
+actor Cliente
+
+'==========================
+' Participantes del sistema
+'==========================
+participant "TiendaOnline" as Tienda
+participant "SistemaAutenticación" as SistemaAutenticacion
+participant "Inventario" as Inventario
+participant "PasarelaPago" as PasarelaPago
+participant "ServicioCorreo" as ServicioCorreo
+
+'==========================
+' Inicio del proceso
+'==========================
+== Inicio del proceso de compra ==
+Cliente -> Tienda : Accede a la tienda online
+activate Tienda
+
+'==========================
+' Bucle para añadir productos
+'==========================
+== Añadir productos al carrito ==
+loop Por cada producto seleccionado
+  Cliente -> Tienda : Añadir producto al carrito
+end
+
+'==========================
+' Autenticación del cliente
+'==========================
+== Autenticación del cliente ==
+Cliente -> SistemaAutenticacion : Solicita autenticación
+activate SistemaAutenticacion
+
+alt Cliente no autenticado
+  SistemaAutenticacion --> Cliente : Redirección a login
+else Cliente autenticado
+  SistemaAutenticacion -> Tienda : Continuar con el carrito
+  deactivate SistemaAutenticacion
+end
+
+'==========================
+' Validación de stock
+'==========================
+== Validación de stock ==
+ref over Tienda, Inventario : Validación de disponibilidad de productos
+
+'==========================
+' Procesamiento de pago
+'==========================
+== Procesamiento de pago ==
+Tienda -> PasarelaPago : Solicitar pago
+activate PasarelaPago
+PasarelaPago --> Tienda : Confirmación de pago exitoso
+deactivate PasarelaPago
+
+'==========================
+' Confirmación y actualización
+'==========================
+== Confirmación y actualización ==
+alt Pago exitoso
+  Tienda -> ServicioCorreo : Enviar confirmación al cliente
+  activate ServicioCorreo
+  ServicioCorreo --> Tienda : Confirmación enviada
+  deactivate ServicioCorreo
+
+  Tienda -> Inventario : Actualizar stock
+  activate Inventario
+  Inventario --> Tienda : Stock actualizado
+  deactivate Inventario
+else Pago fallido
+  Tienda -> Cliente : Notificación de error en el pago
+  deactivate Tienda
+end
+
+'==========================
+' Fin del proceso
+'==========================
+== Fin del proceso de compra (La sesión del cliente es finalizada) ==
+destroy Cliente
+note left
+  Final del proceso de compra
+end note
+
+@enduml
