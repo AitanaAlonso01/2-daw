@@ -1,5 +1,13 @@
 @startuml extra2
 title Extra 2 - Sequence Diagram
+skinparam sequence {
+  ParticipantPadding 10
+  BoxPadding 10
+  MessageSpacing 20
+}
+skinparam participant {
+  MinWidth 150
+}
 
 '==========================
 ' Actores
