@@ -1,0 +1,144 @@
+#%RAML 1.0
+title: Technological IES HA digital platform
+version: v1
+baseUri: https://api.iesha.edu/{version}
+protocols: [ HTTP ]
+mediaType: application/json
+
+types:
+    DigitalResource:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        type:
+          type: array
+          items:
+            type: string
+            enum: [presentation, exercise, video, software]
+        subject:
+          type: string
+        teacher:
+          type: string
+        uploadDate:
+          type: date-only
+    EquipmentLoan:
+      type: object
+      properties:
+        id:
+          type: string
+        equipmentId:
+          type: string
+        studentId:
+          type: string
+        authorizingTeacher:
+          type: string
+        loanDate:
+          type: date-only
+        returnDate:
+          type: date-only
+        status:
+          type: string
+          enum: [active, returned, overdue]
+    Equipment:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [laptop, tablet, VRkit, robotics]
+        model:
+          type: string
+        status:
+          type: string
+          enum: [available, loaned, maintenance]
+
+/resources:
+  get:
+    description: Obtain resources filter by type and subject.
+    queryParameters:
+      type?:
+        type: array
+        items:
+          type: string
+          enum: [presentation, exercise, video, software]
+      subject?:
+        type: string
+        example: "Despliegue"
+    responses:
+      200:
+        body:
+          application/json:
+            type: DigitalResource[]
+      404:
+        body:
+          description: "Resource not found"
+
+  post:
+    description: Upload new resource.
+    body:
+      application/json:
+        type: object
+        properties:
+          id: string
+          title: string
+          type: string
+          subject: string
+          teacher: string
+          uploadDate: date-only
+        example:
+    responses:
+      200:
+        body:
+          application/json:
+            type: DigitalResource
+
+/equipment/available:
+  get:
+    description: List of available equipment.
+    responses:
+      200:
+        body:
+          application/json:
+            type: Equipment
+      404:
+        description: Equipment not found
+
+/loans:
+  post:
+    description: Register student loan.
+    body:
+      application/json:
+        type: object
+        properties:
+          id: string
+          equipmentId: string
+          studentId: string
+          authorizingTeacher: string
+          loanDate: date-only
+          returnDate: date-only
+          status:
+            type: string
+            enum: [active, returned, overdue]
+        example:
+    responses:
+      201:
+        body:
+          application/json:
+            type: EquipmentLoan
+      400:
+        description: Register error
+
+/loans/{studentId}:
+  get:
+    description: Student history
+    responses:
+      200:
+        body:
+          application/json:
+            type: EquipmentLoan[]
+      404:
+        description: Student not found

@@ -1,0 +1,35 @@
+@startuml LoanProcessSequenceDiagram
+  title Sequence Diagram - Complete Loan Process
+
+  actor Student as student
+  actor Teacher as teacher
+  participant "Web Portal" as portal
+  participant "API Gateway" as api
+  participant "Loan Service" as loan
+  participant "Database" as db
+
+  student -> portal: Access loan system
+  activate portal
+  portal -> student: Show available equipment
+  deactivate
+  student -> portal: Submit loan request\n(equipment, dates, purpose)
+  activate portal
+  portal -> api: POST /loans
+  activate api
+  api -> loan : Validate request
+  activate loan
+  loan -> db: Check student history
+  activate db
+  db --> loan: Student record
+  deactivate db
+  loan --> api: Request validated
+  deactivate loan
+  api --> portal: Request registered
+  deactivate
+  portal -> teacher: Notify pending approval
+  deactivate
+  teacher -> portal: Review request details
+  activate portal
+  portal -> teacher: Display request information
+  deactivate
+@enduml
