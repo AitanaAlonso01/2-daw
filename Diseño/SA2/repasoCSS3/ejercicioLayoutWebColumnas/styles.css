@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #4caf50;
+  padding: 1em;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+footer {
+  background-color: #ccc;
+  color: black;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.contenedor {
+  font-size: 0;
+  margin: 0;
+}
+
+.columna {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.izquierda {
+  width: 60%;
+  background-color: #07055a;
+  color: white;
+  border: 1px solid black;
+}
+
+.derecha {
+  width: 40%;
+  background-color: #ffeb3b;
+  border: 1px solid black;
+}
