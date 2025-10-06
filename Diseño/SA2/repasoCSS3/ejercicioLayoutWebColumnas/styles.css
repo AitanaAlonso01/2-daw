@@ -4,14 +4,14 @@ body {
 }
 
 header {
-  background-color: #4caf50;
+  background-color: #00ff00;
   padding: 1em;
   font-weight: bold;
   border: 1px solid black;
 }
 
 footer {
-  background-color: #ccc;
+  background-color: #cccccc;
   color: black;
   padding: 1em;
   border: 1px solid black;
@@ -32,13 +32,13 @@ footer {
 
 .izquierda {
   width: 60%;
-  background-color: #07055a;
+  background-color: #0000ff;
   color: white;
   border: 1px solid black;
 }
 
 .derecha {
   width: 40%;
-  background-color: #ffeb3b;
+  background-color: #ffff00;
   border: 1px solid black;
 }
