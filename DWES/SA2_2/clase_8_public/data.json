@@ -1,0 +1,61 @@
+{
+  "soccer": {
+    "name": "Soccer",
+    "subscribers": 800000,
+    "description": "The football subreddit. News, results and discussion about the beautiful game.",
+    "posts": [
+      {
+        "title": "Marten de Roon to make pizza for more than 1,000 people in Bergamo if Atalanta win the Champions league.",
+        "author": "joeextreme",
+        "img": "https://www.fcbarcelona.com/fcbarcelona/photo/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg"
+      },
+      {
+        "title": "Stephan Lichtsteiner has retired from professional football",
+        "author": "odd person",
+        "img": "../imagenes/mbappe.jpg"
+      },
+      {
+        "title": "OFFICIAL: Dani Parejo signs for Villareal.",
+        "author": "joeextreme"
+      }
+    ]
+  },
+  "chickens": {
+    "name": "Chickens",
+    "subscribers": 23956,
+    "description": "A place to post your photos, video and questions about chickens!",
+    "posts": [
+      {
+        "title": "Naughty chicken hid under a shed for 3 weeks and came home with 25 chicks today!",
+        "author": "joeextreme",
+        "img": "https://images7.memedroid.com/images/UPLOADED441/64dafe1663397.jpeg"
+      },
+      {
+        "title": "Had to kill my first chicken today. Does it get any easier?",
+        "author": "sad boi"
+      },
+      {
+        "title": "My five year old chicken set and hatched one baby. I guess she wanted to be a mama one more time.",
+        "author": "tammythetiger",
+        "img": "https://media.tenor.com/42lsI1BRav8AAAAi/se-ten%C3%ADa-que-decir-y-se-dijo.gif"
+      }
+    ]
+  },
+  "mightyharvest": {
+    "name": "Mighty Harvest",
+    "subscribers": 44002,
+    "description": "Feeding many villages and village idiots for 10s of days.",
+    "posts": [
+      {
+        "title": "My first meyer lemon ripened today. Im so proud of the little guy. Banana for scale",
+        "author": "proudmamma",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XUtGYTTusKM3EdXyviT6l4AYyTksYfQarg&s"
+      },
+      {
+        "title": "I think I overestimated the harvest basket size I needed.",
+        "author": "grower123",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs3j3LOHqx9NwmDjcqvwwdXT3Vjb81ObD6-g&s"
+      }
+    ]
+  }
+}

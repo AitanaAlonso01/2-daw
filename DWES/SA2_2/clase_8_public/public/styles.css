@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.author {
+  margin-right: 30px;
+  font-style: italic;
+}

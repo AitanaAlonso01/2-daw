@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACTS</title>
+  </head>
+  <body>
+    <h1>LISTA DE CONTACTOS</h1>
+    <ul>
+      <% contactos.forEach(contacto => { %>
+      <li>
+        <%= contacto %>
+        <input type="button" value="click me!" onclick="Hola()" />
+      </li>
+      <% }) %>
+    </ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
