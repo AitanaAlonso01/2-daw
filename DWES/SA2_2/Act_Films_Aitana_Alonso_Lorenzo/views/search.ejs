@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resdultados de búsqueda</title>
+    <base href="/" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <button
+      style="
+        background-color: #ff5964;
+        border: 1px solid black;
+        cursor: pointer;
+        width: 5px;
+      "
+      onclick="history.back()"
+    >
+      <img
+        style="width: 30px; height: 30px"
+        src="https://cdn-icons-png.freepik.com/512/2459/2459502.png"
+        alt="volver"
+      />
+    </button>
+    <% if (peli) { %>
+    <div class="contenedor">
+      <h1><%= peli.Title %> (<%= peli.Year %>)</h1>
+      <div class="info">
+        <p><strong>Clasificación:</strong> <%= peli.Rated %></p>
+        <p><strong>Fecha de estreno:</strong> <%= peli.Released %></p>
+        <p><strong>Duración:</strong> <%= peli.Runtime %></p>
+        <p><strong>Género:</strong> <%= peli.Genre %></p>
+        <p><strong>Director:</strong> <%= peli.Director %></p>
+        <p><strong>Guionista:</strong> <%= peli.Writer %></p>
+        <p><strong>Actores:</strong> <%= peli.Actors %></p>
+        <p><strong>Trama:</strong> <%= peli.Plot %></p>
+        <p><strong>Idioma:</strong> <%= peli.Language %></p>
+        <p><strong>País:</strong> <%= peli.Country %></p>
+        <p><strong>Premios:</strong> <%= peli.Awards %></p>
+        <p><strong>Metascore:</strong> <%= peli.Metascore %></p>
+        <p><strong>IMDb Rating:</strong> <%= peli.imdbRating %></p>
+        <p><strong>IMDb Votes:</strong> <%= peli.imdbVotes %></p>
+        <p><strong>IMDb ID:</strong> <%= peli.imdbID %></p>
+        <p><strong>Tipo:</strong> <%= peli.Type %></p>
+        <p><strong>Respuesta:</strong> <%= peli.Response %></p>
+      </div>
+
+      <h2>Imágenes</h2>
+      <div class="imagenes">
+        <% peli.Images.forEach(img => { %>
+        <img src="<%= img %>" alt="Imagen de <%= peli.Title %>" />
+        <% }) %>
+      </div>
+    </div>
+    <% } else { %>
+    <h1>No se encontró ninguna película para "<%= query %>"</h1>
+    <% } %>
+  </body>
+</html>
