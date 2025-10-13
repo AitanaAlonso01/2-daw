@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+header {
+  grid-column: 1 / -1;
+  color: #4b5c77;
+}
+
+header h1 {
+  font-size: 40px;
+  margin: 1rem;
+}
+
+nav {
+  background-color: #1f5b98;
+  color: white;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
+
+nav ul {
+  position: relative;
+}
+
+nav li {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #1f5b98;
+  color: #fff;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+nav li:hover {
+  background-color: #226eb7;
+  color: #fff;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f5b98;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+aside {
+  width: 30%;
+  padding: 1rem;
+}
+
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+aside input {
+  padding: 5px;
+  margin: 0.5rem;
+  width: 100%;
+}
+
+aside button {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  width: 100%;
+  background-color: #1f5b98;
+  color: white;
+  border: none;
+}
+
+aside button:hover {
+  background-color: #226eb7;
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  width: 70%;
+  padding: 1rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+main section h2 {
+  font-size: 30px;
+  color: #226eb7;
+  margin-bottom: 1rem;
+}
