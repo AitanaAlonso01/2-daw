@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
+
+nav li {
+  display: block;
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  text-align: center;
+  width: 200px;
+}
+
+nav li:hover {
+  background-color: #5f4f70;
+  color: #fff;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+}
+
+nav ul li:hover > ul {
+  display: inline-flex;
+  position: absolute;
+  top: 40px;
+  left: 200px;
+}
