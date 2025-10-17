@@ -1,0 +1,26 @@
+PASOS PARA INSTALAR UN API
+1. npm init -y -> crear package.json
+2. crear el index.js
+2.1. npm install express
+3. picar code
+/*
+const express = require('express')
+const app = express()
+const port = 3010
+const path = require('path') // npm i path
+
+// Levantar el server
+app.listen(port, () => {
+  console.log(`http://localhost:${port}`)
+})
+*/ --> index.js, codigo obligatorio
+4. npm i path
+5. app.set('views', path.join(__dirname, 'views')) // directorio que contine las vistas
+6. crear la carpeta public
+7. app.set('view engine', 'ejs') // npm i ejs (SSR)
+8. app.use(express.static(path.join(__dirname, 'public'))) // directorio que contiene los assets
+9. app.get('/', (req, res) => {}) --> RUTAS
+10. // Ruta por defecto (*)
+app.get(/.*/, (req, res) => {
+  res.redirect('/') // redireccionar a la ruta principal
+})
