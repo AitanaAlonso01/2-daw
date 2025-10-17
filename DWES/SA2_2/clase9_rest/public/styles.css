@@ -1,0 +1,155 @@
+/* ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* ESTILOS PARA EL FORMULARIO */
+form {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #0fba00;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form a {
+  background-color: #9b2525;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ESTILOS PARA EL LISTADO DE COMENTARIOS */
+h1 {
+  text-align: center;
+}
+
+a {
+  color: #008cba;
+  text-decoration: none;
+}
+
+div {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+hr {
+  margin: 20px;
+}
+
+/* ESTILOS PARA EL DETALLE DE UN COMENTARIO */
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+div {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.btn-back {
+  background-color: #9500ba;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #e2b521;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ESTILOS PARA EL FORMULARIO DE CREACIÓN DE COMENTARIOS */
+form#new-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+form#new-comment input,
+form#new-comment textarea {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form#new-comment button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form#new-comment a {
+  color: #008cba;
+  text-decoration: none;
+  margin-top: 10px;
+}

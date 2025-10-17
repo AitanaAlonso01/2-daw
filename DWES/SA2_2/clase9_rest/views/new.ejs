@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo comentario - Form</title>
+    <base href="/" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Nuevo comentario</h1>
+    <form action="/comentarios" method="POST">
+      <input type="text" id="usuario" name="usuario" placeholder="Usuario" />
+      <br />
+      <textarea
+        id="comentario"
+        name="comentario"
+        placeholder="Comentario"
+        cols="30"
+        rows="5"
+      ></textarea>
+      <br />
+      <button>Guardar</button>
+      <a href="/">Cancelar</a>
+    </form>
+  </body>
+</html>

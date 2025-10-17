@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar comentario <%= comentario.id %> - Form</title>
+    <base href="/" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Editar comentario de <%= comentario.usuario %></h1>
+    <form action="/comentarios/<%= comentario.id %>" method="PUT">
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        value="<%= comentario.usuario %>"
+        placeholder="Usuario"
+      />
+      <br />
+      <textarea
+        id="comentario"
+        name="comentario"
+        placeholder="Comentario"
+        cols="30"
+        rows="5"
+      >
+<%= comentario.comentario %></textarea
+      >
+      <br />
+      <button>Guardar</button>
+      <a href="/">Cancelar</a>
+    </form>
+  </body>
+</html>
