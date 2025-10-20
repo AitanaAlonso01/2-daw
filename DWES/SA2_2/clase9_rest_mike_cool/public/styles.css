@@ -27,9 +27,15 @@ body {
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .glass-container {
@@ -94,7 +100,7 @@ hr {
   gap: 1rem;
 }
 
-input[type="text"],
+input[type='text'],
 textarea {
   width: 100%;
   border: none;
@@ -107,13 +113,14 @@ textarea {
   transition: background 0.3s ease;
 }
 
-input[type="text"]:focus,
+input[type='text']:focus,
 textarea:focus {
   background: rgba(255, 255, 255, 0.25);
 }
 
 /* Botones */
-.btn, .btn-secondary {
+.btn,
+.btn-secondary {
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -153,6 +160,7 @@ textarea:focus {
 .detalles-icono {
   display: flex;
   justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .detalles-icono a {

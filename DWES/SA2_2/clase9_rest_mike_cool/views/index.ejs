@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Comentarios</title>
+    <base href="/" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glass-container">
+      <div class="card">
+        <h1>💬 Listado de Comentarios</h1>
+        <a href="/comentarios/new" class="btn">➕ Nuevo Comentario</a>
+        <hr />
+        <div class="comentarios">
+          <% for (let c of comentarios) { %>
+          <div class="comentario">
+            <div class="detalles-icono">
+              <a href="/comentarios/<%= c.id %>" title="Ver detalles">🔍</a>
+              <a href="/comentarios/<%= c.id %>/edit" title="Editar">✏️</a>
+              <form
+                action="/comentarios/<%= c.id %>?_method=DELETE"
+                method="POST"
+              >
+                <button>🗑️</button>
+              </form>
+            </div>
+            <div class="detalles
+            <div class="usuario"><b><%= c.usuario %></b></div>
+            <p class="opinion"><%= c.opinion %></p>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
