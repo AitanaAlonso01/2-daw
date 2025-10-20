@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #fff;
+}
+
+.contenedor {
+  height: 150px;
+  width: 40%;
+  border: 2px solid gray;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  top: 40vh;
+}
+
+.cuadrado {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 75px);
+  animation: centroADerecha 1.5s ease-in-out forwards,
+    derechaACentro 1.5s ease-in-out forwards 1.5s,
+    centroAIzquierda 1.5s ease-in-out forwards 3s,
+    izquierdaACentro 1.5s ease-in-out forwards 4.5s;
+}
+
+@keyframes centroADerecha {
+  0% {
+    left: calc(50% - 75px);
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: calc(100% - 150px);
+    background-color: green;
+  }
+}
+
+@keyframes derechaACentro {
+  0% {
+    left: calc(100% - 150px);
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: calc(50% - 75px);
+    background-color: green;
+  }
+}
+
+@keyframes centroAIzquierda {
+  0% {
+    left: calc(50% - 75px);
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: 0;
+    background-color: green;
+  }
+}
+
+@keyframes izquierdaACentro {
+  0% {
+    left: 0;
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  99% {
+    left: calc(50% - 75px);
+    background-color: green;
+    opacity: 0.2;
+  }
+  100% {
+    left: calc(50% - 75px);
+    background-color: green;
+    opacity: 0;
+  }
+}
