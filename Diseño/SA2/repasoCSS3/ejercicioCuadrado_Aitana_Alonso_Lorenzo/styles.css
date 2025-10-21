@@ -20,10 +20,11 @@ body {
   position: absolute;
   top: 0;
   left: calc(50% - 75px);
-  animation: centroADerecha 1.5s ease-in-out forwards,
-    derechaACentro 1.5s ease-in-out forwards 1.5s,
-    centroAIzquierda 1.5s ease-in-out forwards 3s,
-    izquierdaACentro 1.5s ease-in-out forwards 4.5s;
+  animation: centroADerecha 5s ease-in-out forwards,
+    derechaACentro 2s ease-in-out forwards 5s,
+    centroAIzquierda 5s ease-in-out forwards 7s,
+    izquierdaACentro 2.5s ease-in-out forwards 12s,
+    desaparecerEnCentro 2s ease-in-out forwards 14.5s;
 }
 
 @keyframes centroADerecha {
@@ -76,14 +77,24 @@ body {
   50% {
     background-color: yellow;
   }
-  99% {
-    left: calc(50% - 75px);
-    background-color: green;
-    opacity: 0.2;
-  }
   100% {
     left: calc(50% - 75px);
     background-color: green;
+  }
+}
+
+@keyframes desaparecerEnCentro {
+  0% {
+    left: calc(50% - 75px);
+    background-color: green;
+    opacity: 1;
+  }
+  50% {
+    background-color: gray;
+    opacity: 1;
+  }
+  100% {
+    background-color: gray;
     opacity: 0;
   }
 }
