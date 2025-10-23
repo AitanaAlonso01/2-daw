@@ -31,20 +31,13 @@ body {
   bottom: 40px;
   left: 0;
 
-  /* walk-right-psyduck: infinita para la animación de pasos
-    avanzarCrecer: 10s de duración, se ejecuta 1 vez
-    desaparecer: 0.5s de duración, se ejecuta 1 vez
-  */
   animation: walk-right-psyduck 0.6s steps(4) infinite,
-    avanzarCrecer 10s linear 1, desaparecer 0.5s linear 1;
+    avanzarCrecer 30s linear 1, desaparecer 0.5s linear 1;
 
-  /* Retrasos: caminar y moverse (0s), desaparecer (a los 9.5s) */
   animation-delay: 0s, 0s, 9.5s;
 
-  /* Mantiene el último estado (opacity: 0) hasta el final del ciclo */
   animation-fill-mode: forwards;
 
-  /* Hace que toda la secuencia de 10s (aparición, movimiento, desaparición) se repita */
   animation-iteration-count: infinite;
 }
 
@@ -60,18 +53,127 @@ body {
 @keyframes avanzarCrecer {
   0% {
     transform: translateX(0px) scale(2);
+    opacity: 1;
   }
-  100% {
-    transform: translateX(calc(100vw - 24px)) scale(5);
-  }
-}
-
-/* El desvanecimiento ocurre en el 0.5s al final */
-@keyframes desaparecer {
-  0% {
+  85% {
     opacity: 1;
   }
   100% {
+    transform: translateX(calc(100vw - 24px)) scale(5);
     opacity: 0;
+  }
+}
+
+/* GIRATINA */
+.giratina {
+  width: 80px;
+  height: 74px;
+  background-image: url('./imgs/walk-giratina.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  scale: 4;
+  animation: mover-giratina 20s linear infinite;
+  animation-delay: 0s, 0s, 9.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  -webkit-animation: mover-giratina 20s linear infinite;
+}
+
+@keyframes mover-giratina {
+  0% {
+    top: -150px;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    top: 20%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    top: -150px;
+    opacity: 0;
+  }
+}
+
+/* GRENINJA */
+.greninja {
+  width: 32px;
+  height: 40px;
+  background-image: url('./imgs/rearUp-greninja.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 190px;
+  left: 80%;
+  transform: scale(3);
+
+  animation: skull-cycle 1.5s steps(15) infinite,
+    rearUp-skull 1.5s ease-in-out forwards;
+  animation-delay: 0s, 9.5s;
+  animation-fill-mode: none, forwards;
+  animation-iteration-count: infinite, 1;
+}
+
+@keyframes rearUp-skull {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-20px) scale(1.2);
+  }
+  60% {
+    transform: translateY(-40px) scale(1.4);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes skull-cycle {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -480px 0; /* 15 frames × 32px */
+  }
+}
+
+/* HYDREAGON */
+.hydragon {
+  width: 48px;
+  height: 41px;
+  background-image: url('./imgs/hydreagon-fly.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 190px;
+  left: 20%;
+  transform: scale(3);
+  opacity: 0;
+  animation: fly-up-hydragon 8s ease-out forwards;
+  animation-delay: 6s;
+}
+
+@keyframes fly-up-hydragon {
+  0% {
+    transform: translateY(0px) scale(3);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(3);
+    opacity: 1;
+    scale: 4;
   }
 }
