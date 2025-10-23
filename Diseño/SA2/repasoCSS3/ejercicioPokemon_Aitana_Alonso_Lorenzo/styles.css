@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Fondo neutro opcional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./imgs/background.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* PSYDUCK */
+.psyduck {
+  width: 24px;
+  height: 36px;
+  background-image: url('./imgs/walk-psyduck.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+
+  /* walk-right-psyduck: infinita para la animación de pasos
+    avanzarCrecer: 10s de duración, se ejecuta 1 vez
+    desaparecer: 0.5s de duración, se ejecuta 1 vez
+  */
+  animation: walk-right-psyduck 0.6s steps(4) infinite,
+    avanzarCrecer 10s linear 1, desaparecer 0.5s linear 1;
+
+  /* Retrasos: caminar y moverse (0s), desaparecer (a los 9.5s) */
+  animation-delay: 0s, 0s, 9.5s;
+
+  /* Mantiene el último estado (opacity: 0) hasta el final del ciclo */
+  animation-fill-mode: forwards;
+
+  /* Hace que toda la secuencia de 10s (aparición, movimiento, desaparición) se repita */
+  animation-iteration-count: infinite;
+}
+
+@keyframes walk-right-psyduck {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -96px 0;
+  }
+}
+
+@keyframes avanzarCrecer {
+  0% {
+    transform: translateX(0px) scale(2);
+  }
+  100% {
+    transform: translateX(calc(100vw - 24px)) scale(5);
+  }
+}
+
+/* El desvanecimiento ocurre en el 0.5s al final */
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
