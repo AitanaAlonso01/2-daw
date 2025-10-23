@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Movies</title>
-    <base href="/" />
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="/app.css" />
   </head>
-  <body>
-    <img width="100px" src="/imgs/google.png" alt="google" />
+  <body class="home">
+    <img id="logo" src="/imgs/gm-logo.png" alt="Google Movies Logo" />
     <form action="/search" method="GET">
       <input type="text" name="query" placeholder="Buscar películas..." />
-      <br />
       <button type="submit">Buscar con Google</button>
     </form>
   </body>

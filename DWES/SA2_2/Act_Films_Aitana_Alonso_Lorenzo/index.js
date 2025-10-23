@@ -1,38 +1,41 @@
 const fs = require('fs').promises
-const express = require('express') //npm i express
+const express = require('express')
 const app = express()
 const port = 3000
-const path = require('path') //npm i path
-app.set('view engine', 'ejs') //npm i ejs
-app.set('views', path.join(__dirname, 'views')) //donde irá a buscar las vistas
-app.use(express.static(path.join(__dirname, 'public'))) //donde irá a buscar los recursos estáticos
+const path = require('path')
 
-/*
-ruta de llamada
-app.get('/', (req, res) => {})
-*/
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
 
-//Ruta / -> googlemovies.ejs
+// Archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')))
+console.log('Ruta de estáticos:', path.join(__dirname, 'public'))
+
+// Ruta principal
 app.get('/', (req, res) => {
   res.render('googlemovies.ejs')
 })
 
+// Ruta de búsqueda
 app.get('/search', (req, res) => {
   const query = req.query.query?.toLowerCase()
 
   fs.readFile('./films.json', 'utf-8')
     .then(raw => {
       const data = JSON.parse(raw)
-
-      // Convertimos las claves a minúsculas para comparar
       const claves = Object.keys(data)
-      const claveCoincidente = claves.find(k => k.toLowerCase() === query)
 
-      if (claveCoincidente) {
-        const peli = data[claveCoincidente]
-        res.render('search.ejs', { peli, query })
+      // Filtrar todas las claves que contengan el query (insensible a mayúsculas)
+      const coincidencias = claves.filter(k => k.toLowerCase().includes(query))
+
+      if (coincidencias.length > 0) {
+        const resultados = coincidencias.map(k => ({
+          titulo: k,
+          datos: data[k],
+        }))
+        res.render('search.ejs', { resultados, query })
       } else {
-        res.send(`<h1>No se encontró ninguna película para "${query}"</h1>`)
+        res.render('search.ejs', { resultados: [], query })
       }
     })
     .catch(error => {
@@ -40,16 +43,12 @@ app.get('/search', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-  console.log('Servidor activo en http://localhost:3000')
+// Ruta 404 (debe ir al final)
+app.use((req, res) => {
+  res.status(404).send('<h1>ERROR 404 - Página no encontrada</h1>')
 })
 
-//Ruta por defecto (*)
-app.get(/.*/, (req, res) => {
-  res.send('<h1>ERROR 404! PAGE NOT FOUND</h1>')
-})
-
-//Levantar el servidor
+// Levantar servidor (solo UNA VEZ)
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })

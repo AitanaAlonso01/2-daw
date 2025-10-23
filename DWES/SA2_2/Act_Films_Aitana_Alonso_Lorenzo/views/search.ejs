@@ -1,60 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resdultados de búsqueda</title>
+    <title>Resultados de búsqueda</title>
     <base href="/" />
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="/app.css" />
   </head>
   <body>
-    <button
-      style="
-        background-color: #ff5964;
-        border: 1px solid black;
-        cursor: pointer;
-        width: 5px;
-      "
-      onclick="history.back()"
-    >
+    <button class="back" onclick="history.back()">
       <img
-        style="width: 30px; height: 30px"
         src="https://cdn-icons-png.freepik.com/512/2459/2459502.png"
-        alt="volver"
+        alt="Volver"
       />
     </button>
-    <% if (peli) { %>
+
+    <% if (resultados.length > 0) { %> <% for (let i = 0; i < resultados.length;
+    i++) { %> <% var titulo = resultados[i].titulo; %> <% var datos =
+    resultados[i].datos; %>
+
     <div class="contenedor">
-      <h1><%= peli.Title %> (<%= peli.Year %>)</h1>
+      <% if (datos.Poster && datos.Poster !== 'N/A') { %>
+      <div class="poster">
+        <img src="<%= datos.Poster %>" alt="Póster de <%= titulo %>" />
+      </div>
+      <% } %>
+
+      <h1><%= titulo %> (<%= datos.Year %>)</h1>
+
       <div class="info">
-        <p><strong>Clasificación:</strong> <%= peli.Rated %></p>
-        <p><strong>Fecha de estreno:</strong> <%= peli.Released %></p>
-        <p><strong>Duración:</strong> <%= peli.Runtime %></p>
-        <p><strong>Género:</strong> <%= peli.Genre %></p>
-        <p><strong>Director:</strong> <%= peli.Director %></p>
-        <p><strong>Guionista:</strong> <%= peli.Writer %></p>
-        <p><strong>Actores:</strong> <%= peli.Actors %></p>
-        <p><strong>Trama:</strong> <%= peli.Plot %></p>
-        <p><strong>Idioma:</strong> <%= peli.Language %></p>
-        <p><strong>País:</strong> <%= peli.Country %></p>
-        <p><strong>Premios:</strong> <%= peli.Awards %></p>
-        <p><strong>Metascore:</strong> <%= peli.Metascore %></p>
-        <p><strong>IMDb Rating:</strong> <%= peli.imdbRating %></p>
-        <p><strong>IMDb Votes:</strong> <%= peli.imdbVotes %></p>
-        <p><strong>IMDb ID:</strong> <%= peli.imdbID %></p>
-        <p><strong>Tipo:</strong> <%= peli.Type %></p>
-        <p><strong>Respuesta:</strong> <%= peli.Response %></p>
+        <p><strong>Clasificación:</strong> <%= datos.Rated %></p>
+        <p><strong>Fecha de estreno:</strong> <%= datos.Released %></p>
+        <p><strong>Duración:</strong> <%= datos.Runtime %></p>
+        <p><strong>Género:</strong> <%= datos.Genre %></p>
+        <p><strong>Director:</strong> <%= datos.Director %></p>
+        <p><strong>Guionista:</strong> <%= datos.Writer %></p>
+        <p><strong>Actores:</strong> <%= datos.Actors %></p>
+        <p><strong>Trama:</strong> <%= datos.Plot %></p>
+        <p><strong>Idioma:</strong> <%= datos.Language %></p>
+        <p><strong>País:</strong> <%= datos.Country %></p>
+        <p><strong>Premios:</strong> <%= datos.Awards %></p>
+        <p><strong>Metascore:</strong> <%= datos.Metascore %></p>
+        <p><strong>IMDb Rating:</strong> <%= datos.imdbRating %></p>
+        <p><strong>IMDb Votes:</strong> <%= datos.imdbVotes %></p>
+        <p><strong>IMDb ID:</strong> <%= datos.imdbID %></p>
+        <p><strong>Tipo:</strong> <%= datos.Type %></p>
+        <p><strong>Respuesta:</strong> <%= datos.Response %></p>
       </div>
 
+      <% if (datos.Images && datos.Images.length > 0) { %>
       <h2>Imágenes</h2>
       <div class="imagenes">
-        <% peli.Images.forEach(img => { %>
-        <img src="<%= img %>" alt="Imagen de <%= peli.Title %>" />
-        <% }) %>
+        <% for (let j = 0; j < datos.Images.length; j++) { %>
+        <img src="<%= datos.Images[j] %>" alt="Imagen de <%= titulo %>" />
+        <% } %>
       </div>
+      <% } %>
     </div>
-    <% } else { %>
-    <h1>No se encontró ninguna película para "<%= query %>"</h1>
+    <% } %> <% } else { %>
+    <h1 class="no-result">
+      No se encontró ninguna película para "<%= query %>"
+    </h1>
     <% } %>
+    <button id="scrollTopBtn" title="Ir arriba">↑</button>
+
+    <script>
+      const scrollBtn = document.getElementById('scrollTopBtn')
+
+      window.addEventListener('scroll', () => {
+        scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none'
+      })
+
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+    </script>
   </body>
 </html>

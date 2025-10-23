@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #fff;
+}
+
+.contenedor {
+  height: 150px;
+  width: 40%;
+  border: 2px solid gray;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  top: 40vh;
+}
+
+.cuadrado {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 75px);
+  animation: centroADerecha 5s ease-in-out forwards,
+    derechaACentro 2s ease-in-out forwards 5s,
+    centroAIzquierda 5s ease-in-out forwards 7s,
+    izquierdaACentro 2.5s ease-in-out forwards 12s,
+    desaparecerEnCentro 2s ease-in-out forwards 14.5s;
+}
+
+@keyframes centroADerecha {
+  0% {
+    left: calc(50% - 75px);
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: calc(100% - 150px);
+    background-color: green;
+  }
+}
+
+@keyframes derechaACentro {
+  0% {
+    left: calc(100% - 150px);
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: calc(50% - 75px);
+    background-color: green;
+  }
+}
+
+@keyframes centroAIzquierda {
+  0% {
+    left: calc(50% - 75px);
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: 0;
+    background-color: green;
+  }
+}
+
+@keyframes izquierdaACentro {
+  0% {
+    left: 0;
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    left: calc(50% - 75px);
+    background-color: green;
+  }
+}
+
+@keyframes desaparecerEnCentro {
+  0% {
+    left: calc(50% - 75px);
+    background-color: green;
+    opacity: 1;
+  }
+  50% {
+    background-color: gray;
+    opacity: 1;
+  }
+  100% {
+    background-color: gray;
+    opacity: 0;
+  }
+}
