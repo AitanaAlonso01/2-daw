@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personajes Star Wars</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Personajes Star Wars</h1>
+
+    <% if (personaje) { %>
+    <script>
+      window.location.href = '/starwars/<%= personaje.name %>'
+    </script>
+    <% } else { %>
+    <div class="galeria">
+      <% personajes.forEach(p => { %>
+      <a href="/starwars/<%= p.name %>">
+        <img src="<%= p.photo %>" alt="<%= p.name %>" width="150" />
+        <p><%= p.name %></p>
+      </a>
+      <% }) %>
+    </div>
+    <% } %>
+  </body>
+</html>

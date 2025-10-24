@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Editar <%= personaje.name %></title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Editar personaje: <%= personaje.name %></h1>
+
+    <form action="/starwars/<%= personaje.name %>?_method=PUT" method="post">
+      <label for="height">Altura (cm):</label>
+      <input
+        type="text"
+        name="height"
+        id="height"
+        value="<%= personaje.height %>"
+        required
+      />
+
+      <label for="mass">Peso (kg):</label>
+      <input
+        type="text"
+        name="mass"
+        id="mass"
+        value="<%= personaje.mass %>"
+        required
+      />
+
+      <button type="submit">Guardar cambios</button>
+    </form>
+
+    <a href="/starwars/<%= personaje.name %>">Cancelar</a>
+  </body>
+</html>
