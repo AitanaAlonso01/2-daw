@@ -1,10 +1,14 @@
 {
   // --- Apariencia ---
-  // "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.folders.color": "#C9443B",
   // "material-icon-theme.hidesExplorerArrows": true,
   // "workbench.activityBar.location": "bottom",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
+  "workbench.editor.highlightModifiedTabs": false,
+  "workbench.colorTheme": "Default Dark+",
   // "workbench.tree.renderIndentGuides": "none",
   // "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
@@ -13,16 +17,18 @@
   "window.commandCenter": false,
   "window.nativeTabs": true,
   "window.zoomLevel": 1,
-
+  "editor.smoothScrolling": true,
   // --- Editor: Fuente y estilos ---
   "editor.fontFamily": "FiraCode Nerd Font, monospace",
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
   "editor.fontLigatures": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.wordWrap": "on",
   "editor.codeLens": false,
   "editor.minimap.enabled": false,
+  "editor.colorDecorators": true,
+
   // "editor.guides.indentation": false,
   "editor.guides.bracketPairs": true,
   "editor.bracketPairColorization.enabled": true,
