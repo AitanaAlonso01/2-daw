@@ -64,11 +64,11 @@ body {
   }
 }
 
-/* GIRATINA */
-.giratina {
+/* RAYQUAZA */
+.rayquaza {
   width: 80px;
   height: 74px;
-  background-image: url('./imgs/walk-giratina.png');
+  background-image: url('./imgs/walk-rayquaza.png');
   background-repeat: no-repeat;
   position: absolute;
   left: 50%;
@@ -80,7 +80,7 @@ body {
   -webkit-animation: mover-giratina 20s linear infinite;
 }
 
-@keyframes mover-giratina {
+@keyframes mover-rayquaza {
   0% {
     top: -150px;
     opacity: 0;
@@ -145,35 +145,5 @@ body {
   }
   100% {
     background-position: -480px 0; /* 15 frames × 32px */
-  }
-}
-
-/* HYDREAGON */
-.hydragon {
-  width: 48px;
-  height: 41px;
-  background-image: url('./imgs/hydreagon-fly.png');
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 190px;
-  left: 20%;
-  transform: scale(3);
-  opacity: 0;
-  animation: fly-up-hydragon 8s ease-out forwards;
-  animation-delay: 6s;
-}
-
-@keyframes fly-up-hydragon {
-  0% {
-    transform: translateY(0px) scale(3);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) scale(3);
-    opacity: 1;
-    scale: 4;
   }
 }
