@@ -7,6 +7,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <canvas id="espacio"></canvas>
     <h1>Editar personaje: <%= personaje.name %></h1>
 
     <form action="/starwars/<%= personaje.name %>?_method=PUT" method="post">
@@ -32,5 +33,7 @@
     </form>
 
     <a href="/starwars/<%= personaje.name %>">Cancelar</a>
+
+    <script src="/app.js"></script>
   </body>
 </html>
