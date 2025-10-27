@@ -84,17 +84,21 @@ app.get('/starwars', async (req, res) => {
 
 async function getPlaneta(url) {
   try {
+    // Si hay URL, obtener datos del planeta
     const res = await axios.get(url)
     return res.data
   } catch (err) {
+    // Si no hay URL, devolver null
     console.error('Error al obtener planeta:', err.message)
     return null
   }
 }
 
+// Ruta Mostrar (/starwars/:nombre) - Mostrar detalles de un personaje
 app.get('/starwars/:nombre', async (req, res) => {
   const decodedName = decodeURIComponent(req.params.nombre)
   const personaje = personajes.find(p => p.name === decodedName)
+  // Si no se encuentra el personaje, mostrar galería completa
   if (!personaje) return res.render('listar.ejs', { personajes })
 
   const planeta = await getPlaneta(personaje.homeworld)
@@ -118,6 +122,7 @@ app.put('/starwars/:nombre', (req, res) => {
   const personaje = personajes.find(p => p.name === decodedName)
   if (!personaje) return res.status(404).send('Personaje no encontrado')
 
+  // Actualizar datos del personaje
   personaje.height = height
   personaje.mass = mass
 

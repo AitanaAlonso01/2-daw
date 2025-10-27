@@ -10,6 +10,7 @@
     <canvas id="espacio"></canvas>
     <h1>Galeria de Personajes Star Wars</h1>
 
+    <!-- Enlace a la página de búsqueda -->
     <div class="regresar">
       <a href="/">
         <button>⬅ Buscador</button>
@@ -19,7 +20,7 @@
     <% if (personajes.length === 0) { %>
     <p>No se encontraron personajes. Mostrando galería completa.</p>
     <% } %>
-
+    <!-- Lista de personajes en modo galería -->
     <div class="galeria">
       <% personajes.forEach(p => { %>
       <a href="/starwars/<%= p.name %>">

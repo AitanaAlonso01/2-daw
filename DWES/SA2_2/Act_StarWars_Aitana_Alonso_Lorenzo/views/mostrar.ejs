@@ -9,15 +9,16 @@
   <body>
     <canvas id="espacio"></canvas>
     <div class="regresar">
+      <!-- Enlace a la página de galería -->
       <a href="/starwars?q=galeria">
         <button>⬅ Galería</button>
       </a>
-
+      <!-- Enlace a la página de búsqueda -->
       <a href="/">
         <button>⬅ Buscador</button>
       </a>
     </div>
-
+    <!-- Mostrar fichas completas -->
     <% if (typeof personajesConPlaneta !== 'undefined') { %> <%
     personajesConPlaneta.forEach(({ personaje, planeta }) => { %>
     <div class="contenedor-pj">
@@ -51,6 +52,7 @@
         </div>
       </div>
 
+      <!-- Botones para editar y eliminar -->
       <div class="botones-mostrar">
         <form action="/starwars/<%= personaje.name %>/edit" method="get">
           <button class="btn-editar">Editar</button>

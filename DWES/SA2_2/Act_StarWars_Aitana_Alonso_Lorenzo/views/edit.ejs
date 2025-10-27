@@ -9,7 +9,7 @@
   <body>
     <canvas id="espacio"></canvas>
     <h1>Editar personaje: <%= personaje.name %></h1>
-
+    <!-- Formulario para actualizar datos del personaje -->
     <form action="/starwars/<%= personaje.name %>?_method=PUT" method="post">
       <label for="height">Altura (cm):</label>
       <input
