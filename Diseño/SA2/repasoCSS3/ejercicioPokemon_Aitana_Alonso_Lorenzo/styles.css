@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000; /* Fondo neutro opcional */
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,16 +9,27 @@ body {
   overflow: hidden;
 }
 
+/* Fondo controlado por clase */
 #fondo {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('./imgs/background.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
+  transition: background-image 1s ease;
+}
+
+/* Día */
+.day-background #fondo {
+  background-image: url('./imgs/background.jpg');
+}
+
+/* Noche */
+.night-background #fondo {
+  background-image: url('./imgs/night-background.png');
 }
 
 /* PSYDUCK */
@@ -154,5 +165,72 @@ body {
   100% {
     transform: translateY(-120vh) scale(2);
     opacity: 0;
+  }
+}
+
+/* NOIVERN */
+.noivern {
+  width: 40px;
+  height: 36px;
+  background-image: url('./imgs/walk-noivern.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 400px;
+  left: 0;
+  transform: scale(2);
+  animation: walk-noivern 0.8s steps(4) infinite,
+    move-noivern 12s linear infinite;
+}
+
+@keyframes walk-noivern {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -160px 0; /* 4 frames × 40px */
+  }
+}
+
+@keyframes move-noivern {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100vw - 40px);
+    opacity: 0;
+  }
+}
+
+/* NOCTOWL */
+.noctowl {
+  width: 40px;
+  height: 36px;
+  background-image: url('./imgs/noctowl-static.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 700px;
+  left: 100px;
+  transform: scale(3);
+  animation: walk-noctowl 0.8s steps(4) infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.night-background .noctowl {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@keyframes walk-noctowl {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -160px 0;
   }
 }

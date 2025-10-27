@@ -45,3 +45,11 @@ function checkAnimation() {
 }
 
 requestAnimationFrame(checkAnimation)
+
+// Alternancia entre fondo de día y noche
+const body = document.body
+
+setInterval(() => {
+  body.classList.toggle('night-background')
+  body.classList.toggle('day-background')
+}, 30000)
