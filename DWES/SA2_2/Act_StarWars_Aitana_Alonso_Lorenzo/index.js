@@ -45,12 +45,39 @@ app.get('/', (req, res) => {
 
 // Ruta Listar (/starwars) - Lista de personajes
 
-app.get('/starwars', (req, res) => {
+app.get('/starwars', async (req, res) => {
   const q = req.query.q?.toLowerCase()
-  const personaje = q
-    ? personajes.find(p => p.name.toLowerCase().includes(q))
-    : null
-  res.render('listar.ejs', { personaje, personajes })
+
+  // Si el query es "galeria", mostrar todos en modo galería
+  if (q === 'galeria') {
+    return res.render('listar.ejs', { personajes })
+  }
+
+  const coincidencias = q
+    ? personajes.filter(p => p.name.toLowerCase().includes(q))
+    : personajes
+
+  if (q && coincidencias.length === 0) {
+    // No hay coincidencias → mostrar galería completa
+    return res.render('listar.ejs', { personajes })
+  }
+
+  if (q && coincidencias.length === 1) {
+    // Solo una coincidencia → mostrar ficha completa
+    const personaje = coincidencias[0]
+    const planeta = await getPlaneta(personaje.homeworld)
+    return res.render('mostrar.ejs', { personaje, planeta })
+  }
+
+  // Varias coincidencias → mostrar fichas completas
+  const personajesConPlaneta = await Promise.all(
+    coincidencias.map(async p => {
+      const planeta = await getPlaneta(p.homeworld)
+      return { personaje: p, planeta }
+    })
+  )
+
+  res.render('mostrar.ejs', { personajesConPlaneta })
 })
 
 // Ruta Mostrar (/starwars/:nombre) - Mostrar detalles de un personaje
@@ -68,7 +95,7 @@ async function getPlaneta(url) {
 app.get('/starwars/:nombre', async (req, res) => {
   const decodedName = decodeURIComponent(req.params.nombre)
   const personaje = personajes.find(p => p.name === decodedName)
-  if (!personaje) return res.status(404).send('Personaje no encontrado')
+  if (!personaje) return res.render('listar.ejs', { personajes })
 
   const planeta = await getPlaneta(personaje.homeworld)
   res.render('mostrar', { personaje, planeta })

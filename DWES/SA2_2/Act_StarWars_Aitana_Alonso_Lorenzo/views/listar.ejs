@@ -8,13 +8,18 @@
   </head>
   <body>
     <canvas id="espacio"></canvas>
-    <h1>Personajes Star Wars</h1>
+    <h1>Galeria de Personajes Star Wars</h1>
 
-    <% if (personaje) { %>
-    <script>
-      window.location.href = '/starwars/<%= personaje.name %>'
-    </script>
-    <% } else { %>
+    <div class="regresar">
+      <a href="/">
+        <button>⬅ Buscador</button>
+      </a>
+    </div>
+
+    <% if (personajes.length === 0) { %>
+    <p>No se encontraron personajes. Mostrando galería completa.</p>
+    <% } %>
+
     <div class="galeria">
       <% personajes.forEach(p => { %>
       <a href="/starwars/<%= p.name %>">
@@ -23,7 +28,6 @@
       </a>
       <% }) %>
     </div>
-    <% } %>
 
     <script src="/app.js"></script>
   </body>
