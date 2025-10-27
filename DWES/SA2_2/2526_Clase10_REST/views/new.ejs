@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Comentario</title>
+    <base href="/">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glass-container">
+    <div class="card">
+      <h1>📝 Nuevo Comentario</h1>
+      <form action="/comentarios" method="POST" class="formulario">
+        <input type="text" placeholder="👤 Usuario..." name="usuario" required>
+        <textarea name="opinion" placeholder="✍️ Escribe tu opinión..." cols="30" rows="5" required></textarea>
+        <div class="botones">
+          <input type="submit" value="Guardar" class="btn">
+          <a href="/" class="btn-secondary">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

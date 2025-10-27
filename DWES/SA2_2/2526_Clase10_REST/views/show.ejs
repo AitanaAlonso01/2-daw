@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Comentario</title>
+    <base href="/">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glass-container">
+    <div class="card">
+      <h1>💬 Detalles (<%= comentario.id %>)</h1>      
+      <hr>
+      <div class="comentarios">        
+          <div class="comentario">            
+            <div class="usuario"><b><%= comentario.usuario %></b></div>
+            <p class="opinion"><%= comentario.opinion %></p>
+          </div>        
+      </div>
+      <div class="botones">
+          <a href="/" class="btn-secondary">Ir atrás</a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
