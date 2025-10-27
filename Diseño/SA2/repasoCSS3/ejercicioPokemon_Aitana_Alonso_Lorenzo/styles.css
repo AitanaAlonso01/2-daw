@@ -64,43 +64,6 @@ body {
   }
 }
 
-/* RAYQUAZA */
-.rayquaza {
-  width: 80px;
-  height: 74px;
-  background-image: url('./imgs/walk-rayquaza.png');
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 50%;
-  scale: 4;
-  animation: mover-giratina 20s linear infinite;
-  animation-delay: 0s, 0s, 9.5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  -webkit-animation: mover-giratina 20s linear infinite;
-}
-
-@keyframes mover-rayquaza {
-  0% {
-    top: -150px;
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  50% {
-    top: 20%;
-    opacity: 1;
-  }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    top: -150px;
-    opacity: 0;
-  }
-}
-
 /* GRENINJA */
 .greninja {
   width: 32px;
@@ -144,6 +107,52 @@ body {
     background-position: 0 0;
   }
   100% {
-    background-position: -480px 0; /* 15 frames × 32px */
+    background-position: -480px 0;
+  }
+}
+
+/* RAYQUAZA */
+.rayquaza {
+  width: 144px;
+  height: 89px;
+  background-image: url('./imgs/walk-rayquaza.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(2);
+  opacity: 0;
+
+  animation: walk-rayquaza 0.8s steps(4) infinite,
+    float-rayquaza 8s ease-in-out infinite;
+}
+
+@keyframes walk-rayquaza {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -576px 0;
+  }
+}
+
+@keyframes float-rayquaza {
+  0% {
+    transform: translateY(-120vh) scale(2);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(80px) scale(2);
+  }
+  70% {
+    transform: translateY(80px) scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(2);
+    opacity: 0;
   }
 }
