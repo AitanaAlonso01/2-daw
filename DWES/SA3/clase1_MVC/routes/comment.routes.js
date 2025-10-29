@@ -12,5 +12,14 @@ router.post('/', commentController.createComment) // POST - Crear un nuevo comen
 // Mostrar VISTA EJS show.ejs con un comentario específico
 router.get('/:id', commentController.findCommentById)
 
+// Mostrar VISTA EJS edit.ejs para editar un comentario (GET)
+router.get('/:id/edit', commentController.showEditComment)
+
+// PATCH - Updatear un comentario
+router.patch('/:id', commentController.editComment)
+
+// DELETE - Eliminar un comentario
+router.delete('/:id', commentController.deleteComment)
+
 //Exportar rutas para poder usar en el servidor - Siempre debe exportar las rutas (mejor al final del archivo)
 module.exports = router

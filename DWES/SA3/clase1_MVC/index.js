@@ -23,7 +23,9 @@ app.use(express.json())
 app.use(methodOverride('_method'))
 
 // DEFINIR RUTAS EN SERVER
+app.get('/', (req, res) => res.redirect('/comentarios')) // redireccionamos a la ruta /comentarios
 app.use('/comentarios', commentRoutes)
+app.get(/.*/, (req, res) => res.redirect('/comentarios')) // redireccionamos a la ruta /comentarios
 
 // Levantar el servidor
 app.listen(port, () => {
