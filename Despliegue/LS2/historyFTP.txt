@@ -1,0 +1,52 @@
+1  shutdown now
+2  sudo apt-get update
+3  sudo su
+4  exit
+5  exit
+6  ifconfig
+7  ip a
+8  apt install net-tools -y
+9  apt install net-tools
+10  sudo apt install net-tools
+11  clear
+12  ip a
+13  lsblk
+14  ls /media
+15  sudo mount /dev/cdrom /mnt
+16  cd /mnt/
+17  ls
+18  sudo sh VBoxLinuxAdditions.run
+19  sudo reboot
+20  lsmod | grep vbox
+21  shutdown now
+22  reboot
+23  ls /etc/default/
+24  ls /etc/default/useradd
+25  sudo su
+26  sudo apt-get install openssh-server
+27  sudo apt-get install nano iputils-ping
+28  sudo apt-get install ftp-server
+29  sudo apt update
+30  sudo apt upgrade
+31  sudo apt install proftpd
+32  clear
+33  sudo nano /etc/netplan/50-cloud-init.yaml
+34  sudo netplan apply
+35  sudo netplan generate
+36  sudo netplan apply
+37  shutdown now
+38  sudo nano /etc/host
+39  sudo nano /etc/hosts
+40  sudo nano /etc/hostname
+41  reboot
+42  sudo apt update
+43  sudo nslookup google.es
+44  sudo apt-get install dnstools
+45  sudo apt-get install dnsutils
+46  sudo nslookup google.es
+47  sudo apt-get install proftpd
+48  ftp 11.0.5.40
+49  sudo adduser aalser
+50  sudo passwd aalser
+51  init 0
+52  history

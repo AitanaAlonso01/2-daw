@@ -1,0 +1,65 @@
+1  shutdown now
+2  sudo apt-get update
+3  sudo su
+4  exit
+5  exit
+6  ifconfig
+7  ip a
+8  apt install net-tools -y
+9  apt install net-tools
+10  sudo apt install net-tools
+11  clear
+12  ip a
+13  lsblk
+14  ls /media
+15  sudo mount /dev/cdrom /mnt
+16  cd /mnt/
+17  ls
+18  sudo sh VBoxLinuxAdditions.run
+19  sudo reboot
+20  lsmod | grep vbox
+21  shutdown now
+22  reboot
+23  ls /etc/default/
+24  ls /etc/default/useradd
+25  sudo su
+26  shutdown now
+27  sudo apt-get update
+28  sudo apt-get install openssh-server
+29  sudo nano /etc/
+30  sudo nano /etc/netplan/50-cloud-init.yaml
+31  sudo apt-get install nano ping
+32  sudo apt-get install iputils-ping
+33  ip a
+34  sudo nano /etc/netplan/50-cloud-init.yaml
+35  sudo apt-get install net-tools
+36  sudo apt-get install iputils-ping
+37  sudo nano /etc/netplan/50-cloud-init.yaml
+38  shutdown now
+39  sudo nano /etc/netplan/50-cloud-init.yaml
+40  sudo apt-get install iputils-ping
+41  sudo apt-get install net-tools
+42  sudo apt-get install nano
+43  sudo nano /etc/netplan/50-cloud-init.yaml
+44  ping 11.0.5.10
+45  sudo apt update
+46  ping 11.0.5.10
+47  sudo netplan apply
+48  sudo nano /etc/netplan/50-cloud-init.yaml
+49  sudo netplan apply
+50  ping 11.0.5.10
+51  sudo nano /etc/hosts
+52  sudo nano /etc/hostname
+53  ip a
+54  reboot
+55  reboot
+56  sudo apt update
+57  shutdown now
+58  ping 8.8.8.8
+59  sudo apt update
+60  nslookup google.es
+61  sudo nslookup google.es
+62  sudo apt-get install dnsutils
+63  sudo nslookup google.es
+64  shutdown now
+65  history

@@ -1,0 +1,113 @@
+1  shutdown now
+    2  sudo apt-get update
+    3  sudo su
+    4  exit
+    5  exit
+    6  ifconfig
+    7  ip a
+    8  apt install net-tools -y
+    9  apt install net-tools
+   10  sudo apt install net-tools
+   11  clear
+   12  ip a
+   13  lsblk
+   14  ls /media
+   15  sudo mount /dev/cdrom /mnt
+   16  cd /mnt/
+   17  ls
+   18  sudo sh VBoxLinuxAdditions.run
+   19  sudo reboot
+   20  lsmod | grep vbox
+   21  shutdown now
+   22  reboot
+   23  ls /etc/default/
+   24  ls /etc/default/useradd
+   25  sudo su
+   26  clear
+   27  netplan
+   28  sudo vi /etc/hosts
+   29  sudo vi /etc/hostname
+   30  init 6
+   31  sudo reboot
+   32  ip a
+   33  sudo vi /etc/netplan/50-cloud-init.yaml
+   34  init 0
+   35  sudo init 0
+   36  ip a
+   37  sudo vi /etc/netplan/50-cloud-init.yaml
+   38  sudo netplan generate
+   39  sudo vi /etc/netplan/50-cloud-init.yaml
+   40  sudo netplan generate
+   41  sudo vi /etc/netplan/50-cloud-init.yaml
+   42  sudo netplan generate
+   43  sudo netplan apply
+   44  ip a
+   45  sudo vi /etc/netplan/50-cloud-init.yaml
+   46  ip a
+   47  clear
+   48  ip a
+   49  shutdown now
+   50  sudo sysctl -w net.ipv4.ip_forward=1
+   51  sudo nano /etc/systmctl
+   52  sudo nano /etc/sysctl.conf
+   53  echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.conf
+   54  sudo sysctl -p
+   55  sudo nano /etc/sysctl.conf
+   56  sudo apt-get iptables
+   57  sudo apt install iptables
+   58  sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+   59  sudo iptables -A FORWARD -i enp0s8 -o enp0s3 -j ACCEPT
+   60  sudo iptables -A FORWARD -i enp0s3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
+   61  sudo apt update
+   62  sudo apt install iptables-persistent
+   63  sudo netfilter-persistent save
+   64  sysctl net.ipv4.ip_forward
+   65  sudo iptables -L -v -n
+   66  sudo iptables -t nat -L -v -n
+   67  sudo apt-get install bind9 bind9-utils
+   68  sudo ufw allow bind9
+   69  sudo systemctl status bind9
+   70  sudo nano /etc/bind/named.conf.options
+   71  sudo systemctl restart bind9
+   72  systemctl status
+   73  sudo systemctl status bind9
+   74  sudo systemctl restart bind9
+   75  sudo systemctl status bind9
+   76  sudo journalctl -xeu bind9
+   77  sudo named-checkconf
+   78  sudo nano /etc/bind/named.conf.options
+   79  sudo named-checkconf
+   80  sudo systemctl restart bind9
+   81  sudo systemctl status bind9
+   82  sudo nano /etc/default/named
+   83  sudo systemctl restart bind9
+   84  sudo systemctl status bind9
+   85  ip aipipa
+   86  ip a
+   87  sudo apt update
+   88  ssh aalser@11.0.5.20
+   89  ip aç
+   90  ip a
+   91  sudo apt-get install nano
+   92  sudo apt update
+   93  sudo apt upgrade
+   94  sudo nano /etc/netplan/50-cloud-init.yaml
+   95  ip a
+   96  shutdown now
+   97  sudo apt-get install dnsutils
+   98  nslookup google.es
+   99  ip a
+  100  shutdown now
+  101  VBoxManage modifyvm "DNSServer" --natpf1 "ssh,tcp,,2222,,22"
+  102  q
+  103  quit
+  104  exit
+  105  VBoxManage modifyvm "ubuntuServerDNS" --natpf1 "ssh,tcp,,2222,,22"
+  106  shutdown
+  107  shutdown now
+  108  shtdown now
+  109  shutdown now
+  110  ssh aalser@11.0.5.40
+  111  ssh aalser@11.0.5.30
+  112  shutdown now
+  113  history

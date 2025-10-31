@@ -1,0 +1,61 @@
+1  shutdown now
+2  sudo apt-get update
+3  sudo su
+4  exit
+5  exit
+6  ifconfig
+7  ip a
+8  apt install net-tools -y
+9  apt install net-tools
+10  sudo apt install net-tools
+11  clear
+12  ip a
+13  lsblk
+14  ls /media
+15  sudo mount /dev/cdrom /mnt
+16  cd /mnt/
+17  ls
+18  sudo sh VBoxLinuxAdditions.run
+19  sudo reboot
+20  lsmod | grep vbox
+21  shutdown now
+22  reboot
+23  ls /etc/default/
+24  ls /etc/default/useradd
+25  sudo su
+26  shutdown now
+27  sudo su
+28  shutdown now
+29  shutdown now
+30  sudo apt-get install apache
+31  clear
+32  sudo apt update
+33  sudo nslookup google.es
+34  sudo apt-get install dnsutils
+35  sudo nslookup google.es
+36  sudo apt install apache2
+37  sudo systemctl status apache2
+38  sudo apt install openjdk-17-jdk -y
+39  java version
+40  java -version
+41  sudo groupadd tomcat
+42  sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+43  wget -O https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.13/bin/apache-tomcat-11.0.13.tar.gz
+44  wget –O https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.13/bin/apache-tomcat-11.0.13.tar.gz
+45  sudo mkdir /opt/tomcat
+46  sudo tar -xvzf apache-tomcat-11.0.13.tar.gz -C /opt/tomcat/ --strip-components=1
+47  sudo chown -R tomcat:tomcat /opt/tomcat
+48  sudo chmod g+x /opt/tomcat/conf
+49  sudo nano /opt/tomcat/conf/tomcat-users.xml
+50  sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml
+51  sudo nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
+52  sudo update-java-alternatives -l
+53  sudo nano /etc/systemd/system/tomcat.service
+54  sudo systemctl daemon-reload
+55  sudo systemctl enable --now tomcat
+56  sudo systemctl status tomcat
+57  sudo nano /opt/tomcat/conf/tomcat-users.xml
+58  sudo service tomcat restart
+59  sudo systemctl status tomcat
+60  shutdown now
+61  history
