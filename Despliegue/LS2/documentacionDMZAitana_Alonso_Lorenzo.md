@@ -24,12 +24,13 @@ Ejemplo de configuración:
 ````yaml
 network:
   version: 2
-  renderer: networkd
   ethernets:
-    enp0s3:   # NAT/Internet
-      dhcp4: true
-    enp0s8:   # DMZ (todas las VMs, incluido Linux Mint)
-      addresses: [192.168.50.1/24]
+    enp0s3:
+     dhcp4: true
+    enp0s8:
+      addresses:
+      - 11.0.5.10/24
+```
 
 
 Aplicar configuración:
@@ -61,7 +62,9 @@ sudo nano /etc/hosts
 
 _Hostname:_ DNSServer
 
-_Hosts:_ aalserDNS
+_Hosts:_
+127.0.0.1 localhost
+127.0.1.1 DSNServer
 
 Aplicar configuración:
 
@@ -151,27 +154,32 @@ sudo apt-get install bind9 bind9-utils -y
 sudo ufw allow bind9
 ```
 
-#### Archivo de configuración
+#### Configuración de BIND9 – named.conf.options
 
-Se editó el archivo /etc/bind/named.conf.options para definir los parámetros básicos:
+Archivo: `/etc/bind/named.conf.options`
 
 ```conf
 options {
-    directory "/var/cache/bind";
+        directory "/var/cache/bind";
 
-    recursion yes;
-    allow-recursion { 192.168.50.0/24; };
-    listen-on { 192.168.50.1; };
-    listen-on-v6 { none; };
+        // Escuchar en todas las interfaces IPv4
+        listen-on { any; };
 
-    forwarders {
-        8.8.8.8;
-        1.1.1.1;
-    };
+        // Permitir consultas desde localhost y red local
+        allow-query { any; };
 
-    dnssec-validation no;
+        // Redirigir peticiones externas a servidores públicos
+        forwarders {
+                8.8.8.8;
+                8.8.4.4;
+        };
+
+        // Desactivar si no es necesario
+        dnssec-validation no;
+
+        // Desactivar IPv6 (si no es necesaria)
+        //listen-on-v6 { none; };
 };
-
 ```
 
 #### Comprobaciones
@@ -240,15 +248,18 @@ Archivo editado varias veces: `/etc/netplan/50-cloud-init.yaml`
 ```yaml
 network:
   version: 2
-  renderer: networkd
   ethernets:
-    enp0s3: # Interfaz hacia DMZ
-      addresses: [192.168.50.30/24]
+    #enp0s3:
+    # dhcp4: true
+    enp0s8:
+      addresses:
+        - 11.0.5.20/24
       nameservers:
-        addresses: [192.168.50.1]
+        addresses:
+          - 11.0.5.10
       routes:
         - to: default
-          via: 192.168.50.1
+          via: 11.0.5.10
 ```
 
 ## Comprobar y aplicar configuración
@@ -270,9 +281,11 @@ sudo nano /etc/hosts
 
 #### Ejemplo de configuración:
 
-_Hostname:_ GitLabServer
+_Hostname:_ GITLABSRV
 
-_Hosts:_ aalserGitLab
+_Hosts:_
+127.0.0.1 localhost
+127.0.1.1 aalserGITLAB
 
 Aplicar configuración:
 
@@ -309,15 +322,18 @@ Archivo editado: `/etc/netplan/50-cloud-init.yaml`
 ```yaml
 network:
   version: 2
-  renderer: networkd
   ethernets:
-    enp0s3: # Interfaz hacia DMZ
-      addresses: [192.168.50.10/24]
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      addresses:
+        - 11.0.5.30/24
       nameservers:
-        addresses: [192.168.50.1]
+        addresses:
+          - 11.0.5.10
       routes:
         - to: default
-          via: 192.168.50.1
+          via: 11.0.5.10
 ```
 
 #### Aplicar los cambios
@@ -379,11 +395,14 @@ sudo chmod g+x /opt/tomcat/conf
 #### Ejemplo de usuario administrador en `tomcat-users.xml`
 
 ```xml
-<tomcat-users>
-  <role rolename="manager-gui"/>
-  <role rolename="admin-gui"/>
-  <user username="admin" password="admin123" roles="manager-gui,admin-gui"/>
-</tomcat-users>
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+<role rolename="manager-gui"/>
+<role rolename="admin-gui"/>
+<user username="aalser" password="aalser" roles="manager-gui,admin-gui"/>
+
 ```
 
 #### Crear servicio systemd
@@ -392,7 +411,7 @@ sudo chmod g+x /opt/tomcat/conf
 
 ```ini
 [Unit]
-Description=Apache Tomcat Web Application Container
+Description=Tomcat
 After=network.target
 
 [Service]
@@ -401,18 +420,22 @@ Type=forking
 User=tomcat
 Group=tomcat
 
-Environment="JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
-Environment="CATALINA_PID=/opt/tomcat/temp/tomcat.pid"
-Environment="CATALINA_HOME=/opt/tomcat"
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64"
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
 Environment="CATALINA_BASE=/opt/tomcat"
+Environment="CATALINA_HOME=/opt/tomcat"
+Environment="CATALINA_PID=/opt/tomcat/temp/tomcat.pid"
 Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
-Environment="JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom"
 
 ExecStart=/opt/tomcat/bin/startup.sh
 ExecStop=/opt/tomcat/bin/shutdown.sh
 
+RestartSec=10
+Restart=always
+
 [Install]
 WantedBy=multi-user.target
+
 ```
 
 #### Activar servicio
@@ -434,9 +457,11 @@ sudo nano /etc/hosts
 
 #### Ejemplo de configuración:
 
-_Hostname:_ WebServer
+_Hostname:_ WEBSERVER
 
-_Hosts:_ aalserWeb
+_Hosts:_
+127.0.0.1 localhost
+127.0.1.1 aalserWEBSRVR
 
 Aplicar configuración:
 
@@ -475,15 +500,18 @@ Archivo editado: `/etc/netplan/50-cloud-init.yaml`
 ```yaml
 network:
   version: 2
-  renderer: networkd
   ethernets:
-    enp0s3: # Interfaz hacia DMZ
-      addresses: [192.168.50.20/24]
+    # enp0s3:
+    # dhcp4: true
+    enp0s8:
+      addresses:
+        - 11.0.5.40/24
       nameservers:
-        addresses: [192.168.50.1]
+        addresses:
+          - 11.0.5.10
       routes:
         - to: default
-          via: 192.168.50.1
+          via: 11.0.5.10
 ```
 
 #### Aplicar los cambios
@@ -505,9 +533,11 @@ sudo nano /etc/hosts
 
 #### Ejemplo de configuración:
 
-_Hostname:_ FTPServer
+_Hostname:_ FTPSRV
 
-_Hosts:_ aalserFTP
+_Hosts:_
+127.0.0.1 localhost
+127.0.1.1 aalserFTP
 
 Aplicar configuración:
 
@@ -523,14 +553,53 @@ sudo systemctl status proftpd
 
 ### 5. Configuración básica de ProFTPD
 
-Archivo principal: `/etc/proftpd/proftpd.conf`
-
-Ejemplo de parámetros mínimos:
+Archivo: `/etc/proftpd/proftpd.conf`
 
 ```conf
-ServerName                      "FTP Server"
-DefaultRoot                     ~
-RequireValidShell               off
+  Include /etc/proftpd/modules.conf
+
+  UseIPv6 on
+  <IfModule mod_ident.c>
+    IdentLookups off
+  </IfModule>
+
+  ServerName "Debian"
+  ServerType standalone
+  DeferWelcome off
+  DefaultServer on
+  ShowSymlinks on
+
+  TimeoutNoTransfer 600
+  TimeoutStalled 600
+  TimeoutIdle 1200
+
+  DenyFilter \*.*/
+
+  # Jail de usuarios en su home (activar si se desea)
+  # DefaultRoot ~
+
+  # Permitir login aunque el usuario no tenga shell válida (activar si se desea)
+  # RequireValidShell off
+
+  Port 21
+  MaxInstances 30
+
+  User proftpd
+  Group nogroup
+
+  Umask 022 022
+  AllowOverwrite on
+
+  TransferLog /var/log/proftpd/xferlog
+  SystemLog /var/log/proftpd/proftpd.log
+
+  <IfModule mod_quotatab.c>
+  QuotaEngine off
+  </IfModule>
+
+  <IfModule mod_ratio.c>
+  Ratios off
+  </IfModule>
 ```
 
 Reiniciar servicio: `sudo systemctl restart proftpd`
@@ -556,4 +625,107 @@ sudo nslookup google.es
 
 ```bash
 ftp 192.168.50.20
+```
+
+## Cliente Linux Mint (interfaz)
+
+### 1. Preparación del sistema
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install net-tools iputils-ping nano -y
+```
+
+### 2. Configuración de red (Netplan)
+
+Archivo editado: `/etc/netplan/50-cloud-init.yaml`
+
+```yaml
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      addresses:
+        - 11.0.5.30/24
+      nameservers:
+        addresses:
+          - 11.0.5.10
+      routes:
+        - to: default
+          via: 11.0.5.10
+```
+
+#### Aplicar los cambios
+
+```bash
+sudo netplan generate
+sudo netplan apply
+ip a
+```
+
+### 3. Configuración de hostname y hosts
+
+Editar los archivos:
+
+```bash
+sudo nano /etc/hostname
+sudo nano /etc/hosts
+```
+
+#### Ejemplo de configuración:
+
+_Hostname:_ LINUXMINTCLIENT
+
+_Hosts:_
+127.0.0.1 localhost
+127.0.1.1 aalserLinuxMint
+
+Aplicar configuración:
+
+Reiniciar con `sudo reboot`.
+
+### 4. Acceso remoto (VirtualBox)
+
+#### Conexión por SSH desde el host
+
+```bash
+ssh usuario@127.0.0.1
+```
+
+### 5. Comprobar conectividad
+
+```bash
+sudo apt-get install dnsutils -y
+nslookup google.es
+```
+
+### 6. Comprobar conectividad a Apache y Apache Tomcat (por navegador)
+
+#### Apache:
+
+```bash
+http://127.0.0.1
+```
+
+#### Apache Tomcat:
+
+```bash
+http://127.0.0.1:8080
+```
+
+### 7. Comprobar conectividad a FTP (terminal y filezilla)
+
+#### FTP:
+
+```bash
+ftp 127.0.0.1
+```
+
+#### Filezilla:
+
+```bash
+sftp 127.0.0.1
 ```
