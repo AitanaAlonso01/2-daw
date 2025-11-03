@@ -726,8 +726,10 @@ ftp 127.0.0.1
 
 #### Filezilla:
 
+Instalar Filezilla por terminal:
+
 ```bash
-sftp 127.0.0.1
+sudo apt install filezilla -y
 ```
 
 ## Páginas Web de Ayuda
