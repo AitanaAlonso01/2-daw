@@ -645,8 +645,8 @@ Archivo editado: `/etc/netplan/50-cloud-init.yaml`
 network:
   version: 2
   ethernets:
-    enp0s3:
-      dhcp4: true
+    #enp0s3:
+    #  dhcp4: true
     enp0s8:
       addresses:
         - 11.0.5.30/24
@@ -729,3 +729,9 @@ ftp 127.0.0.1
 ```bash
 sftp 127.0.0.1
 ```
+
+## Páginas Web de Ayuda
+
+- [How to Install Apache Tomcat on Ubuntu 24.04 Cloud Servers](https://www.layerstack.com/resources/tutorials/how-to-install-apachetomcat-on-ubuntu24)
+
+- [Configura un servidor DNS con Bind9 en tu servidor Linux](https://www.redeszone.net/tutoriales/servidores/configurar-servidor-dns-bind-linux/)
