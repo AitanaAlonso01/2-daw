@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   background: #000;
-  width: 80%;
+  width: 70%;
 }
 
 /* Pantalla */
@@ -15,6 +15,9 @@
   font-size: 2.5rem;
   text-align: right;
   padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  font-weight: 200;
 }
 
 /* Botonera */
@@ -30,6 +33,8 @@
   border: 1px solid #222;
   background: #e0e0e0;
   cursor: default;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .btn:hover {
@@ -48,45 +53,4 @@
 
 #zero {
   flex: 1 0 50%;
-}
-
-/* 🔹 Breakpoints */
-@media (max-width: 900px) {
-  .calculator {
-    width: 320px;
-  }
-  .btn {
-    height: 70px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .calculator {
-    width: 280px;
-  }
-  .btn {
-    height: 60px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .calculator {
-    width: 240px;
-  }
-  .btn {
-    height: 55px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .calculator {
-    width: 200px;
-  } /* punto más cerrado */
-  .btn {
-    height: 50px;
-    font-size: 0.8rem;
-  }
 }
