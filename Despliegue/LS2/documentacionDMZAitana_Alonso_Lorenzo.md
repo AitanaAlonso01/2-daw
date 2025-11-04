@@ -27,10 +27,12 @@ sudo apt-get install nano
 ip a
 ```
 
-#### Ver por que DNS sale
+#### Ver por que por donde sale la DNS
+
+Para poner el nameserver y routes.
 
 ```bash
-
+resolvectl
 ```
 
 El archivo editado en varias ocasiones fue:
@@ -51,10 +53,10 @@ network:
         - 192.168.50.1/24
       nameservers:
         addresses:
-          - 11.0.5.10
+          - 11.0.2.3
       routes:
         - to: default
-          via: 11.0.5.10
+          via: 11.0.2.3
     enp0s8: # RED INTERNA
       addresses:
         - 11.0.5.20/24
