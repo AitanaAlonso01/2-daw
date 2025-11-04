@@ -93,9 +93,10 @@ console.log(texto18.split('').reverse().join(''))
 // Ejercicio 19: Contar cuántas veces aparece un carácter: Cuenta cuántas veces aparece la letra "a" en "banana".
 console.log('Ejercicio 19 - Contar cuántas veces aparece un carácter')
 let texto19 = 'banana'
-console.log(texto19.includes('a'))
+let contador = texto19.split('a').length - 1
+console.log(contador)
 
 // Ejercicio 20: Formatear un string con plantilla: Usa plantillas literales para mostrar: "Hola, mi nombre es Ana y tengo 25 años." usando variables nombre y edad.
 console.log('Ejercicio 20 - Formatear un string con plantilla')
-let texto20 = 'Hola, mi nombre es Ana y tengo 25 años.'
-console.log(texto20.replace('Ana', 'Ana'))
+let texto20 = 'Hola, mi nombre es Ana y tengo 19 años.'
+console.log(texto20.replace('Ana', 'Aitana'))
