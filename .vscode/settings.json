@@ -2,7 +2,7 @@
   // --- Apariencia ---
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.theme": "specific",
-  "material-icon-theme.folders.color": "#C9443B",
+  "material-icon-theme.folders.color": "#a82727",
   // "material-icon-theme.hidesExplorerArrows": true,
   // "workbench.activityBar.location": "bottom",
   "workbench.startupEditor": "none",
