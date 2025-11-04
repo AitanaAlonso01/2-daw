@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorador de Arquitecturas Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+    Chosen Palette: Paleta Neutra (Tailwind Grays) con acentos en Azul (Tailwind Blue).
+    Application Structure Plan: El diseño transforma el cuestionario lineal (el informe) en una aplicación de 3 pestañas: 1) Un 'Panel Principal' para sintetizar los pros/contras con una visualización (gráfico de radar), 2) Una sección de 'Conceptos Clave' para explorar cada arquitectura individualmente (usando las preguntas como definiciones, ventajas y mitos), y 3) Una 'Autoevaluación' que reimplementa el cuestionario de forma interactiva. Esta estructura prioriza la "exploración" y "comprensión" (como pide el prompt) sobre la simple evaluación, convirtiendo un test estático en una herramienta de aprendizaje dinámica.
+    Visualization & Content Choices:
+    1. Informe: Comparación implícita de 6 arquitecturas -> Objetivo: Sintetizar pros/contras -> Viz: Gráfico de Radar (Chart.js/Canvas) -> Interacción: Vista de resumen en el panel principal -> Justificación: El radar es ideal para comparar múltiples entidades (arquitecturas) a través de múltiples criterios (escalabilidad, complejidad, etc.).
+    2. Informe: Definiciones de conceptos (MVC, SPA, etc.) a través de preguntas/respuestas -> Objetivo: Explorar y organizar -> Viz: Bloques de contenido HTML filtrables -> Interacción: Clic en botones (JS) para mostrar/ocultar la definición, ventajas y "mitos" (basados en las respuestas incorrectas del cuestionario) de cada concepto -> Justificación: Permite una exploración autodirigida y reutiliza todo el contenido del informe.
+    3. Informe: Cuestionario estático de 10 preguntas -> Objetivo: Interactuar y autoevaluar -> Viz: Formulario HTML con JS -> Interacción: El usuario responde y un botón 'Corregir' (JS) valida las respuestas, muestra la puntuación y resalta las correctas/incorrectas -> Justificación: Transforma el informe estático en una herramienta interactiva con retroalimentación inmediata.
+    CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f4f7f6; /* Tono neutro claro */
+      }
+      .nav-btn {
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      .nav-btn.active {
+        background-color: #2563eb; /* blue-600 */
+        color: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .nav-btn:not(.active) {
+        background-color: #ffffff;
+        color: #374151; /* gray-700 */
+        border: 1px solid #d1d5db; /* gray-300 */
+      }
+      .nav-btn:not(.active):hover {
+        background-color: #f9fafb; /* gray-50 */
+      }
+      .concept-btn {
+        transition: all 0.3s ease;
+      }
+      .concept-btn.active {
+        background-color: #1d4ed8; /* blue-700 */
+        color: white;
+        border-color: #1d4ed8;
+      }
+      .concept-btn:not(.active) {
+        background-color: #ffffff;
+        color: #3b82f6; /* blue-500 */
+        border: 1px solid #3b82f6;
+      }
+      .concept-btn:not(.active):hover {
+        background-color: #eff6ff; /* blue-50 */
+      }
+      .concept-panel,
+      .page {
+        display: none; /* Ocultos por defecto */
+      }
+      .page.active,
+      .concept-panel.active {
+        display: block; /* Visibles cuando están activos */
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 96;
+        max-height: 500px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 500px;
+        }
+      }
+      .question-block {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        background-color: #ffffff;
+      }
+      .question-block.correct {
+        border-left: 5px solid #10b981; /* green-500 */
+        background-color: #f0fdf4; /* green-50 */
+      }
+      .question-block.incorrect {
+        border-left: 5px solid #ef4444; /* red-500 */
+        background-color: #fef2f2; /* red-50 */
+      }
+      .question-block label:hover {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <div class="max-w-7xl mx-auto p-4 md:p-8">
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          Explorador Interactivo de Arquitecturas Web
+        </h1>
+        <p class="text-lg text-gray-600">
+          Una herramienta basada en tu cuestionario para explorar y entender los
+          patrones de software.
+        </p>
+      </header>
+
+      <nav
+        class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mb-8"
+      >
+        <button
+          id="nav-dash"
+          class="nav-btn active px-4 py-2 rounded-lg w-full sm:w-auto"
+        >
+          Panel Principal
+        </button>
+        <button
+          id="nav-concepts"
+          class="nav-btn px-4 py-2 rounded-lg w-full sm:w-auto"
+        >
+          Conceptos Clave
+        </button>
+        <button
+          id="nav-quiz"
+          class="nav-btn px-4 py-2 rounded-lg w-full sm:w-auto"
+        >
+          Autoevaluación
+        </button>
+      </nav>
+
+      <main>
+        <!-- ====== Página 1: Panel Principal ====== -->
+        <section id="page-dash" class="page active">
+          <p
+            class="text-base text-gray-700 mb-6 bg-white p-4 rounded-lg shadow-sm"
+          >
+            Bienvenido al panel principal. Esta sección resume las arquitecturas
+            clave mencionadas en tu cuestionario. Utiliza el gráfico de radar
+            para comparar visualmente sus características de alto nivel y revisa
+            las conclusiones principales para afianzar tu comprensión general.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h2 class="text-2xl font-semibold mb-4 text-gray-900">
+                Comparativa de Arquitecturas
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Este gráfico de radar compara las 6 arquitecturas clave en cinco
+                métricas:
+                <span class="font-medium">Escalabilidad</span> (capacidad de
+                crecer),
+                <span class="font-medium">Mantenibilidad</span> (facilidad de
+                corrección y mejora),
+                <span class="font-medium">Acoplamiento</span> (dependencia entre
+                componentes),
+                <span class="font-medium">Complejidad Inicial</span> (dificultad
+                para empezar) y
+                <span class="font-medium">Aislamiento de Fallos</span>.
+              </p>
+              <div class="chart-container h-96 md:h-[500px] max-h-[500px]">
+                <canvas id="architecture-radar-chart"></canvas>
+              </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h2 class="text-2xl font-semibold mb-4 text-gray-900">
+                Principales Conclusiones
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Basado en las respuestas correctas del cuestionario, estos son
+                los puntos clave a recordar:
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <span class="text-blue-600 font-bold mr-3 mt-1">✔</span>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">
+                      Separación de Responsabilidades
+                    </h3>
+                    <p class="text-gray-600">
+                      Tanto <b>MVC</b> como la arquitectura de <b>3 Capas</b> y
+                      <b>Cliente-Servidor</b> se basan en separar la lógica de
+                      negocio de la presentación (UI).
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 font-bold mr-3 mt-1">✔</span>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">
+                      Independencia de Microservicios
+                    </h3>
+                    <p class="text-gray-600">
+                      La ventaja clave de los <b>Microservicios</b> es su
+                      capacidad de ser desplegados, escalados y mantenidos de
+                      forma independiente.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 font-bold mr-3 mt-1">✔</span>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">
+                      Experiencia de Usuario en SPA
+                    </h3>
+                    <p class="text-gray-600">
+                      Las <b>SPAs</b> (Single Page Applications) mejoran la UX
+                      al cargar la página una sola vez y actualizar el contenido
+                      dinámicamente, sin recargas completas.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-600 font-bold mr-3 mt-1">✔</span>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">
+                      El Coste del Monolito
+                    </h3>
+                    <p class="text-gray-600">
+                      Las arquitecturas <b>Monolíticas</b> son más simples al
+                      inicio, pero su alto acoplamiento dificulta la
+                      escalabilidad y el mantenimiento a largo plazo.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====== Página 2: Conceptos Clave ====== -->
+        <section id="page-concepts" class="page">
+          <p
+            class="text-base text-gray-700 mb-6 bg-white p-4 rounded-lg shadow-sm"
+          >
+            Explora cada concepto individualmente. Haz clic en un botón para ver
+            su definición, ventajas y los "mitos" comunes (basados en las
+            opciones incorrectas del cuestionario) asociados con él.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button class="concept-btn active" data-concept="concept-mvc">
+              MVC
+            </button>
+            <button class="concept-btn" data-concept="concept-spa">SPA</button>
+            <button class="concept-btn" data-concept="concept-microservicios">
+              Microservicios
+            </button>
+            <button class="concept-btn" data-concept="concept-monolitica">
+              Monolítica
+            </button>
+            <button class="concept-btn" data-concept="concept-3capas">
+              3 Capas
+            </button>
+            <button class="concept-btn" data-concept="concept-clientserver">
+              Cliente-Servidor
+            </button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <!-- Concepto: MVC -->
+            <div id="concept-mvc" class="concept-panel active">
+              <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                Patrón MVC (Modelo-Vista-Controlador)
+              </h3>
+              <p class="text-lg text-gray-700 mb-4">
+                El patrón MVC separa una aplicación en tres componentes lógicos
+                principales para gestionar la complejidad.
+              </p>
+              <div class="space-y-3">
+                <p>
+                  <strong
+                    ><span class="text-green-600"
+                      >Definición (Q9):</span
+                    ></strong
+                  >
+                  Separa la lógica de negocio (<b>Modelo</b>), la interfaz de
+                  usuario (<b>Vista</b>) y el control de flujo
+                  (<b>Controlador</b>).
+                </p>
+                <p>
+                  <strong
+                    ><span class="text-green-600">Hecho (Q4):</span></strong
+                  >
+                  El <b>Modelo</b> es el componente que gestiona los datos y la
+                  lógica de negocio.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q3):</span></strong>
+                  El Modelo <b>no</b> se encarga de mostrar los datos al
+                  usuario; esa es la tarea de la Vista.
+                </p>
+              </div>
+            </div>
+            <!-- Concepto: SPA -->
+            <div id="concept-spa" class="concept-panel">
+              <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                SPA (Single Page Application)
+              </h3>
+              <p class="text-lg text-gray-700 mb-4">
+                Una aplicación web que carga una única página HTML y actualiza
+                el contenido dinámicamente.
+              </p>
+              <div class="space-y-3">
+                <p>
+                  <strong
+                    ><span class="text-green-600">Ventaja (Q1):</span></strong
+                  >
+                  Mejoran la experiencia del usuario (UX) al reducir los tiempos
+                  de carga, ya que no se recarga toda la página.
+                </p>
+                <p>
+                  <strong
+                    ><span class="text-green-600"
+                      >Definición (Q8):</span
+                    ></strong
+                  >
+                  Carga una sola página HTML y actualiza el contenido de forma
+                  dinámica.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q3):</span></strong>
+                  Las SPAs <b>no</b> requieren que el servidor renderice cada
+                  vista antes de enviarla; el renderizado ocurre en el cliente.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q10):</span></strong>
+                  En una SPA, un clic del usuario <b>no</b> genera una nueva
+                  solicitud de página completa (solo solicita datos).
+                </p>
+              </div>
+            </div>
+            <!-- Concepto: Microservicios -->
+            <div id="concept-microservicios" class="concept-panel">
+              <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                Arquitectura de Microservicios
+              </h3>
+              <p class="text-lg text-gray-700 mb-4">
+                Un enfoque arquitectónico que estructura una aplicación como una
+                colección de servicios pequeños y autónomos.
+              </p>
+              <div class="space-y-3">
+                <p>
+                  <strong
+                    ><span class="text-green-600">Ventaja (Q1):</span></strong
+                  >
+                  Cada microservicio puede ser desplegado, escalado y mantenido
+                  de forma independiente.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q5):</span></strong>
+                  Los microservicios <b>no</b> tienen que estar todos escritos
+                  en el mismo lenguaje de programación (pueden ser políglotas).
+                </p>
+              </div>
+            </div>
+            <!-- Concepto: Monolítica -->
+            <div id="concept-monolitica" class="concept-panel">
+              <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                Arquitectura Monolítica
+              </h3>
+              <p class="text-lg text-gray-700 mb-4">
+                Una arquitectura de software tradicional donde toda la
+                aplicación se construye y despliega como una única unidad.
+              </p>
+              <div class="space-y-3">
+                <p>
+                  <strong
+                    ><span class="text-green-600"
+                      >Definición (Q2):</span
+                    ></strong
+                  >
+                  El despliegue de una aplicación monolítica se realiza como una
+                  única unidad.
+                </p>
+                <p>
+                  <strong
+                    ><span class="text-green-600">Ventaja (Q6):</span></strong
+                  >
+                  Las arquitecturas monolíticas son más simples de desarrollar
+                  en las etapas iniciales.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q7):</span></strong>
+                  Los módulos de un monolito <b>no</b> se ejecutan en servidores
+                  distintos; se ejecutan todos juntos.
+                </p>
+              </div>
+            </div>
+            <!-- Concepto: 3 Capas -->
+            <div id="concept-3capas" class="concept-panel">
+              <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                Arquitectura de 3 Capas
+              </h3>
+              <p class="text-lg text-gray-700 mb-4">
+                Un patrón que separa la aplicación en Presentación, Lógica de
+                Negocio y Acceso a Datos.
+              </p>
+              <div class="space-y-3">
+                <p>
+                  <strong
+                    ><span class="text-green-600">Ventaja (Q7):</span></strong
+                  >
+                  Separar las capas mejora la mantenibilidad y la escalabilidad
+                  del sistema.
+                </p>
+                <p>
+                  <strong
+                    ><span class="text-green-600"
+                      >Definición (Q8):</span
+                    ></strong
+                  >
+                  Divide la aplicación en Presentación, Lógica de Negocio y
+                  Acceso a Datos.
+                </p>
+                <p>
+                  <strong
+                    ><span class="text-green-600"
+                      >Definición (Q2):</span
+                    ></strong
+                  >
+                  La capa de Lógica de Negocio contiene las reglas y procesos
+                  que rigen la aplicación.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q4):</span></strong>
+                  La capa de Acceso a Datos <b>no</b> se comunica directamente
+                  con el usuario (solo con la capa de Lógica de Negocio).
+                </p>
+              </div>
+            </div>
+            <!-- Concepto: Cliente-Servidor -->
+            <div id="concept-clientserver" class="concept-panel">
+              <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                Arquitectura Cliente-Servidor
+              </h3>
+              <p class="text-lg text-gray-700 mb-4">
+                Un modelo de aplicación distribuida que divide las tareas entre
+                los proveedores de recursos (servidores) y los solicitantes de
+                servicios (clientes).
+              </p>
+              <div class="space-y-3">
+                <p>
+                  <strong
+                    ><span class="text-green-600"
+                      >Definición (Q9):</span
+                    ></strong
+                  >
+                  El cliente solicita servicios y el servidor los proporciona.
+                </p>
+                <p>
+                  <strong
+                    ><span class="text-green-600">Ventaja (Q10):</span></strong
+                  >
+                  Este modelo permite separar la lógica de negocio (en el
+                  servidor) de la presentación (en el cliente).
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q5):</span></strong>
+                  El servidor <b>no</b> depende del cliente para ejecutar sus
+                  procesos internos.
+                </p>
+                <p>
+                  <strong><span class="text-red-600">Mito (Q6):</span></strong>
+                  El cliente <b>no</b> tiene acceso directo a la base de datos
+                  sin pasar por el servidor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====== Página 3: Autoevaluación ====== -->
+        <section id="page-quiz" class="page">
+          <p
+            class="text-base text-gray-700 mb-6 bg-white p-4 rounded-lg shadow-sm"
+          >
+            Es hora de poner a prueba tus conocimientos. Responde las 10
+            preguntas extraídas de tu cuestionario. Cuando termines, haz clic en
+            "Corregir Examen" para ver tu puntuación y las respuestas correctas.
+          </p>
+
+          <div
+            id="quiz-results"
+            class="mb-6 p-4 rounded-lg text-center font-semibold text-lg"
+            style="display: none"
+          ></div>
+
+          <form id="quiz-form">
+            <!-- Las preguntas se generarán aquí con JavaScript -->
+          </form>
+
+          <button
+            id="submit-quiz-btn"
+            class="w-full sm:w-auto bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all shadow-md"
+          >
+            Corregir Examen
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // --- Datos del Cuestionario ---
+        const quizData = [
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'En una arquitectura Microservicios: Cada microservicio puede ser desplegado, escalado y mantenido de forma independiente.',
+              'Las SPAs mejoran la experiencia del usuario al reducir los tiempos de carga.',
+              'Las opciones 1 y 2 son correctas.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+            ],
+            correct: 2, // Índice de "Las opciones 1 y 2 son correctas."
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'El despliegue de una aplicación monolítica se realiza como una única unidad.',
+              'En una arquitectura 3 capas: la capa de lógica de negocio contiene las reglas y procesos que rigen la aplicación.',
+              'Las opciones 1 y 2 son correctas.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+            ],
+            correct: 2, // Índice de "Las opciones 1 y 2 son correctas."
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'En una arquitectura SPA: las SPA requieren que el servidor renderice cada vista antes de enviarla al cliente.',
+              'Las opciones 1 y 2 son correctas.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'En una arquitectura MVC: el modelo se encarga de mostrar los datos al usuario.',
+            ],
+            correct: 2, // Índice de "Ninguna de las opciones..." (Ambas 1 y 4 son falsas)
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'Las opciones 1 y 2 son correctas.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'En una arquitectura MVC: el modelo gestiona los datos y la lógica de negocio.',
+              'En una arquitectura 3 capas: la capa de acceso a datos se comunica directamente con el usuario.',
+            ],
+            correct: 2, // Índice de "En una arquitectura MVC..."
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'En una arquitectura Cliente - Servidor: el servidor depende del cliente para ejecutar sus procesos internos.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'Las opciones 1 y 2 son correctas.',
+              'En una arquitectura Microservicios: todos los microservicios deben estar escritos en el mismo lenguaje de programación.',
+            ],
+            correct: 1, // Índice de "Ninguna de las opciones..." (Ambas 1 y 4 son falsas)
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'En una arquitectura Cliente - Servidor: el cliente tiene acceso directo a la base de datos sin pasar por el servidor.',
+              'Las arquitecturas monolíticas son más simples de desarrollar en etapas iniciales.',
+              'Las opciones 1 y 2 son correctas.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+            ],
+            correct: 1, // Índice de "Las arquitecturas monolíticas..."
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'En una arquitectura monolítica: cada módulo de una arquitectura monolítica se ejecuta en un servidor distinto.',
+              'Las opciones 1 y 2 son correctas.',
+              'En una arquitectura 3 capas: separar las capas mejora la mantenibilidad y escalabilidad del sistema.',
+            ],
+            correct: 3, // Índice de "En una arquitectura 3 capas..."
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'En una arquitectura SPA: carga una sola página HTML y actualiza dinámicamente el contenido sin recargar toda la página.',
+              'La arquitectura de 3 capas divide la aplicación en presentación, lógica de negocio y acceso a datos.',
+              'Las opciones 1 y 2 son correctas.',
+            ],
+            correct: 3, // Índice de "Las opciones 1 y 2 son correctas."
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'En la arquitectura cliente-servidor, el cliente solicita servicios y el servidor los proporciona.',
+              'El patrón MVC separa la lógica de negocio, la interfaz de usuario y el control de flujo.',
+              'Las opciones 1 y 2 son correctas.',
+            ],
+            correct: 3, // Índice de "Las opciones 1 y 2 son correctas." (Ambas 2 y 3 son correctas)
+          },
+          {
+            question:
+              'De las siguientes opciones, selecciona la opción correcta:',
+            options: [
+              'El modelo cliente-servidor permite separar la lógica de negocio de la presentación.',
+              'Ninguna de las opciones (Opción 1, 2 y 3) son correctas.',
+              'En una SPA, cada clic del usuario genera una nueva solicitud de página completa al servidor.',
+              'Las opciones 1 y 2 son correctas.',
+            ],
+            correct: 0, // Índice de "El modelo cliente-servidor..."
+          },
+        ]
+
+        // --- Lógica de Navegación Principal ---
+        const navButtons = document.querySelectorAll('.nav-btn')
+        const pages = document.querySelectorAll('.page')
+
+        navButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetPage = btn.id.replace('nav-', 'page-')
+
+            pages.forEach(p => p.classList.remove('active'))
+            document.getElementById(targetPage).classList.add('active')
+
+            navButtons.forEach(b => b.classList.remove('active'))
+            btn.classList.add('active')
+          })
+        })
+
+        // --- Lógica de Navegación de Conceptos ---
+        const conceptButtons = document.querySelectorAll('.concept-btn')
+        const conceptPanels = document.querySelectorAll('.concept-panel')
+
+        conceptButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetPanel = btn.dataset.concept
+
+            conceptPanels.forEach(p => p.classList.remove('active'))
+            document.getElementById(targetPanel).classList.add('active')
+
+            conceptButtons.forEach(b => b.classList.remove('active'))
+            btn.classList.add('active')
+          })
+        })
+
+        // --- Lógica del Gráfico Radar ---
+        const ctx = document
+          .getElementById('architecture-radar-chart')
+          .getContext('2d')
+        new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: [
+              'Escalabilidad',
+              'Mantenibilidad',
+              'Aislamiento de Fallos',
+              'Bajo Acoplamiento',
+              'Baja Complejidad Inicial',
+            ],
+            datasets: [
+              {
+                label: 'Microservicios',
+                data: [5, 4, 5, 5, 1],
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                borderColor: 'rgba(59, 130, 246, 1)',
+                borderWidth: 2,
+              },
+              {
+                label: 'Monolítica',
+                data: [2, 2, 1, 1, 5],
+                backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                borderColor: 'rgba(239, 68, 68, 1)',
+                borderWidth: 2,
+              },
+              {
+                label: '3 Capas',
+                data: [3, 4, 3, 4, 3],
+                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                borderColor: 'rgba(16, 185, 129, 1)',
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            scales: {
+              r: {
+                angleLines: {
+                  color: '#d1d5db', // gray-300
+                },
+                grid: {
+                  color: '#e5e7eb', // gray-200
+                },
+                pointLabels: {
+                  font: {
+                    size: 13,
+                    weight: '500',
+                  },
+                  color: '#1f2937', // gray-800
+                },
+                ticks: {
+                  backdropColor: '#f4f7f6',
+                  color: '#4b5563', // gray-600
+                  beginAtZero: true,
+                  max: 5,
+                  min: 0,
+                  stepSize: 1,
+                },
+              },
+            },
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: {
+                  color: '#1f2937',
+                },
+              },
+            },
+          },
+        })
+
+        // --- Lógica de Autoevaluación (Quiz) ---
+        const quizForm = document.getElementById('quiz-form')
+        const submitQuizBtn = document.getElementById('submit-quiz-btn')
+        const quizResults = document.getElementById('quiz-results')
+
+        function loadQuiz() {
+          let quizHTML = ''
+          quizData.forEach((item, qIndex) => {
+            quizHTML += `<div class="question-block" id="q-block-${qIndex}">`
+            quizHTML += `<p class="text-lg font-semibold text-gray-800 mb-4">Pregunta ${
+              qIndex + 1
+            }: ${item.question}</p>`
+            quizHTML += `<div class="space-y-2">`
+            item.options.forEach((opt, oIndex) => {
+              quizHTML += `
+                            <label for="q${qIndex}_o${oIndex}" class="block p-3 rounded-lg border border-gray-200 cursor-pointer hover:bg-gray-50 transition-all">
+                                <input type="radio" name="q${qIndex}" id="q${qIndex}_o${oIndex}" value="${oIndex}" class="mr-3 text-blue-600 focus:ring-blue-500">
+                                <span class="text-gray-700">${opt}</span>
+                            </label>
+                        `
+            })
+            quizHTML += `</div></div>`
+          })
+          quizForm.innerHTML = quizHTML
+        }
+
+        function checkQuiz(e) {
+          e.preventDefault()
+          let score = 0
+          const formData = new FormData(quizForm)
+
+          quizData.forEach((item, qIndex) => {
+            const userAnswer = formData.get(`q${qIndex}`)
+            const questionBlock = document.getElementById(`q-block-${qIndex}`)
+
+            questionBlock.classList.remove('correct', 'incorrect')
+
+            if (userAnswer == item.correct) {
+              score++
+              questionBlock.classList.add('correct')
+            } else if (userAnswer !== null) {
+              questionBlock.classList.add('incorrect')
+            }
+
+            // Deshabilitar inputs después de corregir
+            questionBlock
+              .querySelectorAll('input[type="radio"]')
+              .forEach(radio => {
+                radio.disabled = true
+              })
+          })
+
+          quizResults.innerHTML = `Tu Puntuación: <span class="text-blue-600 text-2xl">${score}</span> / ${quizData.length}`
+          quizResults.style.display = 'block'
+          quizResults.classList.add(score > 6 ? 'bg-green-100' : 'bg-red-100')
+          quizResults.classList.add(
+            score > 6 ? 'text-green-800' : 'text-red-800'
+          )
+
+          submitQuizBtn.textContent = 'Examen Corregido'
+          submitQuizBtn.disabled = true
+        }
+
+        loadQuiz()
+        submitQuizBtn.addEventListener('click', checkQuiz)
+      })
+    </script>
+  </body>
+</html>
