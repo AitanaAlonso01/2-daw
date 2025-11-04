@@ -21,6 +21,18 @@ sudo apt-get install nano
 
 ### 2. Configuración de red (Netplan)
 
+#### Comprobar IP
+
+```bash
+ip a
+```
+
+#### Ver por que DNS sale
+
+```bash
+
+```
+
 El archivo editado en varias ocasiones fue:
 `/etc/netplan/50-cloud-init.yaml`
 
@@ -33,11 +45,21 @@ Ejemplo de configuración:
 network:
   version: 2
   ethernets:
-    enp0s3:
-     dhcp4: true
-    enp0s8:
+    enp0s3: # NAT
+      # dhcp4: true
       addresses:
-      - 11.0.5.10/24
+        - 192.168.50.1/24
+      nameservers:
+        addresses:
+          - 11.0.5.10
+      routes:
+        - to: default
+          via: 11.0.5.10
+    enp0s8: # RED INTERNA
+      addresses:
+        - 11.0.5.20/24
+    enp0s9: # BRIDGE
+     dhcp4: true
 ```
 
 
