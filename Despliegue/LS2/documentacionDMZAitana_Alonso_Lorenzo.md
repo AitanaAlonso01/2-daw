@@ -1,5 +1,13 @@
 # 📘 Documentación de la DMZ
 
+# Índice
+
+1. [Servidor DNS + Firewall](#servidor-dns--firewall)
+2. [Servidor GitLab (host en DMZ, sin instalación de GitLab)](#servidor-gitlab-host-en-dmz-sin-instalación-de-gitlab)
+3. [Servidor Web (Apache + Tomcat)](#servidor-web-apache--tomcat)
+4. [Servidor FTP (ProFTPD)](#servidor-ftp-proftpd)
+5. [Cliente Linux Mint (interfaz)](#cliente-linux-mint-interfaz)
+
 ## Servidor DNS + Firewall
 
 ### 1. Preparación del sistema
@@ -732,7 +740,7 @@ Instalar Filezilla por terminal:
 sudo apt install filezilla -y
 ```
 
-## Páginas Web de Ayuda
+# Páginas Web de Ayuda
 
 - [How to Install Apache Tomcat on Ubuntu 24.04 Cloud Servers](https://www.layerstack.com/resources/tutorials/how-to-install-apachetomcat-on-ubuntu24)
 
