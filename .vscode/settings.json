@@ -16,7 +16,7 @@
   "explorer.confirmPasteNative": false,
   "window.commandCenter": false,
   "window.nativeTabs": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "editor.smoothScrolling": true,
   // --- Editor: Fuente y estilos ---
   "editor.fontFamily": "FiraCode Nerd Font, monospace",
