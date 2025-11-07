@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nueva linea de pedido</title>
+  </head>
+  <body>
+    <h1>LINEA DE PEDIDO PARA: <%= pedido.id_pedido %></h1>
+    <hr />
+    <form action="/pedidos/<%= pedido.id_pedido %>/newline" method="POST">
+      <label for="producto">Producto:</label>
+      <input type="text" name="producto" id="producto" />
+      <br />
+      <label for="precio_und">Precio Und (€):</label>
+      <input type="number" name="precio_und" id="precio_und" />
+      <br />
+      <label for="cantidad">Cantidad: </label>
+      <input type="number" name="cantidad" id="cantidad" />
+      <br />
+      <label for="descuento">Descuento (%):</label>
+      <input type="number" name="descuento" id="descuento" />
+
+      <hr />
+      <button type="submit">Guardar Pedido</button>
+      <a href="/pedidos">Back to Index</a>
+  </body>
+</html>

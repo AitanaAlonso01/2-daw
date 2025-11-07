@@ -1,0 +1,53 @@
+[
+  {
+    "id_pedido": "e38b7002-dc38-4f95-84da-9c1bd713c7f0",
+    "cliente": "POSIZIONA",
+    "fecha_pedido": "2022-11-04",
+    "lineas_pedido": [
+      {
+        "producto": "Teclado",
+        "precio_und": 28.7,
+        "cantidad": 3,
+        "descuento": 0.1
+      },
+      {
+        "producto": "Monitor",
+        "precio_und": 255.95,
+        "cantidad": 5,
+        "descuento": 0.2
+      }
+    ]
+  },
+  {
+    "id_pedido": "934132f0-b7b0-4777-9c5b-c25fbbbd009a",
+    "cliente": "GRUPO DELFIN",
+    "fecha_pedido": "2022-10-24",
+    "lineas_pedido": [
+      {
+        "producto": "Altavoces",
+        "precio_und": 58.1,
+        "cantidad": 2,
+        "descuento": 0
+      },
+      {
+        "producto": "Monitor",
+        "precio_und": 255.95,
+        "cantidad": 5,
+        "descuento": 0.1
+      }
+    ]
+  },
+  {
+    "id_pedido": "853accf5-d565-4d6f-a24a-da025d7e4aa8",
+    "cliente": "EVERIS",
+    "fecha_pedido": "2022-09-21",
+    "lineas_pedido": [
+      {
+        "producto": "Teclado",
+        "precio_und": 28.7,
+        "cantidad": 22,
+        "descuento": 0.3
+      }
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show</title>
+  </head>
+  <body>
+    <h1>ID Pedido: <%= pedido.id_pedido %></h1>
+    <h2>Cliente: <%= pedido.cliente %> - FECHA: <%= pedido.fecha_pedido %></h2>
+
+    <hr />
+
+    <h3><i>SUBTOTAL:</i></h3>
+    <h3><i>IVA:</i></h3>
+    <h3>TOTAL:</h3>
+
+    <hr />
+
+    <h1>LINEAS DE PEDIDO</h1>
+    <button type="button" href="/pedidos/<%= pedido.id_pedido %>/newline">
+      Nueva Línea de Pedido
+    </button>
+
+    <hr />
+
+    <ul>
+      <% pedido.lineas_pedido.forEach(l => { %>
+      <li>
+        <p>
+          <b><%= l.producto %> </b>- <%= l.precio_und %> (€) - <%= l.cantidad %>
+          Und(s) - <%= l.descuento %> (%) - Importe Total: <%= l.precio_und *
+          l.cantidad * (1 - l.descuento / 100) %>
+        </p>
+      </li>
+    </ul>
+
+    <hr />
+
+    <a href="/pedidos">Volver al Listado</a>
+    <a href="/pedidos/<%= pedido.id_pedido %>/edit">Editar</a>
+
+    <button>Eliminar Pedido</button>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar pedido</title>
+  </head>
+  <body>
+    <h1>Editar Pedido</h1>
+    <form action="/pedidos/<%= pedido.id_pedido %>" method="POST">
+      <label for="cliente">Cliente:</label>
+      <input
+        type="text"
+        name="cliente"
+        id="cliente"
+        value="<%= pedido.cliente %>"
+      />
+      <br />
+      <label for="fecha_pedido">Fecha Pedido:</label>
+      <input
+        type="date"
+        name="fecha_pedido"
+        id="fecha_pedido"
+        value="<%= pedido.fecha_pedido %>"
+      />
+
+      <button type="submit">Guardar Cambios</button>
+      <a href="/pedidos">Cancelar</a>
+    </form>
+  </body>
+</html>

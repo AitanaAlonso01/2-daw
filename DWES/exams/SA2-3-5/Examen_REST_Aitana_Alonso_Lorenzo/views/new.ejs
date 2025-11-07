@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo pedido</title>
+  </head>
+  <body>
+    <h1>Crear un nuevo pedido</h1>
+    <form action="/pedidos" method="POST">
+      <label for="cliente">Cliente:</label>
+      <input type="text" name="cliente" id="cliente" />
+      <br />
+      <label for="fecha_pedido">Fecha Pedido:</label>
+      <input type="date" name="fecha_pedido" id="fecha_pedido" />
+
+      <h1>LINEA DE PEDIDO</h1>
+      <hr />
+      <label for="producto">Producto:</label>
+      <input type="text" name="producto" id="producto" />
+      <br />
+      <label for="precio_und">Precio Und (€):</label>
+      <input type="number" name="precio_und" id="precio_und" />
+      <br />
+      <label for="cantidad">Cantidad: </label>
+      <input type="number" name="cantidad" id="cantidad" />
+      <br />
+      <label for="descuento">Descuento (%):</label>
+      <input type="number" name="descuento" id="descuento" />
+
+      <hr />
+      <button type="submit">Guardar Pedido</button>
+    </form>
+    <a href="/pedidos">Volver al Listado</a>
+  </body>
+</html>
