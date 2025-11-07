@@ -1,121 +1,250 @@
-# Guía MVC en Node.js con Express y EJS
+# Ayuda para MVC
 
-## 📌 ¿Qué es MVC?
+## ¿Qué es MVC?
 
-El patrón **Modelo-Vista-Controlador (MVC)** organiza una aplicación en tres capas:
+MVC es un patrón de diseño de software que se utiliza para organizar el código de una aplicación. MVC se compone de tres componentes principales: Modelo (o Entidad), Vista (o View) y Controlador (o Control).
 
-- **Modelo**: gestiona los datos y la lógica de negocio.
-- **Vista**: muestra la información al usuario (plantillas EJS).
-- **Controlador**: recibe las peticiones, usa el modelo y decide qué vista renderizar.
+El modelo es el conjunto de datos que se utiliza para almacenar y gestionar la información de la aplicación. En el caso de MVC, el modelo se encarga de manejar los datos de la aplicación y proporcionar una interfaz para interactuar con ellos.
 
----
+La vista es el componente que se encarga de mostrar la información a los usuarios. En el caso de MVC, la vista se encarga de renderizar la información del modelo en una forma visualmente atractiva para los usuarios.
 
-## 🗂️ Modelo (Model)
+El controlador es el componente que se encarga de manejar las interacciones del usuario con la aplicación. En el caso de MVC, el controlador se encarga de recibir las solicitudes de entrada del usuario y de procesarlas para actualizar el modelo y mostrar la información en la vista.
 
-Ejemplo: `models/starwars.model.json` o un servicio que accede a datos.
+## Estructura BASICA de carpetas de una aplicación MVC
 
-```js
-// services/starwars.service.js
-const datosRaw = require('../models/starwars.model.json')
+```bash
+app/
+│
+├── index.js
+├── routes/
+│   └── app.routes.js
+├── controllers/
+│   └── app.controller.js
+├── services/
+│   └── app.service.js
+├── models/
+│   └── app.model.json
+└── views/
+    ├── listar.ejs
+    ├── mostrar.ejs
+    └── edit.ejs
+```
+
+### Servidor (index.js)
+
+```javascript
+require('dotenv').config()
+const express = require('express')
+const path = require('path')
+const methodOverride = require('method-override')
+
+const app = express()
+const port = process.env.PORT || 3000
+const appRoutes = require('./routes/app.routes')
+
+// Configuración de vistas
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
+// Middlewares
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(methodOverride('_method'))
+app.use(express.static(path.join(__dirname, 'public')))
+
+// Rutas base de la aplicación
+app.use('/app', appRoutes)
+
+// Levantar Servidor
+app.listen(port, () => {
+  console.log(`Servidor en http://localhost:${port}`)
+})
+```
+
+### Rutas (routes/app.routes.js)
+
+```javascript
+const express = require('express')
+const router = express.Router()
+const controller = require('../controllers/app.controller')
+
+// Listado
+router.get('/', controller.list)
+
+// Ficha
+router.get('/:nombre', controller.show)
+
+// Editar
+router.get('/:nombre/edit', controller.edit)
+router.put('/:nombre', controller.update)
+
+// Eliminar
+router.delete('/:nombre', controller.remove)
+
+module.exports = router
+```
+
+### Controlador (controllers/app.controller.js)
+
+```javascript
+const service = require('../services/app.service')
+
+exports.list = (req, res) => {
+  const items = service.findAll()
+  res.render('listar', { items })
+}
+
+exports.show = (req, res) => {
+  const item = service.findByName(decodeURIComponent(req.params.nombre))
+  res.render('mostrar', { item })
+}
+
+exports.edit = (req, res) => {
+  const item = service.findByName(decodeURIComponent(req.params.nombre))
+  res.render('edit', { item })
+}
+
+exports.update = (req, res) => {
+  service.update(decodeURIComponent(req.params.nombre), req.body)
+  res.redirect(`/app/${encodeURIComponent(req.params.nombre)}`)
+}
+
+exports.remove = (req, res) => {
+  service.remove(decodeURIComponent(req.params.nombre))
+  res.redirect('/app')
+}
+```
+
+### Servicio (services/app.service.js)
+
+```javascript
+let items = require('../models/app.model.json')
 
 function findAll() {
-  return datosRaw
+  return items
 }
 
 function findByName(name) {
-  return datosRaw.find(p => p.name === name)
+  return items.find(i => i.name === name)
 }
 
-module.exports = { findAll, findByName }
+function update(name, data) {
+  const item = findByName(name)
+  if (item) {
+    if (data.height) item.height = data.height
+    if (data.mass) item.mass = data.mass
+  }
+  return item
+}
+
+function remove(name) {
+  items = items.filter(i => i.name !== name)
+}
+
+module.exports = { findAll, findByName, update, remove }
 ```
 
-## 📝 Vista (View)
+### Modelos (models/app.model.json)
 
-Ejemplo: `views/starwars.view.ejs` o un servicio que renderiza una plantilla.
+```json
+[
+  { "name": "Item 1", "height": "100", "mass": "50" },
+  { "name": "Item 2", "height": "120", "mass": "60" }
+]
+```
+
+### Vistas
+
+#### (views/listar.ejs)
 
 ```html
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Galería Star Wars</title>
+    <title>Listar</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <h1>Personajes</h1>
+    <h1>Galería</h1>
     <ul>
-      <% personajes.forEach(p => { %>
+      <% items.forEach(i => { %>
       <li>
-        <a href="/starwars/<%= encodeURIComponent(p.name) %>">
-          <%= p.name %>
-        </a>
+        <a href="/app/<%= encodeURIComponent(i.name) %>"><%= i.name %></a>
       </li>
       <% }) %>
     </ul>
+
+    <script src="/app.js"></script>
   </body>
 </html>
 ```
 
-## 📡 Controlador (Controller)
+#### (views/mostrar.ejs)
 
-Ejemplo: `controllers/starwars.controller.js` o un servicio que recibe las peticiones.
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mostrar</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1><%= item.name %></h1>
+    <p>Altura: <%= item.height %> cm</p>
+    <p>Peso: <%= item.mass %> kg</p>
 
-```js
-const service = require('../services/starwars.service')
+    <a href="/app/<%= encodeURIComponent(item.name) %>/edit">Editar</a>
 
-exports.list = (req, res) => {
-  const personajes = service.findAll()
-  res.render('listar', { personajes })
-}
+    <form
+      action="/app/<%= encodeURIComponent(item.name) %>?_method=DELETE"
+      method="post"
+    >
+      <button>Eliminar</button>
+    </form>
 
-exports.show = (req, res) => {
-  const personaje = service.findByName(decodeURIComponent(req.params.nombre))
-  res.render('mostrar', { personaje })
-}
+    <script src="/app.js"></script>
+  </body>
+</html>
 ```
 
-## 🛣️ Rutas (Routes)
+#### (views/edit.ejs)
 
-Ejemplo: `routes/starwars.routes.js` o un servicio que mapea las peticiones a los controladores.
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Editar</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Editar <%= item.name %></h1>
+    <form
+      action="/app/<%= encodeURIComponent(item.name) %>?_method=PUT"
+      method="post"
+    >
+      <label>Altura:</label>
+      <input type="text" name="height" value="<%= item.height %>" />
+      <label>Peso:</label>
+      <input type="text" name="mass" value="<%= item.mass %>" />
+      <button type="submit">Guardar</button>
+    </form>
 
-```js
-const express = require('express')
-const router = express.Router()
-const controller = require('../controllers/starwars.controller')
-
-// Página de búsqueda
-router.get('/', (req, res) => res.render('search'))
-
-// Listado de personajes
-router.get('/starwars', controller.list)
-
-// Ficha de personaje
-router.get('/starwars/:nombre', controller.show)
-
-module.exports = router
+    <a href="/app/<%= encodeURIComponent(item.name) %>">Cancelar</a>
+  </body>
+</html>
 ```
 
-## Servidor (Server)
+---
 
-Ejemplo: `index.js` o un servicio que inicia el servidor.
+### Ejecución
 
-```js
-const express = require('express')
-const app = express()
-const path = require('path')
-const starwarsRoutes = require('./routes/starwars.routes')
-
-// Configuración de vistas
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
-
-// Middleware para formularios
-app.use(express.urlencoded({ extended: true }))
-
-// Rutas
-app.use('/', starwarsRoutes)
-
-// Servidor
-app.listen(3000, () => {
-  console.log('Servidor en http://localhost:3000')
-})
+```bash
+npm install
+nodemon
 ```
