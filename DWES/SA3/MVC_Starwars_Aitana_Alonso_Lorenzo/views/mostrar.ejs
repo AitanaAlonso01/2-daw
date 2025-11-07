@@ -54,11 +54,14 @@
 
       <!-- Botones para editar y eliminar -->
       <div class="botones-mostrar">
-        <form action="/starwars/<%= personaje.name %>/edit" method="get">
+        <form
+          action="/search/starwars/<%= encodeURIComponent(personaje.name) %>/edit"
+          method="get"
+        >
           <button class="btn-editar">Editar</button>
         </form>
         <form
-          action="/starwars/<%= personaje.name %>?_method=DELETE"
+          action="/search/starwars/<%= encodeURIComponent(personaje.name) %>?_method=DELETE"
           method="post"
         >
           <button class="btn-eliminar">Eliminar</button>

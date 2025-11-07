@@ -37,15 +37,15 @@ exports.show = async (req, res) => {
 exports.edit = (req, res) => {
   const personaje = service.findByName(decodeURIComponent(req.params.nombre))
   if (!personaje) return res.status(404).send('Personaje no encontrado')
-  res.render('edit.ejs', { personaje })
+  res.render('edit', { personaje })
 }
 
 exports.update = (req, res) => {
   service.update(decodeURIComponent(req.params.nombre), req.body)
-  res.redirect(`/starwars/${encodeURIComponent(req.params.nombre)}`)
+  res.redirect(`/search/starwars/${encodeURIComponent(req.params.nombre)}`)
 }
 
 exports.remove = (req, res) => {
   service.remove(decodeURIComponent(req.params.nombre))
-  res.redirect('/starwars')
+  res.redirect('/search/starwars')
 }

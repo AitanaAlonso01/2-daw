@@ -10,7 +10,10 @@
     <canvas id="espacio"></canvas>
     <h1>Editar personaje: <%= personaje.name %></h1>
     <!-- Formulario para actualizar datos del personaje -->
-    <form action="/starwars/<%= personaje.name %>?_method=PUT" method="post">
+    <form
+      action="/search/starwars/<%= encodeURIComponent(personaje.name) %>?_method=PUT"
+      method="post"
+    >
       <label for="height">Altura (cm):</label>
       <input
         type="text"
@@ -32,7 +35,9 @@
       <button type="submit">Guardar cambios</button>
     </form>
 
-    <a href="/starwars/<%= personaje.name %>">Cancelar</a>
+    <a href="/search/starwars/<%= encodeURIComponent(personaje.name) %>"
+      >Cancelar</a
+    >
 
     <script src="/app.js"></script>
   </body>
