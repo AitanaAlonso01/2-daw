@@ -62,11 +62,46 @@ exports.update = async (req, res) => {
   res.redirect(`/personajes/${id}`)
 }
 
-exports.remove = (req, res) => {
+exports.remove = async (req, res) => {
   const id = req.params.id
-  const personaje = service.findById(id)
+  const personaje = await service.findById(id)
   if (!personaje) return res.status(404).send('Personaje no encontrado')
 
   service.remove(personaje.name)
+  res.redirect('/starwars')
+}
+
+exports.new = (req, res) => {
+  res.render('crear') // Vista EJS para el formulario
+}
+
+exports.create = (req, res) => {
+  const {
+    name,
+    height,
+    mass,
+    hair_color,
+    skin_color,
+    eye_color,
+    birth_year,
+    gender,
+    homeworld, // puede venir vacío
+    photo,
+  } = req.body
+
+  const nuevo = {
+    name,
+    height,
+    mass,
+    hair_color,
+    skin_color,
+    eye_color,
+    birth_year,
+    gender,
+    homeworld: homeworld || '', // si no viene, se guarda como cadena vacía
+    photo,
+  }
+
+  service.create(nuevo)
   res.redirect('/starwars')
 }

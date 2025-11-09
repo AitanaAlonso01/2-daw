@@ -17,5 +17,7 @@ router.get('/personajes/:id', controller.show)
 router.get('/personajes/:id/edit', controller.edit)
 router.put('/personajes/:id', controller.update)
 router.delete('/personajes/:id', controller.remove)
+router.get('/starwars/new', controller.new)
+router.post('/starwars', controller.create)
 
 module.exports = router

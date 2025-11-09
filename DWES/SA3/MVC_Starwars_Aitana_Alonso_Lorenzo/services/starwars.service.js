@@ -55,12 +55,41 @@ async function findById(id) {
   const personaje = personajes.find(p => extractIdFromUrl(p.url) === id)
   if (!personaje) return null
 
-  const planeta = await getPlaneta(personaje.homeworld)
+  const planeta = personaje.homeworld
+    ? await getPlaneta(personaje.homeworld)
+    : null
+
   return {
     ...personaje,
     id,
     planet_name: planeta?.name || 'Desconocido',
   }
+}
+
+function create(data) {
+  const id = personajes.length + 1
+  const url = `https://swapi.dev/api/people/${id}/`
+
+  const photo = data.photo?.startsWith('http')
+    ? data.photo
+    : `/imgs/${data.name.split(' ')[0].replace(/[^a-zA-Z0-9]/g, '')}.jpg`
+
+  const nuevo = {
+    name: data.name,
+    height: data.height,
+    mass: data.mass,
+    hair_color: data.hair_color || '',
+    skin_color: data.skin_color || '',
+    eye_color: data.eye_color || '',
+    birth_year: data.birth_year || '',
+    gender: data.gender || '',
+    homeworld: data.homeworld || '',
+    photo,
+    url,
+  }
+
+  personajes.push(nuevo)
+  return nuevo
 }
 
 module.exports = {
@@ -71,4 +100,5 @@ module.exports = {
   update,
   remove,
   getPlaneta,
+  create,
 }
