@@ -8,22 +8,20 @@
   </head>
   <body>
     <canvas id="espacio"></canvas>
-    <h1>Galeria de Personajes Star Wars</h1>
+    <h1>Galería de Personajes Star Wars</h1>
 
-    <!-- Enlace a la página de búsqueda -->
     <div class="regresar">
-      <a href="/">
-        <button>⬅ Buscador</button>
-      </a>
+      <a href="/search"><button>⬅ Buscador</button></a>
     </div>
 
     <% if (personajes.length === 0) { %>
     <p>No se encontraron personajes. Mostrando galería completa.</p>
     <% } %>
-    <!-- Lista de personajes en modo galería -->
+
     <div class="galeria">
-      <% personajes.forEach(p => { %>
-      <a href="/search/starwars/<%= encodeURIComponent(p.name) %>">
+      <% personajes.forEach(p => { %> <% const id =
+      p.url.match(/\/people\/(\d+)\//)[1] %>
+      <a href="/personajes/<%= id %>?q=<%= q %>">
         <img src="<%= p.photo %>" alt="<%= p.name %>" width="150" />
         <p><%= p.name %></p>
       </a>

@@ -9,18 +9,11 @@
   <body>
     <canvas id="espacio"></canvas>
     <div class="regresar">
-      <!-- Enlace a la página de galería -->
-      <a href="/search/starwars?q=galeria">
-        <button>⬅ Galería</button>
-      </a>
-      <!-- Enlace a la página de búsqueda -->
-      <a href="/">
-        <button>⬅ Buscador</button>
-      </a>
+      <a href="/search"><button>🔍 Buscador</button></a>
+      <button onclick="history.back()">⬅ Volver atrás</button>
     </div>
-    <!-- Mostrar fichas completas -->
-    <% if (typeof personajesConPlaneta !== 'undefined') { %> <%
-    personajesConPlaneta.forEach(({ personaje, planeta }) => { %>
+
+    <% if (personaje) { %>
     <div class="contenedor-pj">
       <h1><%= personaje.name %></h1>
       <div class="info-pj">
@@ -38,11 +31,9 @@
           <p><strong>Año de nacimiento:</strong> <%= personaje.birth_year %></p>
           <p><strong>Género:</strong> <%= personaje.gender %></p>
 
-          <% if (planeta) { %>
+          <% if (personaje.planet_name) { %>
           <h2>🌍 Planeta de origen</h2>
-          <p><strong>Nombre:</strong> <%= planeta.name %></p>
-          <p><strong>Rotación:</strong> <%= planeta.rotation_period %> horas</p>
-          <p><strong>Órbita:</strong> <%= planeta.orbital_period %> días</p>
+          <p><strong>Nombre:</strong> <%= personaje.planet_name %></p>
           <% } else { %>
           <p>No se pudo cargar el planeta.</p>
           <% } %>
@@ -52,61 +43,14 @@
         </div>
       </div>
 
-      <!-- Botones para editar y eliminar -->
+      <!-- <p><strong>ID DEBUG:</strong> <%= personaje.id %></p> -->
       <div class="botones-mostrar">
-        <form
-          action="/search/starwars/<%= encodeURIComponent(personaje.name) %>/edit"
-          method="get"
-        >
+        <form action="/personajes/<%= personaje.id %>/edit" method="get">
           <button class="btn-editar">Editar</button>
         </form>
+
         <form
-          action="/search/starwars/<%= encodeURIComponent(personaje.name) %>?_method=DELETE"
-          method="post"
-        >
-          <button class="btn-eliminar">Eliminar</button>
-        </form>
-      </div>
-    </div>
-    <hr />
-    <% }) %> <% } else if (typeof personaje !== 'undefined') { %>
-    <div class="contenedor-pj">
-      <h1><%= personaje.name %></h1>
-      <div class="info-pj">
-        <img
-          src="<%= personaje.photo %>"
-          alt="<%= personaje.name %>"
-          width="200"
-        />
-        <div class="datos-pj">
-          <p><strong>Altura:</strong> <%= personaje.height %> cm</p>
-          <p><strong>Peso:</strong> <%= personaje.mass %> kg</p>
-          <p><strong>Color de pelo:</strong> <%= personaje.hair_color %></p>
-          <p><strong>Color de piel:</strong> <%= personaje.skin_color %></p>
-          <p><strong>Color de ojos:</strong> <%= personaje.eye_color %></p>
-          <p><strong>Año de nacimiento:</strong> <%= personaje.birth_year %></p>
-          <p><strong>Género:</strong> <%= personaje.gender %></p>
-
-          <% if (planeta) { %>
-          <h2>🌍 Planeta de origen</h2>
-          <p><strong>Nombre:</strong> <%= planeta.name %></p>
-          <p><strong>Rotación:</strong> <%= planeta.rotation_period %> horas</p>
-          <p><strong>Órbita:</strong> <%= planeta.orbital_period %> días</p>
-          <% } else { %>
-          <p>No se pudo cargar el planeta.</p>
-          <% } %>
-
-          <p><strong>Creado:</strong> <%= personaje.created %></p>
-          <p><strong>Editado:</strong> <%= personaje.edited %></p>
-        </div>
-      </div>
-
-      <div class="botones-mostrar">
-        <form action="/starwars/<%= personaje.name %>/edit" method="get">
-          <button class="btn-editar">Editar</button>
-        </form>
-        <form
-          action="/starwars/<%= personaje.name %>?_method=DELETE"
+          action="/personajes/<%= personaje.id %>?_method=DELETE"
           method="post"
         >
           <button class="btn-eliminar">Eliminar</button>
@@ -114,7 +58,7 @@
       </div>
     </div>
     <% } else { %>
-    <p>No se recibió información de personajes.</p>
+    <p>No se recibió información del personaje.</p>
     <% } %>
 
     <script src="/app.js"></script>

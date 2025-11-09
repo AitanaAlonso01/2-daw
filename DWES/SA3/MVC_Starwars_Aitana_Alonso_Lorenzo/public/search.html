@@ -3,18 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Buscador Star Wars</title>
-    <base href="/" />
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <canvas id="espacio"></canvas>
-    <!-- Formulario para buscar personajes -->
     <h1>Buscador de personajes Star Wars</h1>
-    <form action="/search/starwars" method="get">
+    <form id="buscador" action="/starwars" method="get">
       <input type="text" name="q" placeholder="Buscar personaje..." required />
       <button type="submit">Buscar</button>
     </form>
-    <script src="/app.js"></script>
   </body>
 </html>

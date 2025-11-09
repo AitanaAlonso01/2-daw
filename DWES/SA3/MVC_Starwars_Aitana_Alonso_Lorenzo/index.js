@@ -1,26 +1,31 @@
 // Require o Imports
-require('dotenv').config()
-const port = process.env.PORT || process.env.PUERTO
-const express = require('express')
+require('dotenv').config() // npm install dotenv
+const express = require('express') // npm install express
+const path = require('path') // npm install path
+const methodOverride = require('method-override') // npm install method-override
+const cors = require('cors') // npm install cors
+
 const app = express()
-const path = require('path')
-const methodOverride = require('method-override')
-const cors = require('cors')
+const port = process.env.PORT || process.env.PUERTO || 3000 // puerto recogido de la variable de entorno del .env
 
-// Importar rutas
-const starwarsRoutes = require('./routes/starwars.routes')
+// RUTAS
+const starwarsRoutes = require('./routes/starwars.routes') // donde se definen las rutas
 
-// SETUP - MIDDLEWARES
+// MIDDLEWARES
 app.use(cors())
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }))
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.json()) // necesario para recibir JSON en API REST
+app.use(express.static(path.join(__dirname, 'public'))) // archivos estáticos como CSS, JS, HTML, etc.
 
-// DEFINIR RUTAS EN SERVER
+app.set('views', path.join(__dirname, 'views')) // views se encuentran en la carpeta views
+app.set('view engine', 'ejs')
+
+// REDIRECCIONES
 app.get('/', (req, res) => res.redirect('/search'))
-app.use('/search', starwarsRoutes)
+
+// RUTAS (starwars.routes.js)
+app.use('/', starwarsRoutes)
 
 // Levantar el servidor
 app.listen(port, () => {

@@ -46,10 +46,28 @@ function findByQuery(query) {
   )
 }
 
+function extractIdFromUrl(url) {
+  const match = url.match(/\/people\/(\d+)\//)
+  return match ? match[1] : null
+}
+
+async function findById(id) {
+  const personaje = personajes.find(p => extractIdFromUrl(p.url) === id)
+  if (!personaje) return null
+
+  const planeta = await getPlaneta(personaje.homeworld)
+  return {
+    ...personaje,
+    id,
+    planet_name: planeta?.name || 'Desconocido',
+  }
+}
+
 module.exports = {
   findAll,
   findByName,
   findByQuery,
+  findById,
   update,
   remove,
   getPlaneta,
