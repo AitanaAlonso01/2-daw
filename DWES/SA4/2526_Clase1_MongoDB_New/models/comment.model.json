@@ -1,0 +1,17 @@
+[
+    {
+        "id":1, 
+        "usuario":"Mike",
+        "opinion":"Me gusta mucho DWES. Es mi módulo favorito."
+    },
+    {
+        "id":2,
+        "usuario":"Mario",
+        "opinion":"Yo soy más de Despliegue. Sueño con él..."
+    },
+    {
+        "id":3,
+        "usuario":"Aitana",
+        "opinion":"Me gusta más el cuarto de hora del patio."
+    }
+]
