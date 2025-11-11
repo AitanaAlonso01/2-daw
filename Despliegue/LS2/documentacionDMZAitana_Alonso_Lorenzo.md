@@ -403,9 +403,9 @@ sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 #### Descargar y descomprimir Tomcat
 
 ```bash
-wget -O apache-tomcat-11.0.13.tar.gz https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.13/bin/apache-tomcat-11.0.13.tar.gz
+wget -O apache-tomcat-11.0.14.tar.gz https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.14/bin/apache-tomcat-11.0.14.tar.gz
 sudo mkdir /opt/tomcat
-sudo tar -xvzf apache-tomcat-11.0.13.tar.gz -C /opt/tomcat/ --strip-components=1
+sudo tar -xvzf apache-tomcat-11.0.14.tar.gz -C /opt/tomcat/ --strip-components=1
 ```
 
 #### Permisos
