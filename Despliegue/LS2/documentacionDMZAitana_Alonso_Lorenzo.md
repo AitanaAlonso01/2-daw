@@ -32,7 +32,8 @@ ip a
 Para poner el nameserver y routes.
 
 ```bash
-resolvectl
+ip route # routes (- to: default via: 11.0.2.3)
+resolvectl # nameservers (addresses: 11.0.2.3)
 ```
 
 El archivo editado en varias ocasiones fue:
