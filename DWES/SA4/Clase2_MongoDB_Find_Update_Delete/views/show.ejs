@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+<div class="glass-container">
+  <div class="card">
+    <h1>💬 Detalles (<%= comentario.id %>)</h1>
+    <hr />
+    <div class="comentarios">
+      <div class="comentario">
+        <div class="usuario">
+          <b>
+            <h2><%= comentario.usuario %></h2>
+          </b>
+        </div>
+        <div class="categoria">
+          <b>Categoría: </b><%= comentario.categoria.toUpperCase() %>
+        </div>
+        <div class="valoracion">
+          <b>Valoración: </b><%= comentario.valoracion %>
+        </div>
+        <hr />
+        <p class="opinion">
+          <b>Comentario:</b> <br />
+          <%= comentario.opinion %>
+        </p>
+      </div>
+    </div>
+    <div class="botones">
+      <a href="/" class="btn-secondary">Ir atrás</a>
+    </div>
+  </div>
+</div>
+<%- include("partials/footer") %>
