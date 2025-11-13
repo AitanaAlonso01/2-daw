@@ -1,0 +1,16 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: white;
+  width: max-content;
+}
+
+.celda {
+  background-color: #6a7c88;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 90px;
+  font-family: sans-serif;
+}

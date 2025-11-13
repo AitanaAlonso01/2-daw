@@ -1,0 +1,19 @@
+.grid-cabecera {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: white;
+  width: max-content;
+}
+
+.celda {
+  background-color: #6a7c88;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.celda1 {
+  grid-column: 1 / -1;
+}

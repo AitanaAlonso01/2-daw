@@ -1,0 +1,39 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 200px 200px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    'header header header'
+    'sidebar celda3 celda4'
+    'sidebar celda5 celda6';
+  gap: 1px;
+  background-color: white;
+  width: max-content;
+}
+
+.celda {
+  background-color: #6a7c88;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.celda:nth-of-type(3) {
+  grid-area: celda3;
+}
+.celda:nth-of-type(4) {
+  grid-area: celda4;
+}
+.celda:nth-of-type(5) {
+  grid-area: celda5;
+}
+.celda:nth-of-type(6) {
+  grid-area: celda6;
+}
