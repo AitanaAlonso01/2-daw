@@ -1,0 +1,175 @@
+/* Estilos Base Comunes */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.arriba-verde,
+.abajo-verde {
+  background-color: #38c172;
+  height: 40px;
+  width: 100%;
+}
+
+/* Estilos de las cajas */
+.caja-izquierda-roja,
+.caja-naranja,
+.caja-azul,
+.caja-superior-rosa {
+  padding: 20px;
+  margin: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.caja-izquierda-roja {
+  background-color: #e3342f;
+}
+
+.caja-superior-rosa {
+  background-color: #f66d9b;
+  height: 60px;
+  width: 100%;
+}
+
+.caja-naranja {
+  background-color: #fa9b54;
+  height: 120px;
+}
+
+.caja-azul {
+  background-color: #1345ff;
+  height: 80px;
+  border: 1px solid white;
+}
+
+/* Diseño para pantallas grandes (Tabletas horizontales y Desktop) */
+@media (min-width: 768px) {
+  .contenido-entre-verdes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .caja-izquierda-roja {
+    width: 20%;
+    min-height: 500px;
+  }
+
+  .contenido-derecha {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenido-naranja {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .caja-naranja {
+    width: 50%;
+  }
+
+  .contenido-azul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .caja-azul {
+    width: 100%;
+    height: 80px;
+  }
+}
+
+/* Diseño para Tabletas (Verticales) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .contenido-entre-verdes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .caja-izquierda-roja {
+    width: 20%;
+    min-height: 500px;
+  }
+
+  .contenido-derecha {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenido-naranja {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caja-naranja {
+    width: 100%;
+  }
+
+  .contenido-azul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .caja-azul {
+    width: 100%;
+    height: 80px;
+  }
+}
+
+/* Diseño para pantallas pequeñas (Mobile) */
+@media (max-width: 575px) {
+  .contenido-entre-verdes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caja-izquierda-roja {
+    width: 100%;
+    min-height: 100px;
+  }
+
+  .contenido-derecha {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenido-naranja {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .caja-naranja {
+    width: 100%;
+  }
+
+  .contenido-azul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .caja-azul {
+    width: 100%;
+    height: 80px;
+  }
+}
