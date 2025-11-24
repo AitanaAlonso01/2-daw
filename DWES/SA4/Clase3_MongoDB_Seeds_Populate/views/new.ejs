@@ -14,7 +14,7 @@
       />
       <select name="categoria">
         <% for(let c of categorias) { %>
-        <option value="<%= c %>"><%= c.toUpperCase() %></option>
+        <option value="<%= c._id %>"><%= c.nombre.toUpperCase() %></option>
         <% } %>
       </select>
       <textarea

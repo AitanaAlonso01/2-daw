@@ -13,7 +13,7 @@ exports.findAllComments = async (req, res) => {
     res.locals.tituloEJS = 'Listado'
     res.render('index.ejs', {
       comentarios,
-      categorias: CategoriasService.getAll(),
+      categorias: await CategoriasService.getAll(),
     })
   } else {
     res.status(404).json('Sin comentarios...')
@@ -31,9 +31,9 @@ exports.findCommentById = async (req, res) => {
   }
 }
 
-exports.showNewComment = (req, res) => {
+exports.showNewComment = async (req, res) => {
   res.locals.tituloEJS = 'Nuevo'
-  res.render('new.ejs', { categorias: CategoriasService.getAll() })
+  res.render('new.ejs', { categorias: await CategoriasService.getAll() })
 }
 
 exports.createComment = async (req, res) => {
@@ -51,7 +51,7 @@ exports.showEditComment = async (req, res) => {
     res.locals.tituloEJS = 'Editar'
     res.render('edit.ejs', {
       comentario,
-      categorias: CategoriasService.getAll(),
+      categorias: await CategoriasService.getAll(),
     })
   } else {
     res.status(404).json('Comentario no encontrado')

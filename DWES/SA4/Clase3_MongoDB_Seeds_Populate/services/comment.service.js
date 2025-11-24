@@ -2,16 +2,20 @@
 const commentModel = require('../models/comment.model')
 
 //Devolver todos los comentarios
-exports.getAll = async () => await commentModel.find() //SELECT * FROM Comments
+exports.getAll = async () =>
+  await commentModel.find().populate('categoria', 'nombre') //SELECT * FROM Comments
 
 //Devolver un comentario por ID
 //SELECT * from Comments WHERE _id = id
-exports.getById = async id => await commentModel.findById(id)
+exports.getById = async id =>
+  await commentModel.findById(id).populate('categoria', 'nombre')
 
-exports.getByUser = async user => await commentModel.find({ usuario: user })
+exports.getByUser = async user =>
+  await commentModel.find({ usuario: user }).populate('categoria', 'nombre')
 
 //exports.getByCat = async (cat) => await commentModel.findOne({categoria:cat}) //Obtiene un registro (un objeto de la primera ocurrencia encontrada)
-exports.getByCat = async cat => await commentModel.find({ categoria: cat }) //Obtiene un array con todas las ocurrencias
+exports.getByCat = async cat =>
+  await commentModel.find({ categoria: cat }).populate('categoria', 'nombre') //Obtiene un array con todas las ocurrencias
 
 //Crear un nuevo comentario
 exports.create = async datos => {

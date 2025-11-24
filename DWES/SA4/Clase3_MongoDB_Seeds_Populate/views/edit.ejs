@@ -1,7 +1,7 @@
 <%- include("partials/header") %>
   <div class="glass-container">
     <div class="card">
-      <h1>📝 Editar Comentario</h1>
+      <h1>📝 Editar Comentario: <%= comentario.id %></h1>
       <form action="<%= baseUrlComentarios %>/<%= comentario.id %>?_method=PATCH" method="POST" class="formulario">
         <input value="<%= comentario.usuario %>" type="text" placeholder="👤 Usuario..." name="usuario" required>
 
@@ -9,7 +9,7 @@
 
         <select name="categoria">
           <% for(let c of categorias) { %>
-            <option <%= c == comentario.categoria ? "selected" : "" %> value="<%= c %>" ><%= c.toUpperCase() %></option>
+            <option <%= c._id.toString() == comentario.categoria._id.toString() ? "selected" : "" %> value="<%= c._id %>" ><%= c.nombre.toUpperCase() %></option>
           <% } %>
         </select>
 

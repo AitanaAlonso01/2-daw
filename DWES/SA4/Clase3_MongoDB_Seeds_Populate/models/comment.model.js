@@ -12,9 +12,9 @@ const commentSchema = new mongoose.Schema({
     required: true, //NOT NULL SQL
   },
   categoria: {
-    type: String,
-    lowercase: true,
-    enum: categorias,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'categorias', //REFERENCIA A LA CATEGORIA (FK en SQL)
+    required: true, //NOT NULL SQL
   },
   valoracion: {
     type: Number,
