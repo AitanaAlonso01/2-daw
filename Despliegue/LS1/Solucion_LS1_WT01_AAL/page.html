@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+	<head>
+		<title>Retroalimentaci&oacute;n: LS1 - Building Our Documentary Brain - Writing test [AITANA ALONSO LORENZO]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body data-absolute-enabled="true" style="font-family:Calibri;font-size:11pt">
+		<div style="position:absolute;left:48px;top:115px;width:624px">
+			<h1 lang="es-ES" style="font-size:16pt;color:#1e4e79;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota final RA6-a), </span><span lang="en-US" style=""> RA6-b), RA6-c) </span><span lang="en-US" style="">y RA6-d): 9.306</span></h1>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Herramientas que ha utilizado:</span></h2>
+			<ul>
+				<li><span lang="es-ES" style=""><span lang="en-US" style="">MuleSoft: 10 </span></span></li>
+				<li><span lang="es-ES" style=""><span lang="en-US" style="">PlantUML: 10</span></span></li>
+				<li><span lang="es-ES" style=""><span lang="en-US" style="">MarkDown: 7.92</span></span></li>
+			</ul>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota total: 9.306</span></h3>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota tarea 1: dise&ntilde;o de una API utilizando RAML: 10</span></h2>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style=""> La tarea cumple con los requerimientos solicitados.</span></p>
+			<br>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota tarea 2: Modelando utilizando PlantUML (diagrama de secuencia): 10</span></h2>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">El nombre del archivo cumple con las normas de entrega.</span></p>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">El diagrama entregadop cumple con la tarea solicitada.</span></p>
+			<br>
+			<img alt='@startuml LoanProcessSequenceDiagram 
+title Sequence Diagram - Complete Loan Process 
+Sequence Diagram - Complete Loan Process 
+actor Student as student 
+actor Teacher as teacher 
+participant "Web Portal" as portal 
+participant "API Gateway" as api 
+participant "Loan Service" as loan 
+Student Teacher 
+Web Portal 
+API Gateway 
+Loan Service 
+Database 
+participant "Database" as db 
+Access loan system 
+student -&gt; portal: Access loan system 
+activate portal 
+Show available equipment 
+portal -&gt; student: Show available equipment 
+deactivate 
+Submit loan request 
+student -&gt; portal: Submit loan request\n(equipment, dates, purpose) 
+(equipment, dates, purpose) 
+activate portal 
+POST /loans 
+portal -&gt; api: POST /loans 
+activate api 
+Validate request 
+api -&gt; loan : Validate request 
+activate loan 
+Check student history 
+loan -&gt; db: Check student history 
+activate db 
+Student record 
+db -- &gt; loan: Student record 
+deactivate db 
+Request validated 
+loan -- &gt; api: Request validated 
+deactivate loan 
+Request registered 
+api -- &gt; portal: Request registered 
+deactivate 
+Notify pending approval 
+portal -&gt; teacher: Notify pending approval 
+Review request details 
+deactivate 
+teacher -&gt; portal: Review request details 
+Display request information 
+activate portal 
+portal -&gt; teacher: Display request information 
+Student Teacher 
+Web Portal 
+API Gateway 
+Loan Service 
+Database 
+deactivate 
+@endum1 ' width="780.5" height="278" src="./page_files/img_1" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<br>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style=""> </span><span lang="en-US" style="">Nota tarea 3: Documentando con MarkDaown: 7.92</span></h2>
+			<br>
+			<table style="border:1px solid;border-collapse:collapse">
+				<tr>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">T&iacute;tulo</span></span></td>
+					<td style="width:111;border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">Caracter&iacute;sticas</span></span></td>
+					<td style="width:117;border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">Estructura del proyecto</span></span></td>
+					<td style="width:78;border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">Endpoints Principales</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">GET /tareas</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">POST /tareas</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">GET /tareas/{id}</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">PUT /tareas/{id}</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">DELETE /tareas/{id}</span></span></td>
+					<td style="width:75;border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">Requisitos</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">Contribuci&oacute;n</span></span></td>
+					<td style="border:1px solid;text-align:center"><span lang="es-ES" style=""><span style="color:black">Licencia</span></span></td>
+				</tr>
+				<tr>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+					<td style="width:111;border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+					<td style="width:117;border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+					<td style="width:78;border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">0,5</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">0,5</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">0,5</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">0,5</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">0,5</span></span></td>
+					<td style="width:75;border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black">1</span></span></td>
+				</tr>
+				<tr>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:111;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:117;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:78;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:75;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+				</tr>
+				<tr>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:111;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:117;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:78;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="width:75;border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="color:black"> </span></span></td>
+				</tr>
+				<tr>
+					<td style="border:1px solid;text-align:right"><span lang="es-ES" style=""><span style="font-size:14pt;color:black;font-weight:bold">Nota</span></span></td>
+					<td style="width:111;border:1px solid"><br>
+					</td>
+					<td style="width:117;border:1px solid"><br>
+					</td>
+					<td style="width:78;border:1px solid"><br>
+					</td>
+					<td style="border:1px solid"><br>
+					</td>
+					<td style="border:1px solid"><br>
+					</td>
+					<td style="border:1px solid"><span lang="es-ES" style=""><span style="font-size:14pt;color:black;font-weight:bold">7,916666667</span></span></td>
+					<td style="border:1px solid"><br>
+					</td>
+					<td style="border:1px solid"><br>
+					</td>
+					<td style="width:75;border:1px solid"><br>
+					</td>
+					<td style="border:1px solid"><br>
+					</td>
+					<td style="border:1px solid"><br>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Error detectado:</span></p>
+			<br>
+			<img alt="# * 
+API de Gestion de Tareas (RAML) - AAL 
+Obtiene todas las tareas registradas. 
+## @ Endpoints Principales 
+### `GET /tareas' 
+Respuesta: 
+votiene todas las tareas registradas. 
+** Respuesta :** 
+{ &quot;id&quot;: 1, &quot;titulo&quot;: &quot;Estudiar RAML&quot;, &quot;completada&quot;: false }, 
+` ` json 
+[ &quot;id&quot;: 2, &quot;titulo&quot;: &quot;Escribir documentaci&oacute;n&quot;, &quot;completada&quot;: true } 
+[ 
+&quot;id&quot;: 1, &quot;titulo&quot;: &quot;Estudiar RAML&quot;, &quot;completada&quot;: false }, 
+{ &quot;id&quot;: 2, &quot;titulo&quot;: &quot;Escribir documentaci&oacute;n&quot;, &quot;completada&quot;: true } 
+&middot; Es la parte ** m&aacute;s consultada ** por otros desarrolladores. 
+Conviene agregar ejemplos en ** JSON ** para que se entienda mejor. 
+Es la parte ** m&aacute;s consultada ** por otros desarrolladores.| 
+Conviene agregar ejemplos en ** JSON ** para que se entienda mejor. " width="480" height="92" src="./page_files/img_2" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Soluci&oacute;n pedida:</span></p>
+			<img alt='GET /tareas 
+Obtiene todas las tareas registradas. 
+Respuesta: 
+ison 
+[ 
+{ "id": 1, "titulo": "Estudiar RAML", "completada": false }, 
+{ "id": 2, "titulo": "Escribir documentaci&oacute;n", "completada": true } 
+&middot; Es la parte ** m&aacute;s consultada ** por otros desarrolladores. 
+&middot; Conviene agregar ejemplos en ** JSON ** para que se entienda mejor. ' width="480" height="178" src="./page_files/img_3" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Error detectado:</span></p>
+			<img alt="### `GET /tareas/{id}' 
+GET /tareas/{id} 
+Obtiene una tarea por su ID. 
+Obtiene una tarea por su ID. 
+### `PUT /tareas/{id} 
+Actualiza una tarea existente. 
+PUT /tareas/ {id} 
+### `DELETE /tareas/{id}' 
+Actualiza una tarea existente 
+Elimina una tarea existente. 
+DELETE /tareas/ {id} 
+Elimina una tarea existente " width="480" height="87" src="./page_files/img_4" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Soluci&oacute;n pedida:</span></p>
+			<br>
+			<img alt='POST /tareas 
+Crea una nueva tarea. 
+Body de ejemplo: 
+JSON 
+{ "id": 3, "titulo": "Probar API", "completada": false } 
+GET /tareas/ {id} 
+Obtiene una tarea por su ID. 
+PUT /tareas/{id} 
+Actualiza una tarea existente. 
+DELETE /tareas/{id} 
+Elimina una tarea existente. ' width="480" height="307" src="./page_files/img_5" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+		</div>
+	</body>
+</html>

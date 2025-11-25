@@ -39,10 +39,10 @@ Obtiene todas las tareas registradas.
   { "id": 1, "titulo": "Estudiar RAML", "completada": false },
   { "id": 2, "titulo": "Escribir documentación", "completada": true }
 ]
+```
+
 🔹 Es la parte **más consultada** por otros desarrolladores.
 🔹 Conviene agregar ejemplos en **JSON** para que se entienda mejor.
-
-```
 
 ---
 
@@ -56,13 +56,19 @@ JSON
 { "id": 3, "titulo": "Probar API", "completada": false }
 ```
 
+---
+
 ### `GET /tareas/{id}`
 
 Obtiene una tarea por su ID.
 
+---
+
 ### `PUT /tareas/{id}`
 
 Actualiza una tarea existente.
+
+---
 
 ### `DELETE /tareas/{id}`
 
