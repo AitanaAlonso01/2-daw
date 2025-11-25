@@ -143,8 +143,8 @@ body {
   }
 
   .caja-izquierda-roja {
-    width: 100%;
-    min-height: 100px;
+    /* desaparece en pantallas pequeñas */
+    display: none;
   }
 
   .contenido-derecha {
