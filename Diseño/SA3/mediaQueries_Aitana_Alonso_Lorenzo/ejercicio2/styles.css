@@ -1,0 +1,151 @@
+/* Estilos Base Comunes */
+
+body {
+  margin: 0.5em;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Contenedor principal para centrar */
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* HEADER: Color Verde para Desktop */
+header .header {
+  background-color: #39d164;
+  height: 60px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: black;
+}
+
+/* CONTENIDO: Estilos comunes y color Rojo */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+main > div {
+  /* Aplica a .content 1, .content 2, .content 3 */
+  background-color: #e53935;
+  min-height: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/* FOOTER: Color Amarillo */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer1,
+.footer2 {
+  background-color: #ffe45c;
+  color: black;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+/* Diseño para pantallas grandes (>= 768px) */
+@media (min-width: 768px) {
+  /* 3 columnas en main */
+  main > div {
+    width: calc(33.33% - 10px);
+  }
+
+  /* 2 footers en footer */
+  .footer1,
+  .footer2 {
+    width: calc(50% - 5px);
+  }
+}
+
+/* Diseño para Tabletas (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Header: Cambia a azul claro */
+  header .header {
+    background-color: #a8f1ff;
+    color: black;
+  }
+
+  /* Contenido: 1 y 2 en fila, 3 abajo (usamos nth-child para apuntar a la posición) */
+  main > div {
+    min-height: 250px;
+  }
+
+  /* Columnas 1 y 2 (1er y 2do div dentro de main) */
+  main > div:nth-child(1),
+  main > div:nth-child(2) {
+    width: calc(50% - 10px);
+  }
+
+  /* Columna 3 (3er div dentro de main) */
+  main > div:nth-child(3) {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  /* Footer: Apilados verticalmente (100% de ancho) */
+  footer {
+    flex-direction: column;
+  }
+
+  .footer1,
+  .footer2 {
+    width: 100%;
+  }
+}
+
+/* Diseño para Móviles (<= 575px) */
+@media (max-width: 575px) {
+  header .header {
+    background-color: #f6a77f;
+    color: black;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main > div {
+    width: 100%;
+    min-height: 150px;
+  }
+
+  /* MODIFICACIÓN CLAVE: Columna 2 cambia de color a cian */
+  .content:nth-child(2) {
+    background-color: #52e3ff;
+  }
+
+  /* Footer: Apilados verticalmente (100% de ancho) */
+  footer {
+    flex-direction: column;
+  }
+
+  .footer1,
+  .footer2 {
+    width: 100%;
+  }
+}
