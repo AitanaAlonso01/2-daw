@@ -1,4 +1,4 @@
-const categorias = require('../models/categorias.model.json')
+const categorias = require('./categorias.model.json')
 const mongoose = require('mongoose')
 
 const commentSchema = new mongoose.Schema({
