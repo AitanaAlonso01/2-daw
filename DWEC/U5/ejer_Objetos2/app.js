@@ -9,6 +9,8 @@ var car = {
   year: 2020,
 }
 
+console.log(car)
+
 // 2. Dado este objeto:
 // const computer = { brand: "Lenovo", ram: 8, cpu: "i5" };
 // Muestra:
