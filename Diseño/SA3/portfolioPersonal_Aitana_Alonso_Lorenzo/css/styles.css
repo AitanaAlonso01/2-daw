@@ -7,6 +7,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #121212;
+  color: #e0e0e0;
 }
 
 /* Header */
@@ -94,7 +95,7 @@ section h2 {
   align-items: center;
   padding: 4rem 2rem;
   background-color: #1e1e1e;
-  color: #fff;
+  color: #e0e0e0;
 }
 
 #about .text {
@@ -116,9 +117,52 @@ section h2 {
   box-shadow: 0 0 10px rgba(192, 84, 84, 0.5);
 }
 
-/*
+/* SKILLS */
 #skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  align-items: start;
 }
+
+.mini-flag {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* STUDIES */
+#studies {
+  background-color: #1e1e1e;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#studies div {
+  padding: 1rem;
+}
+
+#studies div ul {
+  list-style: none;
+}
+
+#studies div ul li {
+  margin-bottom: 0.5rem;
+}
+
+#studies div ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+#studies div ul li a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+/*
 
 #projects {
 }
