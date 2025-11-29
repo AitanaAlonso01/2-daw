@@ -11,6 +11,9 @@
       <div class="logo">
         <img src="./img/logo.png" alt="logo" />
       </div>
+      <button class="hamburger" aria-label="Abrir menú">
+        ☰
+      </button>
       <nav>
         <ul>
           <li><a href="#">Inicio</a></li>
@@ -22,6 +25,7 @@
         </ul>
       </nav>
     </header>
+
 
     <main>
       <!-- Banner principal -->
@@ -41,6 +45,7 @@
             el detalle. Me inspiro en lo absurdo, lo felino y lo auténtico para
             crear proyectos únicos.
           </p>
+          <br />
           <p>
             Actualmente estoy terminando de cursar el grado superior de DAW
             (Desarrollo de Aplicaciones Web) en el instituto Hermanos Amorós de
@@ -51,8 +56,10 @@
             A parte de mis estudios de Desarrollo Web, también me interesa
             aprender sobre el desarrollo de aplicaciones móviles y el desarrollo
             de interfaces.
-            <br />
-            A parte del ambito academico o laboral, también me interesan los
+          </p>
+          <br />
+          <p>
+            Fuera del ámbito académico o laboral, también me interesan los
             videojuegos y la creación de contenido en redes.
           </p>
         </div>
@@ -155,19 +162,116 @@
 
       <section id="projects">
         <h2>Proyectos</h2>
-        <p>Listado de proyectos...</p>
+        <div class="grid-container">
+          <div class="card">
+            <img src="./img/projectsImgs/proyecto1.png" alt="Proyecto 1" />
+            <h3>Pokemon Sprites</h3>
+            <p>
+              Pequeño proyecto que anima y transforma los sprites de Pokemon con
+              CSS y JavaScript.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/projectsImgs/proyecto2.png" alt="Proyecto 2" />
+            <h3>Kaats</h3>
+            <p>
+              Pequeño proyecto para la asignatura de Proyecto Intermodular, para
+              aplicar el diseño responsive a un sitio web. (Trabajo en equipo
+              DobleA)
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/projectsImgs/proyecto3.png" alt="Proyecto 3" />
+            <h3>F1 Web 2024</h3>
+            <p>
+              Pequeño y simple trabajo para la asignatura de Lenguajes de Marcas
+              (1ºDAW). Diseño de Web Informativa sobre la F1 2024. Una de mis
+              primeras webs.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/projectsImgs/proyecto4.png" alt="Proyecto 4" />
+            <h3>Apple Store Desktop</h3>
+            <p>
+              Pequeño proyecto para la asignatura de Proyecto Intermodular,
+              diseño similar a la de Apple Store. (Trabajo en equipo DobleA)
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/projectsImgs/proyecto5.png" alt="Proyecto 5" />
+            <h3>TirraFauna</h3>
+            <p>
+              Pequeño proyecto de verano en Wordpress. 2015 creation (NO JUZGAR,
+              tenia 9 años).
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/projectsImgs/proyecto6.png" alt="Proyecto 6" />
+            <h3>Proyecto Inexistente</h3>
+            <p>
+              Breve descripción del proyecto 6. NO tengo mas proyectos sorry :(.
+            </p>
+          </div>
+        </div>
       </section>
 
       <hr />
 
       <section id="contact">
         <h2>Contacto</h2>
-        <p>Formulario o enlaces...</p>
+
+        <!-- Formulario de contacto -->
+        <div class="contact-form">
+          <form action="https://formspree.io/f/mgjbzjfj" method="POST">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Enlaces de contacto -->
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/aitana-alonso-lorenzo-713743296/"
+            >Linkedin</a
+          >
+          <a href="https://github.com/AitanaAlonso01">GitHub</a>
+          <a href="https://www.instagram.com/aitana.jar/?hl=am-et">Instagram</a>
+        </div>
+
+        <!-- Correo electronico y telefono -->
+        <p>
+          <ul>
+            <li>
+              Email: aitana.alonso.lorenzo@gmail.com
+            </li>
+            <li>
+              Telefono: +34 693 52 03 08
+            </li>
+          </ul>
+        </p>
       </section>
     </main>
 
     <footer>
       <p>© 2025 Portfolio Personal - Aitana Alonso Lorenzo</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="./js/script.js"></script>
   </body>
 </html>
