@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Videojuegos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Gestión de Videojuegos</h1>
+
+    <!-- Formulario para añadir videojuegos -->
+    <section>
+      <h2>Añadir videojuego</h2>
+      <form id="formProducto">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+        <input
+          type="text"
+          id="descripcion"
+          placeholder="Descripción"
+          required
+        />
+        <input type="text" id="categoria" placeholder="Categoría" required />
+        <input type="number" id="precio" placeholder="Precio (€)" required />
+        <input
+          type="number"
+          id="valoracion"
+          placeholder="Valoración (1-5)"
+          required
+        />
+        <button type="submit">Añadir</button>
+      </form>
+    </section>
+
+    <!-- Botones de acciones -->
+    <section>
+      <h2>Acciones</h2>
+      <div class="acciones">
+        <button onclick="mostrarProductos()">Mostrar todos</button>
+        <button onclick="ordenarPorPrecio(true)">Ordenar por precio ↑</button>
+        <button onclick="ordenarPorPrecio(false)">Ordenar por precio ↓</button>
+        <button onclick="ordenarPorNombre(true)">Ordenar A-Z</button>
+        <button onclick="ordenarPorNombre(false)">Ordenar Z-A</button>
+        <button onclick="ordenarPorValoracion(true)">
+          Ordenar valoración ↑
+        </button>
+        <button onclick="ordenarPorValoracion(false)">
+          Ordenar valoración ↓
+        </button>
+      </div>
+    </section>
+
+    <!-- Contenedor para mostrar resultados -->
+    <section>
+      <h2>Listado de videojuegos</h2>
+      <div id="contenedor"></div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d0d;
+  margin: 0;
+  padding: 40px;
+  color: #d6d6d6; /* gris claro */
+}
+
+h1 {
+  text-align: center;
+  color: #7a0c24; /* granate */
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #d6d6d6;
+  margin-bottom: 10px;
+}
+
+/* ======== SECCIONES ======== */
+section {
+  background: #1a1a1a;
+  padding: 20px 25px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ======== FORMULARIO ======== */
+form {
+  display: grid;
+  gap: 12px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #333;
+  background: #0f0f0f;
+  color: #d6d6d6;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: #7a0c24;
+  box-shadow: 0 0 5px rgba(122, 12, 36, 0.6);
+  outline: none;
+}
+
+/* ======== BOTONES ======== */
+button {
+  padding: 10px 14px;
+  background: #7a0c24; /* granate */
+  color: #d6d6d6;
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #9b0f2d; /* granate más claro */
+}
+
+/* ======== BOTONES DE ACCIONES ======== */
+.acciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.acciones button {
+  background: #58091b;
+}
+
+.acciones button:hover {
+  background: #7a0c24;
+}
+
+/* ======== LISTADO DE RESULTADOS ======== */
+#contenedor {
+  display: grid;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.card {
+  background: #121212;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card h3 {
+  margin: 0;
+  color: #7a0c24;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #c8c8c8;
+}
