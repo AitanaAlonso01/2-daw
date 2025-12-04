@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #1d212b;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem;
+  background-color: #101420;
+  /* header fijo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header input {
+  display: flex;
+  align-items: right;
+  font-family: 'Work Sans', sans-serif;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  color: lightgray;
+  background-color: #1d212b;
+  border: none;
+  border-radius: 15px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav ul li a:hover {
+  color: #ffd600;
+}
+
+/* MAIN */
+main {
+  display: block;
+  padding-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Secciones */
+section {
+  width: 100%;
+  padding: 4rem 2rem;
+  color: #e0e0e0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* FESTIS */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  height: 250px;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  z-index: 0;
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-top: 10px;
+}
+
+.card p {
+  justify-content: flex-end;
+  z-index: 1;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.banner:hover,
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  opacity: 0.85;
+}
+
+/* BANNER */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: span 2;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  height: auto;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.banner h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  z-index: 0;
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-top: 10px;
+}
+
+.banner ul {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.banner button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  background-color: #ffd600;
+  color: black;
+  height: 30px;
+  width: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+.banner button:hover {
+  cursor: pointer;
+}
+
+/* MEDIAQUERIES */
+/* La página debe ser responsive utilizando media queries, adaptándose correctamente a:
+Pantallas grandes.
+Pantallas medianas (≤ 1024 px).
+Pantallas pequeñas (≤ 768 px).
+Pantallas muy pequeñas (≤ 425 px). */
+
+/* Pantallas medianas (≤ 1024 px) */
+@media (max-width: 1024px) {
+  /* a) Pantallas medianas (ancho máximo aprox. 1024 px)
+  El contenedor principal sigue teniendo dos columnas, pero:
+  La columna de conciertos y la del banner se acercan en tamaño (relación 2 a 1).
+  El listado de tarjetas de conciertos pasa de 3 columnas a 2 columnas.
+  El menú superior:
+  Reduce un poco los espacios laterales.
+  El buscador reduce su ancho.
+  Ajusta fuentes y espaciados para que todo se vea proporcionado. */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .banner {
+    grid-row: span 2;
+  }
+}
+
+/* Pantallas pequeñas (≤ 768 px) */
+@media (max-width: 768px) {
+  /* b) Pantallas pequeñas (ancho máximo aprox. 768 px)
+  El contenedor principal pasa a tener una sola columna:
+  El banner y el listado de conciertos se muestran uno debajo de otro (una única
+  columna).
+  El orden visual en móvil debe ser:
+  Primero el banner.
+  Después el listado de conciertos.
+  El listado de tarjetas de conciertos queda con 1 sola columna.
+  El menú superior:
+  El contenido del menú se organiza en columna (buscador y enlaces apilados).
+  Los enlaces se muestran en fila y están centrados.
+  La barra de búsqueda ocupa casi todo el ancho disponible y el texto se centra.
+  Las tarjetas reducen un poco su altura máxima.
+  Ajusta tamaños de fuente y espaciados para que todo siga siendo legible pero no
+  ocupe más espacio del necesario. */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header input {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    font-weight: bold;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .banner {
+    grid-row: span 2;
+    order: -1;
+  }
+
+  .banner ul {
+    justify-content: center;
+  }
+}
+
+/* Pantallas muy pequeñas (≤ 425 px) */
+@media (max-width: 425px) {
+  /*
+  c) Pantallas muy pequeñas (ancho máximo aprox. 425 px)
+  El menú ocupa más altura porque el contenido está en varias líneas.
+  Asegúrate de que el contenido de la página principal no queda oculto por el menú
+  fijo.
+  Los enlaces del menú se muestran en columna, centrados, con separación vertical.
+  El buscador ocupa todo el ancho disponible y el texto se centra.
+  Ajusta tamaños de fuente y espaciados para que todo siga siendo legible pero no
+  ocupe más espacio del necesario.
+  */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  header input {
+    width: 100%;
+    text-align: center;
+  }
+  header nav ul {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  main {
+    padding-top: 200px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .banner {
+    grid-row: span 2;
+    order: -1;
+  }
+
+  .banner ul {
+    justify-content: center;
+  }
+}
