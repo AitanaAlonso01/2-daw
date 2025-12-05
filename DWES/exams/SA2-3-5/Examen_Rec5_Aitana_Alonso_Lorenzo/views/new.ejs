@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Player</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Crear un nuevo player</h1>
+    <form action="/players" method="POST" class="new-player">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" />
+      <br />
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" id="apellido" />
+      <br />
+      <label for="edad">Edad:</label>
+      <input type="number" name="edad" id="edad" />
+      <br />
+      <label for="posicion">Posición:</label>
+      <input type="text" name="posicion" id="posicion" />
+      <br />
+      <label for="equipo">Equipo:</label>
+      <input type="text" name="equipo" id="equipo" />
+      <br />
+      <button type="submit">Guardar Player</button>
+    </form>
+    <a href="/players">Volver al Listado</a>
+  </body>
+</html>

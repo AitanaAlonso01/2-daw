@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index de Players</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>PLAYERS</h1>
+      <button onclick="location.href='/players/new'">Nuevo Player</button>
+      <div>
+        <% for (let p of players) { %>
+        <div class="player">
+          <div>
+            <b><%= p.nombre + " " + p.apellido + " - " + p.equipo %></b>
+            <p>Edad: <%= p.edad %></p>
+            <p>Posición: <%= p.posicion %></p>
+          </div>
+          <div>
+            <form
+              action="/players/<%= p.id %>?_method=DELETE"
+              method="POST"
+              class="inline-form"
+              title="Eliminar"
+            >
+              <button class="trash" type="submit">🗑️</button>
+            </form>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
