@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index de Pedidios</title>
+    <title>Index de Pedidos</title>
   </head>
   <body>
     <h1>PEDIDOS</h1>
@@ -14,10 +14,11 @@
           <p><%= p.cliente %> - <%= p.fecha_pedido %></p>
           <a href="/pedidos/<%= p.id_pedido %>">Detalles</a>
         </li>
+        <% } %>
       </ul>
     </div>
 
     <a href="/pedidos/new">Nuevo pedido</a>
-    <a href="../models/pedidos.model.json">Ver en formato JSON</a>
+    <a href="/pedidos/json">Ver en formato JSON</a>
   </body>
 </html>

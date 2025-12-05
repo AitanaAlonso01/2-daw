@@ -1,9 +1,16 @@
 const pedidosController = require('../controllers/pedidos.controller')
+const pedidoService = require('../services/pedido.service')
 const express = require('express')
 const router = express.Router()
 
+// GET - FOrmato JSON
+router.get('/json', (req, res) => {
+  const pedidos = pedidoService.getAll()
+  res.json(pedidos)
+})
+
 // Mostrar VISTA EJS index.ejs con listado de pedidos
-router.get('/pedidos', pedidosController.findAllPedidos)
+router.get('/', pedidosController.findAllPedidos)
 
 //Mostrar VISTA EJS new.ejs para crear un nuevo pedido
 router.get('/new', pedidosController.showNewPedido)
@@ -22,6 +29,7 @@ router.patch('/:id', pedidosController.editPedido)
 router.delete('/:id', pedidosController.deletePedido)
 
 // POST - Agregar una linea de pedido
+router.get('/:id/newline', pedidosController.showNewLine)
 router.post('/:id/newline', pedidosController.newLine)
 
 //Exportar rutas para poder usar en el servidor - Siempre debe exportar las rutas (mejor al final del archivo)

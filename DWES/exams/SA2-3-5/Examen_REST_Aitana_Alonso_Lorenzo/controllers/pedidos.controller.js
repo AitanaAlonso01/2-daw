@@ -8,13 +8,26 @@ exports.findAllPedidos = (req, res) => {
 }
 
 exports.findPedidoById = (req, res) => {
-  const { id_pedido } = req.params
-  const pedido = PedidoService.getById(id_pedido)
-  if (pedido) {
-    res.render('show.ejs', { pedido })
-  } else {
-    res.status(404).json('pedido no encontrado') // devolvemos un mensaje de error por JSON
+  const { id } = req.params
+  const pedido = PedidoService.getById(id)
+
+  if (!pedido) {
+    return res.status(404).json('pedido no encontrado')
   }
+
+  // Calcular subtotal
+  const subtotal = pedido.lineas_pedido.reduce((acc, l) => {
+    const totalLinea = l.precio_und * l.cantidad * (1 - l.descuento)
+    return acc + totalLinea
+  }, 0)
+
+  // Calcular IVA (21%)
+  const iva = +(subtotal * 0.21).toFixed(2)
+
+  // Calcular total
+  const total = +(subtotal + iva).toFixed(2)
+
+  res.render('show.ejs', { pedido, subtotal, iva, total })
 }
 
 exports.showNewPedido = (req, res) => {
@@ -27,8 +40,8 @@ exports.createPedido = (req, res) => {
 }
 
 exports.showEditPedido = (req, res) => {
-  const { id_pedido } = req.params
-  const pedido = PedidoService.getById(id_pedido) // cargamos el pedido
+  const { id } = req.params
+  const pedido = PedidoService.getById(id) // cargamos el pedido
   if (pedido) {
     res.render('edit.ejs', { pedido })
   } else {
@@ -37,19 +50,30 @@ exports.showEditPedido = (req, res) => {
 }
 
 exports.editPedido = (req, res) => {
-  const { id_pedido } = req.params
-  PedidoService.update(id_pedido, req.body) // actualizamos el pedido
+  const { id } = req.params
+  PedidoService.update(id, req.body) // actualizamos el pedido
   res.redirect('/pedidos') // redirigimos al listado de pedidos
 }
 
 exports.deletePedido = (req, res) => {
-  const { id_pedido } = req.params
-  PedidoService.delete(id_pedido) // eliminamos el pedido
+  const { id } = req.params
+  PedidoService.delete(id) // eliminamos el pedido
   res.redirect('/pedidos') // redirigimos al listado de pedidos
 }
 
+exports.showNewLine = (req, res) => {
+  const { id } = req.params
+  const pedido = PedidoService.getById(id)
+
+  if (!pedido) {
+    return res.status(404).send('Pedido no encontrado')
+  }
+
+  res.render('newline.ejs', { pedido })
+}
+
 exports.newLine = (req, res) => {
-  const { id_pedido } = req.params
-  PedidoService.addLine(id_pedido) // agregamos una linea de pedido
-  res.redirect('/pedidos') // redirigimos al listado de pedidos
+  const { id } = req.params
+  PedidoService.addLine(id, req.body)
+  res.redirect(`/pedidos/${id}`)
 }

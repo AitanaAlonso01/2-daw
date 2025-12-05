@@ -7,21 +7,25 @@
   </head>
   <body>
     <h1>Editar Pedido</h1>
-    <form action="/pedidos/<%= pedido.id_pedido %>" method="POST">
+
+    <form action="/pedidos/<%= pedido.id_pedido %>?_method=PATCH" method="POST">
       <label for="cliente">Cliente:</label>
       <input
         type="text"
         name="cliente"
         id="cliente"
         value="<%= pedido.cliente %>"
+        required
       />
       <br />
+
       <label for="fecha_pedido">Fecha Pedido:</label>
       <input
         type="date"
         name="fecha_pedido"
         id="fecha_pedido"
         value="<%= pedido.fecha_pedido %>"
+        required
       />
 
       <button type="submit">Guardar Cambios</button>

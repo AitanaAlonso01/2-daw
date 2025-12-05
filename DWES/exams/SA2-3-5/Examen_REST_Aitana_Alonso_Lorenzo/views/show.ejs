@@ -11,28 +11,29 @@
 
     <hr />
 
-    <h3><i>SUBTOTAL:</i></h3>
-    <h3><i>IVA:</i></h3>
-    <h3>TOTAL:</h3>
+    <h3><i>SUBTOTAL:</i> <%= subtotal.toFixed(2) %> €</h3>
+    <h3><i>IVA (21%):</i> <%= iva.toFixed(2) %> €</h3>
+    <h3><b>TOTAL:</b> <%= total.toFixed(2) %> €</h3>
 
     <hr />
 
     <h1>LINEAS DE PEDIDO</h1>
-    <button type="button" href="/pedidos/<%= pedido.id_pedido %>/newline">
+    <a href="/pedidos/<%= pedido.id_pedido %>/newline">
       Nueva Línea de Pedido
-    </button>
+    </a>
 
     <hr />
 
     <ul>
-      <% pedido.lineas_pedido.forEach(l => { %>
+      <% (pedido.lineas_pedido || []).forEach(l => { %>
       <li>
         <p>
-          <b><%= l.producto %> </b>- <%= l.precio_und %> (€) - <%= l.cantidad %>
-          Und(s) - <%= l.descuento %> (%) - Importe Total: <%= l.precio_und *
-          l.cantidad * (1 - l.descuento / 100) %>
+          <b><%= l.producto %></b> - <%= l.precio_und %> (€) - <%= l.cantidad %>
+          Und(s) - <%= l.descuento %> (%) - Importe Total: <%= (l.precio_und *
+          l.cantidad * (1 - l.descuento)).toFixed(2) %> €
         </p>
       </li>
+      <% }) %>
     </ul>
 
     <hr />
@@ -40,6 +41,11 @@
     <a href="/pedidos">Volver al Listado</a>
     <a href="/pedidos/<%= pedido.id_pedido %>/edit">Editar</a>
 
-    <button>Eliminar Pedido</button>
+    <form
+      action="/pedidos/<%= pedido.id_pedido %>?_method=DELETE"
+      method="POST"
+    >
+      <button type="submit">Eliminar Pedido</button>
+    </form>
   </body>
 </html>
