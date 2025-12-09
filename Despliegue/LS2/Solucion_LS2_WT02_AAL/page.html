@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="en-US">
+	<head>
+		<title>Retroalimentaci&oacute;n: Writing tes - Creating our own DMZ [AITANA ALONSO LORENZO]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body data-absolute-enabled="true" style="font-family:Calibri;font-size:11pt">
+		<div data-id="_default" style="position:absolute;left:48px;top:120px;width:624px">
+			<h6 style="color:#2e75b5;font-style:italic;margin-top:5.5pt;margin-bottom:5.5pt"><span style="font-family:Helvetica;font-size:7.5pt;color:#333333">Dadas las m&aacute;quinas virtuales, implementa el siguiente escenario:</span></h6>
+			<img alt="Creando nuestra propia DMZ 
+G,tLab 
+192.168uST NUMBER u 
+Ether I 
+Etherl 
+Etherl 
+FTP se 
+Q Bridge " width="624" height="370.5" src="./page_files/img_1" data-src-type="image/png" data-fullres-src-type="image/png">
+			<h4 style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:5.5pt;margin-bottom:5.5pt"><span style="font-family:Helvetica;color:#df2c14;font-weight:bold">Consideraciones:</span></h4>
+			<ul>
+				<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Usuario de acceso al sistema operativo: AlumnXY; donde XY es el n&uacute;mero de pc que est&aacute;s utilizando.</span></li>
+				<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Puede que en alguna m&aacute;quina virtual falten algunas aplicaciones.</span></li>
+				<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Se os facilita un documento ".pdf" y otro ".docx" para facilitar la entrega de la documentaci&oacute;n.</span></li>
+				<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Se debe realizar captura de pantalla de todo lo realizado.</span></li>
+			</ul>
+			<p style="margin-top:5.5pt;margin-bottom:5.5pt"><span style="font-family:Helvetica;font-size:10.5pt;color:#df2c14;font-weight:bold">Entregas:</span></p>
+			<ul>
+				<li><p style="margin-top:0pt;margin-bottom:0pt"><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Documento en formato ".pdf" siguiendo la siguiente nomenclatura: </span></p>
+				<ul>
+					<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">LS1_RA1_XYZ.pdf; donde XYZ corresponde a vuestras iniciales.</span></li>
+				</ul>
+				</li>
+				<li><p style="margin-top:0pt;margin-bottom:0pt"><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Como se tendr&aacute; en cuenta la documentaci&oacute;n, puesto que va vinculada al RA1-i), se evaluar&aacute;: </span></p>
+				<ul>
+					<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Presentaci&oacute;n.</span></li>
+					<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Orden y limpieza.</span></li>
+					<li><span style="font-family:Helvetica;font-size:10.5pt;color:#333333">Es un documento formal, por lo que es importante que el contenido sea lo m&aacute;s formal y entendible posible, es decir, evitar capturas de pantalla grandes o saltos o espacios sin sentido.</span></li>
+				</ul>
+				</li>
+			</ul>
+			<br>
+			<br>
+			<p style="margin-top:5.5pt;margin-bottom:5.5pt"><span style="font-family:Helvetica;font-size:10.5pt;color:#df2c14;font-weight:bold">Si el archivo no est&aacute; en formato pdf no se corrigir&aacute;</span></p>
+		</div>
+		<div style="position:absolute;left:91px;top:974px;width:624px">
+			<h1 lang="es-ES" style="font-size:16pt;color:#1e4e79;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota final: 6.417+6.667+6.111+9.167 = 7.1</span></h1>
+			<br>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota servidor DNS: 6.417</span></p>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota servidor GitLab: 6.667</span></p>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota servidor web: 6.111</span></p>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Nota servidor FTP: 9.167</span></p>
+			<br>
+			<h1 lang="es-ES" style="font-size:16pt;color:#1e4e79;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcci&oacute;n:</span></h1>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Servidor DNS:Configuraci&oacute;n de la red: Nota(9.5 + 2.25+7.5= 6.417</span></h2>
+			<ol>
+				<li value="1"><h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Servidor DNS:Configuraci&oacute;n de la red: Nota(9.5 + 2.25+7.5= 6.417</span></h2>
+				</li>
+			</ol>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.1. Configuraci&oacute;n de la red ( Nota: 9+10/2=9.5)</span></h3>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.1.1. Configuraci&oacute;n de red &ndash; Servidor DNS (Nota: 9 puntos) </span></h4>
+			<img alt="dns@servidordns: ~ 
+X 
+GNU nano 7.2 
+/etc/netplan/50-cloud-init.yaml 
+network: 
+version: 2 
+ethernets: 
+RED INTERNA 
+GitLab Server 
+enp0s3: 
+addresses: 
+- 192.168.17.50/24 
+# NAT 
+Enp0s3 =&gt; Ether1 (NAT) 
+Ether1 
+enpos8: 
+dhcp4: true 
+addresses : 
+- 10.0.3.15/24 
+Web Server 
+nameservers: 
+(apache) 
+addresses : 
+Ether2 
+NAT 
+- 10.2.1.254 
+routes : 
+Enpos8 =&gt; (Ether2) Red Internet 
+Ether1 
+- to: default 
+.150 
+via: 10.0.3.2 
+# BRIDGE 
+FTP Server 
+enpos9: 
+dhcp4: true 
+Host Red 
+Interna 
+Ether1 
+.200 
+Ether3 
+Bridge 
+Host 
+Anfitri&oacute;n 
+Read 21 lines 
+^G 
+Help 
+^0 
+Write Out 
+Where Is 
+Cut 
+Execute 
+Location 
+M-U Undo 
+M-A 
+Set Mark 
+M- 
+To Bracket 
+Exit 
+Read File 
+Replace 
+Paste 
+Justify 
+Go To Line 
+M-F 
+Redo 
+M-6 Copy 
+0. 
+Where Was 
+0 . 1 19:13 " width="480" height="305" src="./page_files/img_2" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.1.2. Configuraci&oacute;n del enrutamiento (iptables) (Nota: 10 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="color:black">Correcto</span></p>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.2. Comprobar la comunicaci&oacute;n entre m&aacute;quinas e internet (Nota: 9+0+0+0/4= 2.25) </span></h2>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.2.1. Comprobar acceso a Internet (Nota 9 puntos)</span></h3>
+			<img alt="dns@servidordns :- 
+x 
+dns@servidordns :- $ nslookup www.google.es 
+Server: 
+127.0.0.53 
+Address: 
+127.0.0.53#53 
+Non-authoritative answer: 
+www.google.es canonical name = forcesafesearch.google.com. 
+&iquest;Has comprobado que te funciona 
+Name: 
+forcesafesearch.google.com 
+Address: 216.239.38.120 
+Name : 
+forcesafesearch.google.com 
+teniendo Ether3 desactivado? 
+Address: 2001:4860:4802:32 :: 78 
+dns@servidordns :- $ " width="480" height="109" src="./page_files/img_3" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.2.2. Comprobar acceso del servidor DNS al servidor GitLab (Nota 0 puntos) </span></h3>
+			<img alt="git@gitserver :~ 
+X 
+git@gitserver :~ $ ip a 
+1: lo: &lt; LOOPBACK, UP, LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 
+inet 127.0.0.1/8 scope host lo 
+valid lft forever preferred_lft forever 
+inet6 : : 1/128 scope host noprefixroute 
+No compruebas el acceso del 
+valid lft forever preferred_lft forever 
+2: enpos3: &lt; BROADCAST, MULTICAST, UP, LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000 
+link/ether 08:00:27:53:b6:28 brd ff:ff:ff:ff:ff:ff 
+servidor DNS al servidor GitLab 
+inet 192.168.17.100/24 brd 192.168.17.255 scope global enp@s3 
+valid_lft forever preferred_lft forever 
+inet6 fe80: : a00:27ff : fe53:b628/64 scope link 
+valid_lft forever preferred_lft forever 
+git@gitserver :~ $ 
+Soluci&oacute;n: 
+dns@dnsserver: ~ 
+X 
++ 
+V 
+0 
+X 
+dns@dnsserver: ~ $ ping 192.168.100.100 
+PING 192.168.100.100 (192.168.100.100) 56(84) bytes of data. 
+64 bytes from 192.168.100.100: icmp_seq=1 ttl=64 time=0.967 ms 
+64 bytes from 192.168.100.100: icmp_seq=2 ttl=64 time=0.807 ms 
+64 bytes from 192.168.100.100: icmp_seq=3 ttl=64 time=0.667 ms 
+64 bytes from 192.168.100.100: icmp_seq=4 ttl=64 time=1.07 ms 
+64 bytes from 192.168.100.100: icmp_seq=5 ttl=64 time=0.417 ms 
+64 bytes from 192.168.100.100: icmp_seq=6 ttl=64 time=1.84 ms 
+64 bytes from 192.168.100.100: icmp_seq=7 ttl=64 time=0.412 ms 
+64 bytes from 192.168.100.100: icmp_seq=8 ttl=64 time=0.862 ms 
+64 bytes from 192.168.100.100: icmp_seq=9 ttl=64 time=1.07 ms 
+64 bytes from 192.168.100.100: icmp_seq=10 ttl=64 time=0.611 ms 
+64 bytes from 192.168.100.100: icmp_seq=11 ttl=64 time=0.578 ms 
+64 bytes from 192.168.100.100: icmp_seq=12 ttl=64 time=0.790 ms 
+64 bytes from 192.168.100.100: icmp_seq=13 ttl=64 time=0.863 ms " width="480" height="323" src="./page_files/img_4" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.2.3. Comprobar acceso del servidor DNS al servidor Web (Nota 0 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">No realizado.</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.2.4. Comprobar acceso del servidor DNS al servidor FTP (Nota 0 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Mismo comentario que el punto 1.2.2</span></p>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.3. Instalaci&oacute;n y configuraci&oacute;n del servicio DNS (bind9) (Nota: 10+5/2= 7.5)</span></h2>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.3.1. Instalaci&oacute;n DNS (Nota: 10 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcto</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">1.3.2. Configuraci&oacute;n DNS y cortafuegos Nota: 5 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Al cambiar la interfaces has tenido en cuenta dicha circunstancia en la configuraci&oacute;n y es correcta.</span></p>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="font-weight:bold">Falta la configuraci&oacute;n del fichero /etc/default/named</span></p>
+			<img alt="dns@servidordns: - 
+X 
+dns@servidordns :- $ sudo sysctl status bind9 
+[ sudo] password for dns: 
+sysctl: cannot stat /proc/sys/status: No such file or directory 
+sysctl: cannot stat /proc/sys/bind9: No such file or directory 
+dns@servidordns :- $ sudo systemctl status bind9 
+. named. service - BIND Domain Name Server 
+Loaded: Loaded (/usr/lib/systend/system/named.service; enabled; preset: enabled) 
+Active: active (running) since Tue 2025-11-11 18:10:08 UTC; 31min ago 
+Docs : man: named (8) 
+Main PID: 2034 (named) 
+Status: &quot;running&quot; 
+Tasks: 5 (limit: 1058) 
+Memory: 23.9M (peak: 24.3M) 
+CPU: 274ms 
+No aparece que est&aacute; escuchando con 
+CGroup: /system.slice/named. service 
+L2034 /usr/sbin/named -f -u bind 
+la IP versi&oacute;n 4 
+Nov 11 18:36:13 servidordns nared[2034]: timed out res 
+Nov 11 18:36:13 servidordns nared[2034]: network unrea 
+Nov 11 18:36:13 servidordns named[2034]: network unreachable resolving &quot;_http ._ tcp.es.archive.ubuntu.com/SRV/IN': 2620:2d:4000:1 :: 43#53 
+Nov 11 18:36:14 servidordns nared[2034]: timed out resolving &quot;es.archive.ubuntu.com/A/IN': 192.168.17.50#53 
+Nov 11 18:36:14 servidordns nared[2034]: timed out resolving &quot;es.archive.ubuntu.com/AAAA/IN': 192.168.17.50#53 
+Nov 11 18:36:14 servidordns nared[2034]: network unreachable resolving &quot;es. archive.ubuntu.com/A/IN' : 2620:2d: 4000: 1: : 44#53 
+Nov 11 18:36:14 servidordns nared[2034]: network unreachable resolving 'es. archive.ubuntu.com/AAAA/IN': 2620:2d:4000:1 :: 44#53 
+Nov 11 18:36:14 servidordns nared[2034]: network unreachable resolving 'es. archive. ubuntu.com/A/IN' : 2620:2d: 4000: 1 :: 43#53 
+Nov 11 18:36:14 servidordns nared[2034]: network unreachable resolving 'es. archive.ubuntu.com/AAAA/IN' : 2620:2d:4000: 1: : 43#53 
+Nov 11 18:36:22 servidordns named[2034]: Lame server resolving 'es.archive.ubuntu.com' [in 'ubuntu.com'?): 185.125.190.65#53 
+dns@servidordns :~ $ " width="480" height="213" src="./page_files/img_5" data-src-type="image/png" data-fullres-src-type="image/png">
+			<br>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="font-weight:bold">Falta la configuraci&oacute;n del cortafuegos.</span></p>
+			<br>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">2. Servidor GilLab (Nota: 10 + 3.333/2 = 6.667)</span></h2>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">2.1. Configuraci&oacute;n de la red (Nota: 10 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcta</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">2.2. Comprobar la comunicaci&oacute;n entre m&aacute;quinas e internet. (Nota: 10+0+0/3=3.333 puntos)</span></h3>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">2.2.1. Comprobar acceso a Internet </span><span lang="en-US" style="">(Nota: 10 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:5.5pt;margin-bottom:5.5pt"><span lang="en-US" style="">Correcta</span></p>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">2.2.2. Comprobar acceso del servidor GitLab al servidor Web (Nota: 0 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">No realizada</span></p>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">2.2.3. Comprobar acceso del servidor GitLab al servidor FTP (Nota: 0 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Mismo comentario que el punto 1.2.2</span></p>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3. Servidor Web (Nota: 10+5+3.333/3=6.111</span></h2>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.1. Configuraci&oacute;n de la red (Nota: 10 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcta</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.2. Comprobar la comunicaci&oacute;n entre m&aacute;quinas e internet (Nota: 10+0/2=5 puntos)</span></h3>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.2.1. Comprobar acceso a Internet (portal.edu.gva.es) (Nota: 10 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcta</span></p>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.2.2. Comprobar acceso del servidor Web al servidor FTP (Nota: 0 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Mismo comentario que el punto 1.2.2</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.3. Instalaci&oacute;n y configuraci&oacute;n del servicio Apache (Nota: 10+0+0/3=3.333)</span></h3>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.3.1. Instalaci&oacute;n Apache (Nota: 10 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcta</span></p>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.3.2. Comprobaci&oacute;n funcionamiento Apache 2 en el servidor (Nota: 0 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">No realizada.</span></p>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">3.3.3. Comprobaci&oacute;n funcionamiento Apache 2 en el cliente </span><span lang="en-US" style="">(Nota: 0 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:5.5pt;margin-bottom:5.5pt"><span lang="en-US" style="">No realizada.</span></p>
+			<h2 lang="es-ES" style="font-size:14pt;color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4. Servidor FTP (Nota: 10+10+7.5/3=9.167</span></h2>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.1. Configuraci&oacute;n de la red (Nota: 10 puntos)</span></h3>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcta</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.2. Comprobar la comunicaci&oacute;n entre m&aacute;quinas e internet Nota: 10 puntos)</span></h3>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.2.1. Comprobar acceso a Internet (</span><span lang="en-US" style="">www.gva.es) (Nota: 10 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:5.5pt;margin-bottom:5.5pt"><span lang="en-US" style="">Correcta</span></p>
+			<h3 lang="es-ES" style="font-size:12pt;color:#5b9bd5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.3. Instalaci&oacute;n y configuraci&oacute;n del servicio FTP (proftpd) (Nota: 10+5/2=7.5 puntos)</span></h3>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.3.1. Instalaci&oacute;n servicio FTP (Nota: 10 puntos)</span></h4>
+			<p lang="es-ES" style="margin-top:5.5pt;margin-bottom:5.5pt"><span lang="en-US" style="">Correcta</span></p>
+			<h4 lang="es-ES" style="font-size:12pt;color:#5b9bd5;font-style:italic;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.3.2. Comprobaci&oacute;n funcionamiento servicio FTP (Nota: 10+0 /2=5puntos)</span></h4>
+			<h5 lang="es-ES" style="color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.3.2.1. Acceso usuario fpt desde el terminal (Nota: 10 puntos)</span></h5>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">Correcta</span></p>
+			<h5 lang="es-ES" style="color:#2e75b5;margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">4.3.2.2. Acceso usuario fpt desde el filezilla (Nota: 0 puntos)</span></h5>
+			<p lang="es-ES" style="margin-top:0pt;margin-bottom:0pt"><span lang="en-US" style="">No realizada.</span></p>
+		</div>
+		<div style="position:absolute;left:829px;top:975px;width:624px">
+			<br>
+		</div>
+	</body>
+</html>
