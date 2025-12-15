@@ -1,0 +1,56 @@
+[2025-12-15T20:02:00.492] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:05:35.795] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:06:21.404] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:06:36.234] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:07:39.742] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:08:06.333] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:08:24.642] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:08:34.622] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:08:49.479] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:09:17.084] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:10:06.517] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:12:40.304] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:13:47.171] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:13:56.526] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:14:07.804] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:15:55.573] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:16:41.506] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:16:55.071] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:18:38.368] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:19:27.526] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:24:30.587] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:30:51.297] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:31:37.004] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:32:08.369] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:32:22.354] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:34:28.059] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:34:36.862] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:34:59.906] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:35:26.885] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:36:31.647] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:37:20.284] [INFO] access - Server levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [15/Dec/2025:19:38:50 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:38:50 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:38:51 +0000] "GET /api/v1/comentarios/new HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:38:53 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:38:53 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:38:59 +0000] "GET /api/v1/comentarios/6924a63f2af20e3f65ee982a/edit HTTP/1.1" 200 1617 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:39:00 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/6924a63f2af20e3f65ee982a/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:39:00 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios/6924a63f2af20e3f65ee982a/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:39:02 +0000] "GET /api/v1/comentarios/6924a63f2af20e3f65ee982a/edit HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:39:06 +0000] "PATCH /api/v1/comentarios/6924a63f2af20e3f65ee982a?_method=PATCH HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios/6924a63f2af20e3f65ee982a/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:39:06 +0000] "GET /comentarios HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/6924a63f2af20e3f65ee982a/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:39:06 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 6754 "http://localhost:3010/api/v1/comentarios/6924a63f2af20e3f65ee982a/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2025-12-15T20:41:06.398] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:42:10.637] [INFO] access - Server levantado en http://localhost:3010
+[2025-12-15T20:42:56.837] [INFO] access - Server levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:05 +0000] "GET /api-docs HTTP/1.1" 401 1322 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2025-12-15T20:43:22.679] [INFO] access - Server levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:36 +0000] "GET /comentarios/ HTTP/1.1" 401 21 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:36 +0000] "GET /favicon.ico HTTP/1.1" 401 21 "http://localhost:3010/comentarios/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:45 +0000] "GET /comentarios?login=123 HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:45 +0000] "GET /api/v1/comentarios HTTP/1.1" 401 21 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:45 +0000] "GET /favicon.ico HTTP/1.1" 401 21 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:58 +0000] "GET /api/v1/comentarios?login=123 HTTP/1.1" 200 6754 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [15/Dec/2025:19:43:58 +0000] "GET /favicon.ico HTTP/1.1" 401 21 "http://localhost:3010/api/v1/comentarios?login=123" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2025-12-15T20:44:45.419] [INFO] access - Server levantado en http://localhost:3010
