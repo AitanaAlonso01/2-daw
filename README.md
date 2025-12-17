@@ -22,7 +22,7 @@ Todo lo que voy a ir aprendiendo en 2º Año de Desarrollo de Aplicaciones Web.
 | Desarrollo Web en Entorno Cliente             | 7          |
 | Despliegue de Aplicaciones Web                | 7          |
 | Sostenibilidad Aplicada al Sistema Productivo | 7          |
-| Diseño de Interfaces Web                      | 0          |
+| Diseño de Interfaces Web                      |            |
 | Digitalización Aplicada al Sistema Productivo | 6          |
 | Proyecto Intermodular                         | 9          |
 | Inglés Oral                                   | 9          |
