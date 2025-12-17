@@ -19,11 +19,12 @@ Todo lo que voy a ir aprendiendo en 2º Año de Desarrollo de Aplicaciones Web.
 | Asignatura                                    | Nota Media |
 | --------------------------------------------- | ---------- |
 | Desarrollo Web en Entorno Servidor            | 5          |
-| Desarrollo Web en Entorno Cliente             | 0          |
+| Desarrollo Web en Entorno Cliente             | 7          |
 | Despliegue de Aplicaciones Web                | 7          |
 | Sostenibilidad Aplicada al Sistema Productivo | 7          |
 | Diseño de Interfaces Web                      | 0          |
 | Digitalización Aplicada al Sistema Productivo | 6          |
 | Proyecto Intermodular                         | 9          |
+| Inglés Oral                                   | 9          |
 
 ![1ª Evaluación](https://i.pinimg.com/736x/6f/f2/8e/6ff28e022736cb571e18034f9c906604.jpg)
