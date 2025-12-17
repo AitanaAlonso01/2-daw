@@ -28,3 +28,18 @@ Todo lo que voy a ir aprendiendo en 2º Año de Desarrollo de Aplicaciones Web.
 | Inglés Oral                                   | 9          |
 
 ![1ª Evaluación](https://i.pinimg.com/736x/6f/f2/8e/6ff28e022736cb571e18034f9c906604.jpg)
+
+## 2ª Evaluación
+
+| Asignatura                                    | Nota Media |
+| --------------------------------------------- | ---------- |
+| Desarrollo Web en Entorno Servidor            |            |
+| Desarrollo Web en Entorno Cliente             |            |
+| Despliegue de Aplicaciones Web                |            |
+| Sostenibilidad Aplicada al Sistema Productivo |            |
+| Diseño de Interfaces Web                      |            |
+| Digitalización Aplicada al Sistema Productivo |            |
+| Proyecto Intermodular                         |            |
+| Inglés Oral                                   |            |
+
+![2ª Evaluación](https://i.pinimg.com/736x/6f/f2/8e/6ff28e022736cb571e18034f9c906604.jpg)
