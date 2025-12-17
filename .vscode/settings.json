@@ -36,7 +36,7 @@
   "editor.renderLineHighlight": "none",
   "editor.occurrencesHighlight": "off",
   "breadcrumbs.enabled": false,
-  "editor.hover.enabled": false, // Quita los tooltips de GitLens, pero también la ayuda de cualquier elemento de la UI
+  "editor.hover.enabled": "off", // Quita los tooltips de GitLens, pero también la ayuda de cualquier elemento de la UI
 
   // --- Editor: Formato y Prettier ---
   "editor.tabSize": 2,
