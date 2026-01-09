@@ -13,10 +13,12 @@ const commentRoutes = require('./routes/comment.routes')
 const commentRoutesCSR = require('./routes/comment.csr.routes')
 const tvRoutes = require('./routes/tv.routes')
 const catRoutes = require('./routes/categoria.routes')
+const userRoutes = require('./routes/user.routes')
 const baseUrlComentarios = `/api/${process.env.API_VERSION}/comentarios`
 const baseUrlComentariosCSR = `/api/${process.env.API_VERSION}/comments`
 const baseUrlTV = `/api/${process.env.API_VERSION}/tv`
 const baseUrlCategorias = `/api/${process.env.API_VERSION}/categorias`
+const baseUrlUsuarios = `/api/${process.env.API_VERSION}/users`
 const mongodbConfig = require('./utils/mongodb.config')
 const logger = require('./utils/logger')
 const morganMW = require('./middlewares/morgan.mw')
@@ -61,6 +63,7 @@ app.use(baseUrlComentarios, commentRoutes)
 app.use(baseUrlComentariosCSR, commentRoutesCSR)
 app.use(baseUrlTV, tvRoutes)
 app.use(baseUrlCategorias, catRoutes)
+app.use(baseUrlUsuarios, userRoutes)
 //Rutas por defecto
 app.get(/.*/, (req, res) => {
   // logger.error.fatal('Ruta no existente: ' + req.originalUrl)

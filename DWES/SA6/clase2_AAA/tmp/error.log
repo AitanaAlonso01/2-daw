@@ -1,28 +1,33 @@
-[2026-01-07T15:57:06.643] [FATAL] error - Ruta no existente: /favicon.ico
-[2026-01-07T16:10:05.712] [ERROR] error - Error handler (undefined): Operation `comments.find()` buffering timed out after 10000ms
-[2026-01-07T16:11:07.932] [ERROR] error - Error handler (undefined): Operation `comments.find()` buffering timed out after 10000ms
-[2026-01-07T16:12:14.155] [FATAL] error - Ruta no existente: /favicon.ico
-[2026-01-07T16:12:14.156] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:12:32.352] [FATAL] error - Ruta no existente: /api/v1/rjghgbejg
-[2026-01-07T16:12:32.353] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:13:31.318] [FATAL] error - Ruta no existente: /api/v1/rjghgbejg
-[2026-01-07T16:13:31.319] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:15:23.394] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:15:37.884] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:22:24.458] [ERROR] error - Error handler (500): Operation `comments.find()` buffering timed out after 10000ms
-[2026-01-07T16:26:41.044] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:33:37.744] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:34:04.445] [ERROR] error - Error handler (500): Cast to ObjectId failed for value "papasfritas" (type string) at path "_id" for model "comment"
-[2026-01-07T16:36:50.529] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:36:56.405] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:37:05.329] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:38:41.467] [ERROR] error - Error handler (404): Ruta no existente weon
-[2026-01-07T16:41:18.911] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:42:30.975] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:48:39.317] [ERROR] error - Error handler (500): comment validation failed: categoria: Cast to ObjectId failed for value "{ _id: '', nombre: 'tecnologia' }" (type Object) at path "categoria" because of "BSONError"
-[2026-01-07T16:49:14.908] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:49:17.798] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T16:49:19.693] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T20:34:43.739] [ERROR] error - Error handler (404): Ruta no existente
-[2026-01-07T20:34:50.150] [ERROR] error - Error handler (404): Sin comentarios...
-[2026-01-07T20:34:50.188] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:21:30.704] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:21:36.523] [ERROR] error - Error handler (404): Sin comentarios...
+[2026-01-09T15:21:36.568] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:22:29.683] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:22:31.237] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:22:31.946] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:22:32.112] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:22:32.291] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:22:32.457] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:24:36.520] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:24:53.024] [ERROR] error - Error handler (404): Sin comentarios...
+[2026-01-09T15:24:53.067] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:24:56.815] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:47:46.071] [ERROR] error - Error handler (404): Sin usuarios
+[2026-01-09T15:47:46.117] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:49:13.075] [ERROR] error - Error handler (500): Cannot read properties of undefined (reading 'password')
+[2026-01-09T15:50:29.534] [ERROR] error - Error handler (400): Expected double-quoted property name in JSON at position 52 (line 4 column 1)
+[2026-01-09T15:51:10.875] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T15:54:49.113] [ERROR] error - Error handler (500): E11000 duplicate key error collection: 2526_DAW_DB.users index: username_1 dup key: { username: "pepito29" }
+[2026-01-09T16:16:11.845] [ERROR] error - Error handler (500): E11000 duplicate key error collection: 2526_DAW_DB.users index: username_1 dup key: { username: "pepito29" }
+[2026-01-09T16:17:24.511] [ERROR] error - Error handler (500): user validation failed: username: Path `username` is required.
+[2026-01-09T16:20:32.229] [ERROR] error - Error handler (406): Clave duplicada espabila colega
+[2026-01-09T16:21:00.582] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T16:25:56.619] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T16:25:56.639] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T16:25:59.470] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T16:26:27.774] [ERROR] error - Error handler (404): Ruta no existente
+[2026-01-09T16:39:28.197] [ERROR] error - Error handler (500): data and hash arguments required
+[2026-01-09T16:40:43.826] [ERROR] error - Error handler (500): data and hash arguments required
+[2026-01-09T16:40:52.706] [ERROR] error - Error handler (500): data and hash arguments required
+[2026-01-09T16:42:01.249] [ERROR] error - Error handler (500): data and hash arguments required
+[2026-01-09T16:42:33.603] [ERROR] error - Error handler (500): data and hash arguments required
+[2026-01-09T16:43:54.632] [ERROR] error - Error handler (401): Usuario y/o contraseña incorrectos

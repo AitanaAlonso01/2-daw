@@ -1,137 +1,114 @@
-[2026-01-07T15:55:24.530] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T15:55:47.465] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T15:56:59.550] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:14:57:05 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:14:57:05 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 3650 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:14:57:06 +0000] "GET /favicon.ico HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T15:59:03.721] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T15:59:17.491] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T15:59:24.390] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T15:59:35.458] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:01:29.427] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:06:28.337] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:06:35 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:06:45 +0000] "GET /api/v1/comentarios HTTP/1.1" 500 1331 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:09:02.192] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:09:55.626] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs HTTP/1.1" 301 158 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs/ HTTP/1.1" 200 3106 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs/swagger-ui-init.js HTTP/1.1" 200 14452 "http://localhost:3010/api-docs/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs/swagger-ui.css HTTP/1.1" 200 155212 "http://localhost:3010/api-docs/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 250398 "http://localhost:3010/api-docs/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1510271 "http://localhost:3010/api-docs/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:02 +0000] "GET /api-docs/favicon-16x16.png HTTP/1.1" 200 665 "http://localhost:3010/api-docs/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:10:05 +0000] "GET /api/v1/comentarios HTTP/1.1" 500 1331 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:10:49.478] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:11:07 +0000] "GET /api/v1/comentarios HTTP/1.1" 500 1331 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:12:11.333] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:12:13 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 3650 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:12:14 +0000] "GET /favicon.ico HTTP/1.1" 500 1377 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:12:26.270] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:12:26 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:12:26 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:12:32 +0000] "GET /api/v1/rjghgbejg HTTP/1.1" 500 1377 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:13:29.572] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:13:31 +0000] "GET /api/v1/rjghgbejg HTTP/1.1" 404 27 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:15:02.298] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:15:20.629] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:15:23 +0000] "GET /api/v1/rjghgbejg HTTP/1.1" 404 27 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:15:37.338] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:15:37 +0000] "GET /api/v1/rjghgbejg HTTP/1.1" 404 32 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:16:05 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:21:59 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:22:00 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:22:00 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:22:11.858] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:22:14 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:22:24 +0000] "GET /api/v1/comentarios HTTP/1.1" 500 71 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:26:33.221] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:26:40 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:26:40 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 6754 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:26:41 +0000] "GET /favicon.ico HTTP/1.1" 404 32 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:27:13.872] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:27:36.005] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:28:19.125] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:28:50.960] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:29:05.981] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:30:18.389] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:30:36.207] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:31:43.941] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:32:10.422] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:32:34.815] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:33:02.008] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:33:25.566] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:33:37 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 6754 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:33:37 +0000] "GET /favicon.ico HTTP/1.1" - - "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:34:04 +0000] "GET /api/v1/comentarios/papasfritas HTTP/1.1" 500 111 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:34:31 +0000] "GET /api/v1/comments/ HTTP/1.1" 200 1433 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:34:57.277] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:35:12.945] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:35:49.787] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:36:13.925] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:36:43 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:36:50 +0000] "DELETE /api/v1/comentarios/67a1b2c3d4e5f67890123456?_method=DELETE HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:36:50 +0000] "GET /comentarios HTTP/1.1" 404 32 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:36:56 +0000] "DELETE /api/v1/comentarios/693059c966790d73a3ee9eb5?_method=DELETE HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:36:56 +0000] "GET /comentarios HTTP/1.1" 404 32 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:37:05 +0000] "DELETE /api/v1/comentarios/6924aa8837109a5de46e8f66?_method=DELETE HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:37:05 +0000] "GET /comentarios HTTP/1.1" 404 32 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:37:16 +0000] "GET /api/v1/comentarios/6924a5afaaaf85237cb58273 HTTP/1.1" 200 1054 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:37:18 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/6924a5afaaaf85237cb58273" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:37:18 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 4524 "http://localhost:3010/api/v1/comentarios/6924a5afaaaf85237cb58273" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:37:34.793] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:37:58.942] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:38:01 +0000] "GET /api/v1/comentarios/new HTTP/1.1" 200 1497 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:38:41 +0000] "POST /api/v1/comentarios HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:38:41 +0000] "GET /comentarios HTTP/1.1" 404 32 "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:38:45 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:38:45 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 5278 "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:39:05.847] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:40:54 +0000] "GET /api/v1/comentarios/6924aa6237109a5de46e8f60/edit HTTP/1.1" 200 1636 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:40:55 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/6924aa6237109a5de46e8f60/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:40:55 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 5544 "http://localhost:3010/api/v1/comentarios/6924aa6237109a5de46e8f60/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:40:57 +0000] "GET /api/v1/comentarios/6924aa6237109a5de46e8f60 HTTP/1.1" 200 979 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:40:58 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/6924aa6237109a5de46e8f60" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:40:58 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios/6924aa6237109a5de46e8f60" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:00 +0000] "GET /api/v1/comentarios/new HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:02 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:02 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios/new" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:05 +0000] "GET /api/v1/comentarios?cat=69174af9dbca9ed324094c74 HTTP/1.1" 200 2168 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:08 +0000] "GET /api/v1/comentarios?cat=69174af9dbca9ed324094c75 HTTP/1.1" 200 2266 "http://localhost:3010/api/v1/comentarios?cat=69174af9dbca9ed324094c74" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:10 +0000] "GET /api/v1/comentarios?cat=69174af9dbca9ed324094c75 HTTP/1.1" 304 - "http://localhost:3010/api/v1/comentarios?cat=69174af9dbca9ed324094c74" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:14 +0000] "GET /api/v1/comentarios HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:18 +0000] "DELETE /api/v1/comentarios/6924aa6237109a5de46e8f60?_method=DELETE HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:41:18 +0000] "GET /comentarios HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:42:30.846] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:42:30 +0000] "GET /comentarios HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:42:37 +0000] "DELETE /api/v1/comentarios/6924aa6237109a5de46e8f60?_method=DELETE HTTP/1.1" 500 19 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:42:42 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 4714 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:42:58.387] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:15:43:51 +0000] "GET /api/v1/comments HTTP/1.1" 200 853 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:10.2.0.160 - - [07/Jan/2026:15:48:30 +0000] "POST /api/v1/comments HTTP/1.1" 200 163 "-" "PostmanRuntime/7.49.1"
-::ffff:10.2.0.160 - - [07/Jan/2026:15:48:39 +0000] "POST /api/v1/comments HTTP/1.1" 500 180 "-" "PostmanRuntime/7.49.1"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:01 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 5530 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:06 +0000] "GET /api/v1/comentarios/695e804ef92428f638e52ec4/edit HTTP/1.1" 200 1622 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:14 +0000] "PATCH /api/v1/comentarios/695e804ef92428f638e52ec4?_method=PATCH HTTP/1.1" 302 41 "http://localhost:3010/api/v1/comentarios/695e804ef92428f638e52ec4/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:14 +0000] "GET /comentarios HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios/695e804ef92428f638e52ec4/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:17 +0000] "GET /comentarios HTTP/1.1" 404 27 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:19 +0000] "GET /comentarios HTTP/1.1" 404 27 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:23 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/comentarios/695e804ef92428f638e52ec4/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:15:49:23 +0000] "GET /api/v1/comentarios HTTP/1.1" 200 5516 "http://localhost:3010/api/v1/comentarios/695e804ef92428f638e52ec4/edit" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-[2026-01-07T16:50:26.360] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:51:09.898] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:51:18.638] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:51:51.737] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:52:34.201] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:52:43.562] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:53:01.969] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:54:40.989] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:54:59.936] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:55:27.059] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T16:55:56.228] [INFO] access - Servidor Express levantado en http://localhost:3010
-[2026-01-07T20:34:24.859] [INFO] access - Servidor Express levantado en http://localhost:3010
-::ffff:127.0.0.1 - - [07/Jan/2026:19:34:43 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:19:34:43 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:19:34:43 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:19:34:50 +0000] "GET /api/v1/comments/ HTTP/1.1" 404 28 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
-::ffff:127.0.0.1 - - [07/Jan/2026:19:34:50 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comments/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-09T15:21:25.576] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:22:22.994] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:29 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:29 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:29 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:31 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:31 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:31 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:31 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:32 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:32 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:32 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:32 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:32 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:22:32 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-09T15:24:32.265] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:36 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:36 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:36 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:53 +0000] "GET /api/v1/comments/ HTTP/1.1" 404 28 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:53 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comments/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:56 +0000] "GET /api/v1/comentarios HTTP/1.1" - - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:24:56 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/comentarios" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-09T15:27:08.417] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:27:39.591] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:27:50.045] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:28:08.960] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:29:01.837] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:29:10.062] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:29:28.223] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:30:19.329] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:30:26.686] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:31:13.739] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:32:21.075] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:32:34.679] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:32:55.410] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:33:02.263] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:34:00.729] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:35:54.534] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:36:04.187] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:36:26.604] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:36:37.142] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:37:38.372] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:37:45.406] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:38:27.726] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:38:40.407] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:39:07.634] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:39:31.969] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:40:12.909] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:41:58.204] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:42:32.371] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:43:15.487] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:43:44.354] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:43:50.372] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:43:57.022] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:44:17.555] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:44:25.428] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:44:32.985] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:44:49.833] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:44:57.296] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:45:08.556] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:46:06.295] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:46:59.518] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:47:20.688] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:47:44.032] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:14:47:46 +0000] "GET /api/v1/users HTTP/1.1" 404 22 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:47:46 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/users" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:14:49:13 +0000] "POST /api/v1/users?username=paco&password=1234 HTTP/1.1" 500 66 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:14:51:00 +0000] "POST /api/v1/users HTTP/1.1" 201 155 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:51:10 +0000] "GET /api/v1/users HTTP/1.1" 200 157 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:51:10 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/users" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:14:54:49 +0000] "POST /api/v1/users HTTP/1.1" 500 120 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:16:07.350] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:16:11 +0000] "POST /api/v1/users HTTP/1.1" 500 120 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:17:13 +0000] "POST /api/v1/users HTTP/1.1" 201 154 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:17:24 +0000] "POST /api/v1/users HTTP/1.1" 500 72 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:18:36.694] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:19:14.814] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:19:45.787] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:20:16.587] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:20:29.355] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:20:32 +0000] "POST /api/v1/users HTTP/1.1" 406 41 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:21:00 +0000] "GET /api/v1/users HTTP/1.1" 200 312 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:21:00 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/users" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-09T16:23:08.176] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:25:21.533] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:25:42.706] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:25:54.166] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:15:25:56 +0000] "GET /api/v1/users:Aitana HTTP/1.1" 404 27 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:25:56 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/users:Aitana" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:25:59 +0000] "GET /api/v1/users HTTP/1.1" - - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:25:59 +0000] "GET /favicon.ico HTTP/1.1" 404 27 "http://localhost:3010/api/v1/users" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:15:26:27 +0000] "GET /api/v1/users:Aitana HTTP/1.1" 404 27 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:26:42 +0000] "GET /api/v1/users?q=Aitana HTTP/1.1" 200 312 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:27:37.061] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:46.117] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:37:30.014] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:37:39.014] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:38:14 +0000] "GET /api/v1/users HTTP/1.1" 200 312 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:39:28 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:40:43 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:40:52 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:41:32.345] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:41:46.484] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:42:00.251] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:42:01 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:42:32.981] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:42:33 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:42:46.656] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:43:18.501] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:43:39.620] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:43:46 +0000] "POST /api/v1/users/login HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:43:54 +0000] "POST /api/v1/users/login HTTP/1.1" 401 45 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:44:01 +0000] "POST /api/v1/users/login HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
