@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+<div class="glass-container">
+  <div class="card">
+    <h1>Usuarios</h1>
+    <div class="tvshows-grid">
+      <% users.forEach(function(user) { %>
+      <div class="show-card">
+        <div class="show-image">
+          <img src="https://www.placecage.com/c/600/400" alt="Imagen de la serie">
+        </div>
+        <div class="show-content">
+          <h2 class="show-title"><%= user.username %></h2>
+          <p class="show-genres">
+            <%= user.profile %>
+          </p>
+          <p class="show-summary">
+            <%= user.username %> es un usuario de la plataforma de streaming de TV.
+          </p>
+          <div class="show-link">
+            <a href=<%= baseUrlUsers + "/" + user._id %>>Ver perfil</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+<%- include("../partials/footer") %>
