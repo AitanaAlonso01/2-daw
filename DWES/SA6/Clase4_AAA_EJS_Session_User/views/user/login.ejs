@@ -1,0 +1,21 @@
+<%- include("../partials/header") %>
+<div class="glass-container">
+    <div class="card">
+        <h1>Iniciar sesión</h1>
+        <form action=<%= baseUrlUsers + "/login" %> method="POST" class="formulario">
+            <input type="text" name="username" placeholder="Username..." required>
+            <input type="password" name="password" placeholder="Password..." required>            
+            <div class="botones">
+                <input type="submit" value="Entrar" class="btn">
+            </div>
+        </form>
+
+        <p style="margin-top: 1rem;">
+            ¿No tienes cuenta?
+            <a href=<%= baseUrlUsers + "/register" %>>
+                Regístrate
+            </a>
+        </p>
+    </div>
+</div>
+<%- include("../partials/footer") %>

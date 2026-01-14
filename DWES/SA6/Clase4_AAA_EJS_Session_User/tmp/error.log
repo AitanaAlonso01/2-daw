@@ -1,0 +1,20 @@
+[2026-01-12T19:53:30.516] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-12T19:53:39.067] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2026-01-12T19:53:46.836] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2026-01-12T19:53:57.413] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2026-01-12T20:15:27.208] [ERROR] error - Error Handler(500): ReferenceError: /home/migsan/Escritorio/DWES/SA6 - AAA/2_CLASES/2526_Clase4_AAA/views/user/login.ejs:1
+ >> 1| <%- include("../partials/header") %>
+    2| <div class="glass-container">
+    3|     <div class="card">
+    4|         <h1>Iniciar sesión</h1>
+
+/home/migsan/Escritorio/DWES/SA6 - AAA/2_CLASES/2526_Clase4_AAA/views/partials/header.ejs:14
+    12|     <nav class="nav-bar">
+    13|         <div class="nav-content">
+ >> 14|             <% if (user) { %>
+    15|                 <span>Hola, <strong><%= user.username %></strong></span>
+    16|                 <a href="<%= baseUrlUsers + '/logout' %>">Salir</a>
+    17|             <% } else { %>
+
+user is not defined
+[2026-01-12T20:19:58.591] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico

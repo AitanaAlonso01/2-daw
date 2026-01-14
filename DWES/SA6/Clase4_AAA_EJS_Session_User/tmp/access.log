@@ -1,0 +1,153 @@
+[2026-01-12T19:18:11.829] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T19:26:19.516] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T19:26:23.395] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T19:26:30.489] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T19:36:20.474] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T19:37:24.225] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T19:37:27.149] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:18:37:46 +0000] "GET /api/v1/users/register HTTP/1.1" 200 1196 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:38:06 +0000] "GET /api/v1/users/login HTTP/1.1" 200 365 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:38:17 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:33 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:37 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1032 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:39 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:40 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:41 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:42 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:43 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:44 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:45 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:46 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:47 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:48 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:49 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:49 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:49:51 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:51:22 +0000] "GET /api/v1/users/register HTTP/1.1" 200 1196 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:53:04 +0000] "POST /api/v1/users HTTP/1.1" 200 155 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:53:30 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1032 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:53:30 +0000] "GET /favicon.ico HTTP/1.1" 404 41 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:53:39 +0000] "POST /api/v1/users/login HTTP/1.1" 401 45 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:53:46 +0000] "POST /api/v1/users/login HTTP/1.1" 401 45 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:53:57 +0000] "POST /api/v1/users/login HTTP/1.1" 401 45 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:54:18 +0000] "GET /api/v1/users HTTP/1.1" 200 1850 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:54:22 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:54:28 +0000] "POST /api/v1/users HTTP/1.1" 200 153 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:54:32 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:54:37 +0000] "POST /api/v1/users/login HTTP/1.1" 200 153 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:09:50.047] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:09:55 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1032 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:10:01 +0000] "POST /api/v1/users/login HTTP/1.1" 200 153 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:14:59 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1032 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:15:27 +0000] "GET /api/v1/users/login HTTP/1.1" 500 694 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:16:02 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1181 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:19:58 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1179 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:19:58 +0000] "GET /favicon.ico HTTP/1.1" 404 41 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:21:57.990] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:09.633] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:15.440] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:26.770] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:39.187] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:51.159] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:55.687] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:22:56.360] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:23:16 +0000] "POST /api/v1/users/login HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:23:16 +0000] "GET /api/v1/users HTTP/1.1" 200 2004 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:24:22.002] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:24:27.094] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:24:32.264] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:24:40.449] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:24:45.554] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:24:49.965] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:25:03.929] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:25:14.017] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:25:20.280] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:25:22.731] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:26:19.241] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:26:26.348] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:26:41.237] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:26:42.463] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:13 +0000] "GET /api/v1/users HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:13 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1179 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:18 +0000] "GET /api/v1/users HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:18 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:21 +0000] "GET /api/v1/users HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:21 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:28 +0000] "GET /api/v1/users/ HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:28 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:34 +0000] "POST /api/v1/users/login HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:34 +0000] "GET /api/v1/users HTTP/1.1" 200 2004 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:46 +0000] "GET /api/v1/users HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:46 +0000] "GET /api/v1/users HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:47 +0000] "GET /api/v1/users HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:48 +0000] "GET /api/v1/users HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:27:49 +0000] "GET /api/v1/users HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:28:04 +0000] "GET /api/v1/users HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:28:04 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1179 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:28:09 +0000] "GET /api/v1/users HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:28:09 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:29:01.196] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:29:42.829] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:29:50.149] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:29:52.144] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:29:55.117] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:32:14 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1220 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:32:22 +0000] "POST /api/v1/users/login HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:32:22 +0000] "GET /api/v1/users HTTP/1.1" 200 2004 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:32:26 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1227 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:35:28.999] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:35:41.865] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:35:50.303] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:35:51.876] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:35:54.847] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:35:56.380] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:36:02.660] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:36:08.896] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:36:16.915] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:36:20.730] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:36:29.317] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:37:13.442] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:37:25.561] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:39:38 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1220 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:39:44 +0000] "POST /api/v1/users/login HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:39:44 +0000] "GET /api/v1/users HTTP/1.1" 200 2004 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:39:51 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1262 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:39:55 +0000] "GET / HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:39:55 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:40:49 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1282 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:40:51 +0000] "GET /api/v1/users/logout HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:40:51 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1239 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:40:53 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:40:54 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:40:57 +0000] "GET /api/v1/users/register HTTP/1.1" 200 1403 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:42:56 +0000] "POST /api/v1/users HTTP/1.1" 200 152 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:01 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:04 +0000] "POST /api/v1/users/login HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:04 +0000] "GET /api/v1/users HTTP/1.1" 200 2157 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:08 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1281 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:10 +0000] "GET /api/v1/users/logout HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:10 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1239 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:43:12 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:43:39.612] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:43:50.065] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:43:52.477] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:43:58.260] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:43:59.466] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-12T20:44:00.523] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:44:59 +0000] "GET /api/v1/users/register HTTP/1.1" 304 - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:45:11 +0000] "POST /api/v1/users HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:45:11 +0000] "GET /api/v1/users HTTP/1.1" 200 2463 "http://localhost:3010/api/v1/users/register" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:45:18 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1281 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:45:25 +0000] "GET /api/v1/users/logout HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:45:25 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1239 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-12T20:47:31.880] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:36 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:36 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:40 +0000] "GET /api/v1/users/ HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:40 +0000] "GET /api/v1/users/login HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:45 +0000] "POST /api/v1/users/login HTTP/1.1" 302 42 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:46 +0000] "GET /api/v1/users HTTP/1.1" 200 2463 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:51 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1282 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:53 +0000] "GET /api/v1/users/logout HTTP/1.1" 302 48 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:53 +0000] "GET /api/v1/users/login HTTP/1.1" 200 1239 "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:19:47:53 +0000] "GET /api/v1/comentarios HTTP/1.1" - - "http://localhost:3010/api/v1/users/login" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"

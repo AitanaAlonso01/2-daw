@@ -1,0 +1,113 @@
+[2026-01-09T15:47:50.715] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T15:50:34.141] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:14:50:44 +0000] "POST /api/v1/users HTTP/1.1" 200 155 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:14:52:58 +0000] "GET /api/v1/users HTTP/1.1" 200 157 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:14:54:44 +0000] "POST /api/v1/users HTTP/1.1" 500 121 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:10:24 +0000] "POST /api/v1/users HTTP/1.1" 500 111 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:10:40.409] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:15:10:47 +0000] "GET /api/v1/users HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:15:10:52 +0000] "POST /api/v1/users HTTP/1.1" 500 111 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:11:33.372] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:15:11:36 +0000] "GET /api/v1/users HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:11:36 +0000] "GET /api/v1/users HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:11:37 +0000] "GET /api/v1/users HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:15:12:08 +0000] "POST /api/v1/users HTTP/1.1" 500 111 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:12:53.498] [INFO] access - Servidor Express levantado en http://localhost:3010
+::ffff:127.0.0.1 - - [09/Jan/2026:15:13:07 +0000] "GET /api/v1/users HTTP/1.1" 200 154 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:15:13:14 +0000] "POST /api/v1/users HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:13:17 +0000] "GET /api/v1/users HTTP/1.1" 200 309 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::1 - - [09/Jan/2026:15:13:38 +0000] "POST /api/v1/users HTTP/1.1" 200 156 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:13:41 +0000] "GET /api/v1/users HTTP/1.1" 200 466 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-09T16:14:11.436] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:14:26.903] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:14:30.114] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:14:32.632] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:14:59 +0000] "POST /api/v1/users HTTP/1.1" 500 121 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:15:44 +0000] "POST /api/v1/users HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:15:58.562] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:16:00.550] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:16:04 +0000] "POST /api/v1/users HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:16:31 +0000] "POST /api/v1/users HTTP/1.1" 500 72 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:17:00.929] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:17:04.261] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:17:06.102] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:17:11.050] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:17:15.538] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:17:27.672] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:17:37.374] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:18:10 +0000] "POST /api/v1/users HTTP/1.1" 500 1207 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:18:26.869] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:18:31 +0000] "POST /api/v1/users HTTP/1.1" 400 72 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:19:40.305] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:20:01.605] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:21:08 +0000] "POST /api/v1/users HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:21:29 +0000] "POST /api/v1/users HTTP/1.1" 406 119 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:21:51 +0000] "GET /api/v1/users HTTP/1.1" 200 774 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+[2026-01-09T16:26:41.270] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:26:47.772] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:21.371] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:25.974] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:29.792] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:32.641] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:35.303] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:27:36.761] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:29:06.386] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:29:35.089] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:29:36.825] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:29:38.231] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:30:09.597] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:30:47.813] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:30:49.175] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:30:53.868] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:30:55.621] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:31:08.368] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:31:43.635] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:31:47.774] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:31:54.703] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:31:58.413] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:17.548] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:26.967] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:37.621] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:39.876] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:42.024] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:52.439] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:32:57.385] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:33:55.910] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:00.233] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:11.278] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:26.294] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:33.066] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:45.376] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:56.629] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:34:58.672] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:04.494] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:10.364] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:12.173] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:16.305] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:20.841] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:26.029] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:29.029] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:30.655] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:37.806] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:35:40.240] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:37:14.837] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:37:25.230] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:39:23 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:39:47.717] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:39:51.417] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:39:55 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:40:34.417] [INFO] access - Servidor Express levantado en http://localhost:3010
+[2026-01-09T16:40:36.152] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:40:41 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:41:08.197] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:41:15 +0000] "POST /api/v1/users/login HTTP/1.1" 500 42 "-" "EchoapiRuntime/1.1.0"
+[2026-01-09T16:43:18.887] [INFO] access - Servidor Express levantado en http://localhost:3010
+::1 - - [09/Jan/2026:15:43:33 +0000] "POST /api/v1/users/login HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:43:52 +0000] "POST /api/v1/users/login HTTP/1.1" 401 45 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:44:06 +0000] "POST /api/v1/users/login HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:44:14 +0000] "POST /api/v1/users/login HTTP/1.1" 401 45 "-" "EchoapiRuntime/1.1.0"
+::1 - - [09/Jan/2026:15:44:56 +0000] "POST /api/v1/users/login HTTP/1.1" 200 154 "-" "EchoapiRuntime/1.1.0"
+::ffff:127.0.0.1 - - [09/Jan/2026:15:45:14 +0000] "GET /api/v1/users HTTP/1.1" 200 928 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:18:19 +0000] "GET / HTTP/1.1" 302 48 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:18:19 +0000] "GET /api/v1/comentarios HTTP/1.1" 404 20 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+::ffff:127.0.0.1 - - [12/Jan/2026:18:18:24 +0000] "GET /api/v1/users HTTP/1.1" 200 1538 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"

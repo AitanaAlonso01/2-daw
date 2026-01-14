@@ -1,0 +1,119 @@
+//REQUIRES / IMPORTS
+require("dotenv").config() //npm i dotenv
+const swaggerUI = require("swagger-ui-express")
+const specs = require("./swagger/swagger")
+const port = process.env.PORT || process.env.PUERTO
+const express = require("express")
+const app = express()
+const path = require("path") //npm i path
+const {v4:uuid} = require("uuid") //npm i uuid
+const methodOverride = require("method-override") //npm i method-override
+const cors = require("cors") //npm i cors
+const commentRoutes = require("./routes/comment.routes")
+const userRoutes = require("./routes/user.routes")
+const commentRoutesCSR = require("./routes/comment.csr.routes")
+const tvRoutes = require("./routes/tv.routes")
+const catRoutes = require("./routes/categoria.routes")
+const baseUrlComentarios = `/api/${process.env.API_VERSION}/comentarios`
+const baseUrlComentariosCSR = `/api/${process.env.API_VERSION}/comments`
+const baseUrlUsers = `/api/${process.env.API_VERSION}/users`
+const baseUrlTV = `/api/${process.env.API_VERSION}/tv`
+const baseUrlCategorias = `/api/${process.env.API_VERSION}/categorias`
+const mongodbConfig = require("./utils/mongodb.config")
+const logger = require("./utils/logger")
+const morganMW = require("./middlewares/morgan.mw")
+const errorHandlerMW = require("./middlewares/errorHandler.mw")
+const AppError = require("./utils/AppError")
+const session = require("express-session") //npm i express-session
+
+//SETUP - MIDDLEWARES
+app.use(cors())
+
+//Configurar EXPRESS-SESSION
+app.use(session({
+    name:"sid", //nombre de la cookie de session (opcional)
+    secret: process.env.SESSION_SECRET || "clave_super_secreta", //para firmar la cookie con clave privada
+    resave: false, //No queremos que se guarde la sessión si esta no cambia
+    saveUninitialized: false, //Para no crear sesiones vacías
+    cookie: {
+       httpOnly: true, //Desde JS no podamos acceder a la cookie (document.cookie)
+       secure: false, //HTTP --> secure:true si HTTPS
+       maxAge: 1000 * 60 * 60 //1 hora (caducidad de la cookie) 
+    }
+}))
+
+app.set("views",path.join(__dirname,"views"))
+app.set("view engine","ejs") //npm i ejs (SSR)
+app.use(express.static(path.join(__dirname,"public")))
+//Para poder leer datos (request body) en métodos POST
+app.use(express.urlencoded({extended:true}))
+//Leer datos JSON en request body POST
+app.use(express.json())
+app.use(methodOverride("_method"))
+//MIDDLEWARE para configurar VARIABLES GLOBALES en vistas EJS
+app.use((req,res,next)=>{
+    res.locals.tituloEJS = "API REST"
+    res.locals.baseUrlComentarios = baseUrlComentarios
+    res.locals.baseUrlTV = baseUrlTV
+    res.locals.baseUrlUsers = baseUrlUsers
+    res.locals.user = req.session.user || null
+    next()
+})
+
+app.use(morganMW.usingMorgan())
+
+/*app.use((req,res,next) => {
+    const { login } = req.query
+    if(login && login == "123"){
+        next()
+    }else{
+        res.status(401).json("Prohibido el acceso")
+    }
+})*/
+
+//DEFINIR RUTAS
+app.use(process.env.SWAGGER_DOCS,swaggerUI.serve,swaggerUI.setup(specs))
+//Raíz
+app.get("/",(req,res)=>res.redirect(baseUrlComentarios))
+//Propias del REST
+app.use(baseUrlComentarios,commentRoutes)
+app.use(baseUrlComentariosCSR,commentRoutesCSR)
+app.use(baseUrlTV,tvRoutes)
+app.use(baseUrlCategorias,catRoutes)
+app.use(baseUrlUsers,userRoutes)
+//Rutas por defecto
+app.get(/.*/,(req,res)=>{
+    //logger.error.fatal("Ruta no existente: " + req.originalUrl)
+    //res.redirect(baseUrlComentarios)
+    throw new AppError("Ruta no existente: " + req.originalUrl, 404) //NOT FOUND
+})
+
+
+//Gestión de todos los errores (Síncrono y Asíncrono)
+app.use(errorHandlerMW.errorHandler)
+
+//LEVANTAR EL SERVER
+app.listen(port,async()=>{
+    console.log(`http://localhost:${port}`)
+    console.log(`Swagger en http://localhost:${port}${process.env.SWAGGER_DOCS}`)
+    logger.access.info(`Servidor Express levantado en http://localhost:${port}`)
+    try {
+        //Una vez levantado el servidor, intentamos conectar con MongoDB
+        await mongodbConfig.conectarMongoDB()
+        .then(()=>{
+            console.log("Conectado con MongoDB!!!")
+        })
+        .catch((err) => {
+            //Si no conectamos con MongoDB, debemos tumbar el server
+            console.log(`Error al conectar con MongoDB. Desc: ${err}`)
+            //Tumbar el server
+            process.exit(0)
+        })
+
+    } catch (error) {
+         //Si no conectamos con MongoDB, debemos tumbar el server
+        console.log(`Error al conectar con MongoDB. Desc: ${error}`)
+        //Tumbar el server
+        process.exit(0)
+    }
+})

@@ -1,0 +1,18 @@
+[2026-01-09T15:49:21.842] [ERROR] error - Error Handler(404): Error: Sin usuarios
+[2026-01-09T15:50:12.281] [ERROR] error - Error Handler(500): ValidationError: usename: Path `usename` is required.
+[2026-01-09T15:54:44.146] [ERROR] error - Error Handler(500): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.users index: username_1 dup key: { username: "pepito29" }
+[2026-01-09T16:10:24.671] [ERROR] error - Error Handler(500): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.users index: usename_1 dup key: { usename: null }
+[2026-01-09T16:10:52.315] [ERROR] error - Error Handler(500): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.users index: usename_1 dup key: { usename: null }
+[2026-01-09T16:12:08.224] [ERROR] error - Error Handler(500): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.users index: usename_1 dup key: { usename: null }
+[2026-01-09T16:14:59.273] [ERROR] error - Error Handler(500): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.users index: username_1 dup key: { username: "pepito29" }
+[2026-01-09T16:15:44.218] [ERROR] error - Error Handler(500): Error: data and salt arguments required
+[2026-01-09T16:16:04.374] [ERROR] error - Error Handler(500): Error: data and salt arguments required
+[2026-01-09T16:16:31.092] [ERROR] error - Error Handler(500): ValidationError: username: Path `username` is required.
+[2026-01-09T16:18:31.820] [ERROR] error - Error Handler(400): ValidationError: username: Path `username` is required.
+[2026-01-09T16:21:29.950] [ERROR] error - Error Handler(406): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.users index: username_1 dup key: { username: "johnny" }
+[2026-01-09T16:39:23.281] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-09T16:39:55.779] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-09T16:40:41.595] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-09T16:41:15.315] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-09T16:43:52.161] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2026-01-09T16:44:14.173] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
