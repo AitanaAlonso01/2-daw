@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de Eventos - DOM</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      section {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #eee;
+      }
+      .oculto {
+        display: none;
+      }
+      .negrita {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      #cuadrado {
+        width: 50px;
+        height: 50px;
+        background: orange;
+        position: relative;
+        transition: all 0.1s;
+      }
+      #btnAleatorio {
+        position: absolute;
+      }
+      .espacio-juego {
+        height: 200px;
+        position: relative;
+        border: 1px dashed #aaa;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Resolución: Ejercicios de Eventos [cite: 1, 8]</h1>
+
+    <section>
+      <h2>1. Ejercicios Eventos ratón [cite: 1]</h2>
+
+      <button id="btn1">Ejercicio 1: Haz clic</button>
+
+      <p id="p2">Ejercicio 2: Pasa el ratón por aquí para cambiar a rojo.</p>
+
+      <button id="btn3">Ejercicio 3: Sumar +1</button>
+      <span>Total: <b id="resultado3">0</b></span>
+
+      <p>Tecla pulsada:</p>
+      <p id="p4" style="color: green"></p>
+
+      <div style="margin-top: 10px">
+        <label>Ejercicio 5: Escribe algo:</label>
+        <input type="text" id="input5" />
+        <p id="p5" style="color: blue"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Actividades ratón y teclado [cite: 8]</h2>
+
+      <button id="btnRojo">Rojo</button>
+      <button id="btnVerde">Verde</button>
+      <button id="btnAzul">Azul</button>
+
+      <div style="margin-top: 10px">
+        <button id="btnToggle">Mostrar/Ocultar Texto</button>
+        <p id="txtToggle">
+          Este texto aparece y desaparece con classList.toggle.
+        </p>
+      </div>
+
+      <div style="margin-top: 10px">
+        <button id="btnMas">+1</button>
+        <button id="btnMenos">-1</button>
+        <span>Contador: <b id="total3">0</b></span>
+      </div>
+
+      <p id="pDoble">Ejercicio 4: Haz doble clic aquí para poner en negrita.</p>
+
+      <div>
+        <label>Ejercicio 5 (Largo > 5):</label>
+        <input type="text" id="inputValida" />
+      </div>
+
+      <p>Teclas pulsadas: <b id="contTeclas">0</b></p>
+
+      <input type="text" id="inputEnter" placeholder="Escribe y pulsa Enter" />
+
+      <form id="miForm" style="margin-top: 15px">
+        <input type="text" placeholder="Nombre" required />
+        <button type="submit">Enviar Formulario</button>
+      </form>
+
+      <p>Ejercicio 9: Usa las flechas del teclado para mover el cuadro.</p>
+      <div class="espacio-juego">
+        <div id="cuadrado"></div>
+      </div>
+
+      <div class="espacio-juego">
+        <button id="btnAleatorio">¡Clickeame! (10 seg)</button>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
