@@ -1,0 +1,30 @@
+[2026-01-14T15:53:41.005] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T15:53:46.123] [ERROR] error - Error Handler(404): Error: Ruta no existente: /api/v1/users/login
+[2026-01-14T15:53:46.208] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T15:53:48.269] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T15:54:46.543] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T15:55:25.403] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-14T15:55:32.511] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-14T15:56:11.184] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-14T16:20:57.242] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:21:30.380] [ERROR] error - Error Handler(401): Error: Token inválido o expirado. Desc: JsonWebTokenError: jwt malformed
+[2026-01-14T16:22:26.542] [ERROR] error - Error Handler(404): Error: Ruta no existente: /api/v1/users/login
+[2026-01-14T16:22:26.597] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:22:28.780] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:22:28.802] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:22:30.360] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:22:30.405] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:27:14.173] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:27:14.220] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:27:37.085] [ERROR] error - Error Handler(500): CastError: Cast to ObjectId failed for value "696115d405d1fb0057f1d19" (type string) at path "_id" for model "user"
+[2026-01-14T16:28:35.430] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:28:35.465] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:28:39.342] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:28:39.837] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:28:40.623] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:28:44.224] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:28:44.270] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-14T16:35:26.082] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:51:45.863] [ERROR] error - Error Handler(401): Error: Token inválido o expirado. Desc: JsonWebTokenError: jwt malformed
+[2026-01-14T16:52:00.325] [ERROR] error - Error Handler(403): Error: No tienes permisos
+[2026-01-14T16:52:45.287] [ERROR] error - Error Handler(403): Error: No tienes permisos
