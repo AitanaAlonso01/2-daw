@@ -1,0 +1,12 @@
+[2026-01-16T15:42:02.054] [ERROR] error - Error Handler(401): Error: Token inválido o expirado. Desc: TokenExpiredError: jwt expired
+[2026-01-16T16:18:14.625] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:32:06.125] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:33:18.665] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:36:38.834] [ERROR] error - Error Handler(500): TypeError: Cannot read properties of undefined (reading 'token')
+[2026-01-16T16:39:38.458] [ERROR] error - Error Handler(500): TypeError: Cannot read properties of undefined (reading 'token')
+[2026-01-16T16:41:16.142] [ERROR] error - Error Handler(500): TypeError: Cannot read properties of undefined (reading 'token')
+[2026-01-16T16:50:05.432] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:50:08.556] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:50:17.070] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:50:17.942] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-16T16:50:47.123] [ERROR] error - Error Handler(401): Error: No autenticado

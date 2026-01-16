@@ -1,0 +1,7 @@
+[2026-01-14T15:55:23.470] [ERROR] error - Error Handler(500): Error: data and hash arguments required
+[2026-01-14T16:20:57.645] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:21:12.693] [ERROR] error - Error Handler(401): Error: Token inválido o expirado. Desc: JsonWebTokenError: jwt malformed
+[2026-01-14T16:31:43.355] [ERROR] error - Error Handler(401): Error: Token inválido o expirado. Desc: TokenExpiredError: jwt expired
+[2026-01-14T16:39:01.341] [ERROR] error - Error Handler(401): Error: Token inválido o expirado. Desc: TokenExpiredError: jwt expired
+[2026-01-14T16:51:13.997] [ERROR] error - Error Handler(401): Error: No autenticado
+[2026-01-14T16:52:10.395] [ERROR] error - Error Handler(403): Error: No tienes permisos
