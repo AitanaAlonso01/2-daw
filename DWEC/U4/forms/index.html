@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicios Formularios - JS</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 20px;
+        background-color: #f0f2f5;
+      }
+      section {
+        background: white;
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+        color: #007bff;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .error {
+        color: red;
+        font-size: 0.85em;
+        display: block;
+        margin-top: 5px;
+      }
+      .success {
+        color: green;
+        font-weight: bold;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Actividad 1: Usuario</h2>
+      <form id="formAct1">
+        <input type="text" id="inputUser" placeholder="Introduce usuario" />
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="msg1"></div>
+    </section>
+
+    <section>
+      <h2>Actividad 2: Nombre y Edad</h2>
+      <form id="formAct2">
+        <input type="text" id="nombre2" placeholder="Nombre" />
+        <input type="number" id="edad2" placeholder="Edad" />
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="msg2"></div>
+    </section>
+
+    <section>
+      <h2>Actividad 3: Login</h2>
+      <form id="formAct3">
+        <div class="form-group">
+          <input type="text" id="email3" placeholder="Email" />
+          <span id="errEmail" class="error"></span>
+        </div>
+        <div class="form-group">
+          <input type="password" id="pass3" placeholder="Contraseña" />
+          <span id="errPass" class="error"></span>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <div id="msg3"></div>
+    </section>
+
+    <section>
+      <h2>Actividad 4: Resumen Personal</h2>
+      <form id="formAct4">
+        <input type="text" id="nombre4" placeholder="Nombre" />
+        <div>
+          Género:
+          <input type="radio" name="genero" value="Hombre" checked /> Hombre
+          <input type="radio" name="genero" value="Mujer" /> Mujer
+          <input type="radio" name="genero" value="Otro" /> Otro
+        </div>
+        <select id="ciudad4">
+          <option value="Madrid">Madrid</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Valencia">Valencia</option>
+        </select>
+        <button type="submit">Generar Resumen</button>
+      </form>
+      <p id="msg4"></p>
+    </section>
+
+    <section>
+      <h2>Actividad 5: Gestión de Usuarios</h2>
+      <form id="formAct5">
+        <input type="text" id="regNombre" placeholder="Nombre" required />
+        <input type="email" id="regEmail" placeholder="Email" required />
+        <input type="number" id="regEdad" placeholder="Edad" required />
+        <button type="submit">Registrar</button>
+      </form>
+      <table id="tablaRegistros">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Edad</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
