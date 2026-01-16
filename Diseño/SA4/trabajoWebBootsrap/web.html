@@ -9,22 +9,66 @@
       rel="stylesheet"
     />
     <style>
+      /* Estilos modo oscuro y granate */
       body {
-        background-color: #f8f9fa;
+        background-color: #0f0f0f; /* Fondo muy oscuro */
+        color: #e0e0e0;
       }
+
+      .text-granate {
+        color: #9d1b28 !important; /* Un granate vibrante */
+      }
+
+      .bg-granate {
+        background-color: #9d1b28 !important;
+        color: white !important;
+      }
+
+      .bg-dark-custom {
+        background-color: #1a1a1a !important;
+        border: 1px solid #2d2d2d !important;
+      }
+
+      .border-granate {
+        border-color: #9d1b28 !important;
+      }
+
       .img-anime {
         object-fit: cover;
         height: 260px;
         width: 100%;
+        filter: brightness(0.8);
+        transition: 0.3s;
+      }
+
+      .img-anime:hover {
+        filter: brightness(1.1);
+        border-color: #9d1b28 !important;
+      }
+
+      .figure-caption {
+        color: #888;
+      }
+
+      .table-dark-custom {
+        --bs-table-bg: #1a1a1a;
+        --bs-table-color: #e0e0e0;
+        --bs-table-border-color: #2d2d2d;
+      }
+
+      .list-group-item {
+        border-color: #2d2d2d !important;
       }
     </style>
   </head>
   <body>
     <div class="container py-5">
       <header class="text-center mb-5">
-        <h1 class="display-4 fw-bold text-dark">Recap Anime 2025</h1>
+        <h1 class="display-4 fw-bold text-white">
+          Recap Anime <span class="text-granate">2025</span>
+        </h1>
         <p
-          class="lead text-secondary border-top border-bottom d-inline-block py-2"
+          class="lead text-secondary border-top border-bottom border-secondary d-inline-block py-2"
         >
           Un pase por los animes empezados y vistos en 2025 por mi :)
         </p>
@@ -33,17 +77,17 @@
       <section class="row justify-content-center mb-5">
         <div class="col-lg-10 text-center py-3">
           <p
-            class="mb-0 fs-5 text-muted shadow-sm p-4 bg-white rounded-3 border"
+            class="mb-0 fs-5 shadow-sm p-4 bg-dark-custom rounded-3 border border-granate"
           >
             En el año pasado 2025, empecé a ver anime de nuevo tras dejarlo por
             los estudios. <br />
-            <strong>Por fin 🥹​.</strong>
+            <strong class="text-granate">Por fin 🥹​.</strong>
           </p>
         </div>
       </section>
 
       <article
-        class="row align-items-center bg-white border rounded-4 p-4 mb-4 shadow-sm"
+        class="row align-items-center bg-dark-custom border rounded-4 p-4 mb-4 shadow-sm"
       >
         <div class="col-md-5 mb-3 mb-md-0">
           <figure class="figure mb-0 w-100">
@@ -58,7 +102,9 @@
           </figure>
         </div>
         <div class="col-md-7 ps-md-4">
-          <h2 class="h4 fw-bold border-bottom pb-2">My Hero Academia</h2>
+          <h2 class="h4 fw-bold border-bottom border-granate pb-2 text-white">
+            My Hero Academia
+          </h2>
           <p class="text-secondary small">
             Ya tocaba, empecé este anime cuando iba a 3º de la eso, hace como
             4-5 años, y aun no lo habia terminado.
@@ -66,13 +112,13 @@
             Con la excusa de que iba a terminar me terminé de completar la
             colección de mnagas y había que volver a empezar con el anime.
             <br />
-            <strong>Aún voy por la season 4 😭​.​</strong>
+            <strong class="text-granate">Aún voy por la season 4 😭​.​</strong>
           </p>
         </div>
       </article>
 
       <article
-        class="row align-items-center flex-md-row-reverse bg-white border rounded-4 p-4 mb-4 shadow-sm"
+        class="row align-items-center flex-md-row-reverse bg-dark-custom border rounded-4 p-4 mb-4 shadow-sm"
       >
         <div class="col-md-5 mb-3 mb-md-0">
           <figure class="figure mb-0 w-100">
@@ -87,20 +133,22 @@
           </figure>
         </div>
         <div class="col-md-7 pe-md-4">
-          <h2 class="h4 fw-bold border-bottom pb-2">
+          <h2 class="h4 fw-bold border-bottom border-granate pb-2 text-white">
             Los Diarios de la Boticaria
           </h2>
           <p class="text-secondary small">
             Me lo recomendó un amigo, es interesante y divertido. Es facil y
             rapido de ver, no te come la cabeza. 10/10.
             <br />
-            <strong>Necesito q lo terminen ya! 😭​.</strong>
+            <strong class="text-granate"
+              >Necesito q lo terminen ya! 😭​.</strong
+            >
           </p>
         </div>
       </article>
 
       <article
-        class="row align-items-center bg-white border rounded-4 p-4 mb-5 shadow-sm"
+        class="row align-items-center bg-dark-custom border rounded-4 p-4 mb-5 shadow-sm"
       >
         <div class="col-md-5 mb-3 mb-md-0">
           <figure class="figure mb-0 w-100">
@@ -115,11 +163,13 @@
           </figure>
         </div>
         <div class="col-md-7 ps-md-4">
-          <h2 class="h4 fw-bold border-bottom pb-2">Wind Breaker</h2>
+          <h2 class="h4 fw-bold border-bottom border-granate pb-2 text-white">
+            Wind Breaker
+          </h2>
           <p class="text-secondary small">
             Me encontré este anime de refilón buscando que ver en Crunchyroll.
             <br />
-            <small
+            <small class="text-granate"
               >Porque para nada tengo una lista de 100 animes que quiero ver
               jeje.</small
             >
@@ -131,7 +181,7 @@
       </article>
 
       <article
-        class="row align-items-center flex-md-row-reverse bg-white border rounded-4 p-4 mb-4 shadow-sm"
+        class="row align-items-center flex-md-row-reverse bg-dark-custom border rounded-4 p-4 mb-4 shadow-sm"
       >
         <div class="col-md-5 mb-3 mb-md-0">
           <figure class="figure mb-0 w-100">
@@ -146,12 +196,14 @@
           </figure>
         </div>
         <div class="col-md-7 ps-md-4">
-          <h2 class="h4 fw-bold border-bottom pb-2">DanDaDan</h2>
+          <h2 class="h4 fw-bold border-bottom border-granate pb-2 text-white">
+            DanDaDan
+          </h2>
           <p class="text-secondary small">
-            Lo empecé porque me lo ensñó mi expareja, y me moló mucho, así q
+            Lo empecé porque me lo enseñó mi expareja, y me moló mucho, así q
             habia que acabarlo.
             <br />
-            <strong>Que lo acaben ya por dios 😭​.</strong>
+            <strong class="text-granate">Que lo acaben ya por dios 😭​.</strong>
             <br />
             El primer cap es tan raro que no sabes ni lo que estás viendo pero
             esta muy bien y es comedia continua.
@@ -160,7 +212,7 @@
       </article>
 
       <article
-        class="row align-items-center bg-white border rounded-4 p-4 mb-5 shadow-sm"
+        class="row align-items-center bg-dark-custom border rounded-4 p-4 mb-5 shadow-sm"
       >
         <div class="col-md-5 mb-3 mb-md-0">
           <figure class="figure mb-0 w-100">
@@ -175,7 +227,9 @@
           </figure>
         </div>
         <div class="col-md-7 ps-md-4">
-          <h2 class="h4 fw-bold border-bottom pb-2">Cowboy Bebop</h2>
+          <h2 class="h4 fw-bold border-bottom border-granate pb-2 text-white">
+            Cowboy Bebop
+          </h2>
           <p class="text-secondary small">
             Empecé a verlo porque estaba en Netflix y era lo unico que podia ver
             en clase el año pasado mientras hacia tareas de Lenguajes de Marcas.
@@ -187,49 +241,69 @@
 
       <div class="row g-4 mb-5">
         <div class="col-md-6">
-          <div class="p-4 bg-light border rounded-3 h-100">
+          <div
+            class="p-4 bg-dark-custom border border-secondary rounded-3 h-100"
+          >
             <h3
-              class="h6 fw-bold text-uppercase text-secondary border-bottom pb-2 mb-3"
+              class="h6 fw-bold text-uppercase text-granate border-bottom border-granate pb-2 mb-3"
             >
               Animes al Dia
             </h3>
             <ul class="list-group list-group-flush small">
-              <li class="list-group-item bg-transparent">
+              <li class="list-group-item bg-transparent text-light">
                 Los Diarios de la Boticaria
               </li>
-              <li class="list-group-item bg-transparent">DanDaDan</li>
-              <li class="list-group-item bg-transparent">Wind Breaker</li>
-              <li class="list-group-item bg-transparent">Jujutsu Kaisen</li>
+              <li class="list-group-item bg-transparent text-light">
+                DanDaDan
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                Wind Breaker
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                Jujutsu Kaisen
+              </li>
             </ul>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="p-4 bg-light border rounded-3 h-100 text-md-end">
+          <div
+            class="p-4 bg-dark-custom border border-secondary rounded-3 h-100 text-md-end"
+          >
             <h3
-              class="h6 fw-bold text-uppercase text-secondary border-bottom pb-2 mb-3"
+              class="h6 fw-bold text-uppercase text-granate border-bottom border-granate pb-2 mb-3"
             >
               Pendientes (solo unos poquitos jeje)
             </h3>
             <ul class="list-group list-group-flush small">
-              <li class="list-group-item bg-transparent border-0">
+              <li class="list-group-item bg-transparent text-light border-0">
                 One Piece (lo he intentado empezar 4 veces)
               </li>
-              <li class="list-group-item bg-transparent border-0">
+              <li class="list-group-item bg-transparent text-light border-0">
                 Mob Psycho 100
               </li>
-              <li class="list-group-item bg-transparent border-0">Frieren</li>
-              <li class="list-group-item bg-transparent border-0">+99</li>
+              <li class="list-group-item bg-transparent text-light border-0">
+                Frieren
+              </li>
+              <li
+                class="list-group-item bg-transparent text-secondary border-0"
+              >
+                +99
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="bg-white border rounded-3 p-4 shadow-sm mb-5">
-        <h3 class="h5 fw-bold mb-4">Calendario de Lanzamientos Esperados</h3>
+      <div
+        class="bg-dark-custom border border-granate rounded-3 p-4 shadow-sm mb-5"
+      >
+        <h3 class="h5 fw-bold mb-4 text-white">
+          Calendario de Lanzamientos Esperados
+        </h3>
         <div class="table-responsive">
-          <table class="table table-hover align-middle small">
-            <thead class="table-light">
-              <tr>
+          <table class="table table-hover table-dark-custom align-middle small">
+            <thead>
+              <tr class="text-granate">
                 <th>Anime</th>
                 <th>Fecha</th>
                 <th>Temporada</th>
@@ -240,7 +314,7 @@
                 <td>Jujutsu Kaisen</td>
                 <td>Enero</td>
                 <td>
-                  <span class="badge bg-secondary rounded-pill"
+                  <span class="badge bg-granate rounded-pill"
                     >Temporada 3 (Culling Game)</span
                   >
                 </td>
@@ -249,16 +323,15 @@
                 <td>Los Diarios de la Boticaria</td>
                 <td>Octubre</td>
                 <td>
-                  <span class="badge bg-secondary rounded-pill"
-                    >Temporada 3</span
-                  >
+                  <span class="badge bg-granate rounded-pill">Temporada 3</span>
                 </td>
               </tr>
               <tr>
                 <td>Los Diarios de la Boticaria</td>
                 <td>¿Enero?</td>
                 <td>
-                  <span class="badge bg-light text-dark border rounded-pill"
+                  <span
+                    class="badge border border-granate text-granate rounded-pill"
                     >Pelicula por confirmar</span
                   >
                 </td>
@@ -268,8 +341,11 @@
         </div>
       </div>
 
-      <footer class="text-center py-4 border-top text-muted">
-        <p class="mb-0 small">PROYECTO ACADÉMICO BOOTSTRAP · 2026 · AAL</p>
+      <footer class="text-center py-4 border-top border-secondary">
+        <p class="mb-0 small">
+          PROYECTO ACADÉMICO BOOTSTRAP ·
+          <span class="text-granate">2026</span> · AAL
+        </p>
       </footer>
     </div>
 
