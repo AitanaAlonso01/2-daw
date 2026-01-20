@@ -1,0 +1,75 @@
+body {
+  background-color: #3b2e2e;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+}
+
+.contenedor-principal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.entrada-tarea input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#boton-agregar {
+  background-color: #8b0000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#boton-agregar:hover {
+  background-color: #a50000;
+}
+
+.tarea-item {
+  background-color: #bd5d5d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.completada {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.iconos i {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.fa-check-circle {
+  color: #36ff36;
+}
+
+.fa-check-circle:hover {
+  color: #44a844;
+}
+
+.fa-trash {
+  color: #000000;
+}
+
+.fa-trash:hover {
+  color: #383838;
+}
