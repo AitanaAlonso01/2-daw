@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -8,61 +8,105 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      /* Estilos modo oscuro y granate */
-      body {
-        background-color: #0f0f0f; /* Fondo muy oscuro */
-        color: #e0e0e0;
-      }
-
-      .text-granate {
-        color: #9d1b28 !important; /* Un granate vibrante */
-      }
-
-      .bg-granate {
-        background-color: #9d1b28 !important;
-        color: white !important;
-      }
-
-      .bg-dark-custom {
-        background-color: #1a1a1a !important;
-        border: 1px solid #2d2d2d !important;
-      }
-
-      .border-granate {
-        border-color: #9d1b28 !important;
-      }
-
-      .img-anime {
-        object-fit: cover;
-        height: 260px;
-        width: 100%;
-        filter: brightness(0.8);
-        transition: 0.3s;
-      }
-
-      .img-anime:hover {
-        filter: brightness(1.1);
-        border-color: #9d1b28 !important;
-      }
-
-      .figure-caption {
-        color: #888;
-      }
-
-      .table-dark-custom {
-        --bs-table-bg: #1a1a1a;
-        --bs-table-color: #e0e0e0;
-        --bs-table-border-color: #2d2d2d;
-      }
-
-      .list-group-item {
-        border-color: #2d2d2d !important;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container py-5">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-granate fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"
+          ><span class="text-granate">ANIME</span>2026</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#recap">Recap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#calendario">Calendario</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="animeCarousel" class="carousel slide mb-0" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#animeCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#animeCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#animeCarousel"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://w.wallhaven.cc/full/pk/wallhaven-pkgoge.jpg"
+            class="d-block w-100"
+            alt="jjk"
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://w.wallhaven.cc/full/z8/wallhaven-z8rd3g.jpg"
+            class="d-block w-100"
+            alt="japanTradArt"
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://w.wallhaven.cc/full/w5/wallhaven-w552jx.jpg"
+            class="d-block w-100"
+            alt="bnha"
+          />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#animeCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#animeCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <div class="container py-5" id="recap">
       <header class="text-center mb-5">
         <h1 class="display-4 fw-bold text-white">
           Recap Anime <span class="text-granate">2025</span>
@@ -325,6 +369,7 @@
       </div>
 
       <div
+        id="calendario"
         class="bg-dark-custom border border-granate rounded-3 p-4 shadow-sm mb-5"
       >
         <h3 class="h5 fw-bold mb-4 text-white">

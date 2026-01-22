@@ -1,0 +1,58 @@
+/* Tus estilos originales mantenidos al 100% */
+body {
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  padding-top: 60px; /* Añadido para que el menú fijo no tape el contenido */
+}
+
+.text-granate {
+  color: #9d1b28 !important;
+}
+
+.bg-granate {
+  background-color: #9d1b28 !important;
+  color: white !important;
+}
+
+.bg-dark-custom {
+  background-color: #1a1a1a !important;
+  border: 1px solid #2d2d2d !important;
+}
+
+.border-granate {
+  border-color: #9d1b28 !important;
+}
+
+.img-anime {
+  object-fit: cover;
+  height: 260px;
+  width: 100%;
+  filter: brightness(0.8);
+  transition: 0.3s;
+}
+
+.img-anime:hover {
+  filter: brightness(1.1);
+  border-color: #9d1b28 !important;
+}
+
+.figure-caption {
+  color: #888;
+}
+
+.table-dark-custom {
+  --bs-table-bg: #1a1a1a;
+  --bs-table-color: #e0e0e0;
+  --bs-table-border-color: #2d2d2d;
+}
+
+.list-group-item {
+  border-color: #2d2d2d !important;
+}
+
+/* Ajuste para que las imágenes del carrusel no sean gigantes */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
