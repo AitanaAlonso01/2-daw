@@ -106,6 +106,23 @@
       </button>
     </div>
 
+    <div class="container mt-4">
+      <div
+        class="alert alert-dismissible fade show bg-dark-custom border-granate text-white shadow-sm"
+        role="alert"
+      >
+        <span class="badge bg-granate me-2">HOT!</span>
+        ¡Confirmada la fecha de estreno de
+        <strong>Solo Leveling Temporada 2</strong> para 2026!
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
     <div class="container py-5" id="recap">
       <header class="text-center mb-5">
         <h1 class="display-4 fw-bold text-white">
@@ -158,6 +175,25 @@
             <br />
             <strong class="text-granate">Aún voy por la season 4 😭​.​</strong>
           </p>
+          <div class="mt-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="small text-secondary">Progreso de la serie:</span>
+              <span class="small text-granate fw-bold">50%</span>
+            </div>
+            <div
+              class="progress bg-dark border border-secondary"
+              style="height: 10px"
+            >
+              <div
+                class="progress-bar bg-granate progress-bar-striped progress-bar-animated"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -172,7 +208,18 @@
               alt="DiariosBoticaria"
             />
             <figcaption class="figure-caption text-center">
-              I believe in MaoMao supremacy 🛐​.
+              I believe in
+              <span
+                class="text-granate fw-bold"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Protagonista de Los Diarios de la Boticaria"
+                style="cursor: help"
+              >
+                MaoMao
+              </span>
+              supremacy 🛐​.
             </figcaption>
           </figure>
         </div>
@@ -306,7 +353,18 @@
             Lo empecé porque me moló el estilo de animación y porque me salía
             mucho en redes.
             <br />
-            <small class="text-granate">Vibes Takopī no Genzai.</small>
+            <small class="text-granate">
+              Vibes
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Manga de drama psicológico y ciencia ficción muy turbio"
+                style="cursor: help; border-bottom: 1px #9d1b28 bold"
+              >
+                <b>Takopī no Genzai </b> </span
+              >.
+            </small>
             <br />
             Esta guay pero es muy raro y turbio. Cuesta de seguir.
           </p>
@@ -368,62 +426,285 @@
         </div>
       </div>
 
-      <div
-        id="calendario"
-        class="bg-dark-custom border border-granate rounded-3 p-4 shadow-sm mb-5"
-      >
-        <h3 class="h5 fw-bold mb-4 text-white">
+      <section class="mb-5">
+        <h3
+          class="h4 fw-bold text-white border-bottom border-granate pb-2 mb-4"
+        >
+          Información Adicional
+        </h3>
+        <div class="accordion shadow" id="accordionInfoExtra">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#infoUno"
+              >
+                ¿Por qué el estilo Granate?
+              </button>
+            </h2>
+            <div
+              id="infoUno"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionInfoExtra"
+            >
+              <div class="accordion-body text-secondary">
+                Es el color que mejor representa la intensidad de los animes de
+                acción vistos en 2025 y combina perfectamente con el modo oscuro
+                de esta agenda.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#infoDos"
+              >
+                Sobre las plataformas de Streaming
+              </button>
+            </h2>
+            <div
+              id="infoDos"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionInfoExtra"
+            >
+              <div class="accordion-body text-secondary">
+                La mayoría de estos animes los sigo a través de
+                <strong>Crunchyroll</strong> y <strong>Netflix</strong>,
+                aprovechando los descansos entre estudios.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#infoTres"
+              >
+                Estado de la Colección de Mangas
+              </button>
+            </h2>
+            <div
+              id="infoTres"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionInfoExtra"
+            >
+              <div class="accordion-body text-secondary">
+                Como mencioné en el bloque de <strong>My Hero Academia</strong>,
+                mi meta para 2026 es terminar de completar los tomos físicos que
+                me faltan mientras me pongo al día con el anime.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h3
+          class="h4 fw-bold text-white border-bottom border-granate pb-2 mb-4"
+        >
           Calendario de Lanzamientos Esperados
         </h3>
-        <div class="table-responsive">
-          <table class="table table-hover table-dark-custom align-middle small">
-            <thead>
-              <tr class="text-granate">
-                <th>Anime</th>
-                <th>Fecha</th>
-                <th>Temporada</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Jujutsu Kaisen</td>
-                <td>Enero</td>
-                <td>
-                  <span class="badge bg-granate rounded-pill"
-                    >Temporada 3 (Culling Game)</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Los Diarios de la Boticaria</td>
-                <td>Octubre</td>
-                <td>
-                  <span class="badge bg-granate rounded-pill">Temporada 3</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Los Diarios de la Boticaria</td>
-                <td>¿Enero?</td>
-                <td>
-                  <span
-                    class="badge border border-granate text-granate rounded-pill"
-                    >Pelicula por confirmar</span
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div
+          id="calendario"
+          class="bg-dark-custom border border-granate rounded-3 p-4 shadow-sm mb-5"
+        >
+          <div class="table-responsive">
+            <table
+              class="table table-hover table-dark-custom align-middle small"
+            >
+              <thead>
+                <tr class="text-granate">
+                  <th>Anime</th>
+                  <th>Fecha</th>
+                  <th>Temporada</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jujutsu Kaisen</td>
+                  <td>Enero</td>
+                  <td>
+                    <span class="badge bg-granate rounded-pill"
+                      >Temporada 3 (Culling Game)</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Los Diarios de la Boticaria</td>
+                  <td>Octubre</td>
+                  <td>
+                    <span class="badge bg-granate rounded-pill"
+                      >Temporada 3</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Los Diarios de la Boticaria</td>
+                  <td>¿Enero?</td>
+                  <td>
+                    <span
+                      class="badge border border-granate text-granate rounded-pill"
+                      >Pelicula por confirmar</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center my-5">
+        <button
+          type="button"
+          class="btn bg-granate px-4 py-2 shadow"
+          data-bs-toggle="modal"
+          data-bs-target="#sugerenciaModal"
+        >
+          ¿Alguna recomendación para 2026?
+        </button>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light pt-4 pb-2 border-top border-granate mt-5">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-1">
+            <h5 class="text-uppercase mb-3 fw-bold text-granate">Anime 2026</h5>
+            <p class="small text-secondary">
+              Recopilación personal de anime 2025-2026.
+            </p>
+          </div>
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-1">
+            <h5 class="text-uppercase mb-2 fw-bold text-white small">
+              Navegación
+            </h5>
+            <p class="mb-1">
+              <a href="#" class="text-secondary text-decoration-none small"
+                >Inicio</a
+              >
+            </p>
+            <p class="mb-1">
+              <a href="#recap" class="text-secondary text-decoration-none small"
+                >Recap</a
+              >
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-1">
+            <h5 class="text-uppercase mb-2 fw-bold text-white small">
+              Contacto
+            </h5>
+            <p class="small text-secondary mb-0">Tlf: +34 693 52 03 08</p>
+            <p class="small text-secondary">aitana.alonso.lorenzo@gmail.com</p>
+          </div>
+        </div>
+
+        <hr class="my-3 border-secondary" />
+
+        <div class="row align-items-center">
+          <div class="col-md-7 col-lg-8">
+            <p class="small mb-0">
+              © 2026 <strong class="text-granate">PROYECTO BOOTSTRAP</strong>
+            </p>
+          </div>
+          <div class="col-md-5 col-lg-4 text-center text-md-end">
+            <p class="small fw-bold mb-0">
+              Hecho por <span class="text-granate">AAL</span>
+            </p>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <footer class="text-center py-4 border-top border-secondary">
-        <p class="mb-0 small">
-          PROYECTO ACADÉMICO BOOTSTRAP ·
-          <span class="text-granate">2026</span> · AAL
-        </p>
-      </footer>
+    <div
+      class="modal fade"
+      id="sugerenciaModal"
+      tabindex="-1"
+      aria-labelledby="sugerenciaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark-custom border-granate text-white">
+          <div class="modal-header border-secondary">
+            <h5 class="modal-title" id="sugerenciaModalLabel">
+              Sugerir nuevo anime
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="small text-secondary">
+              Si creas que me falta algún imprescindible en mi lista de 2026,
+              ¡escríbelo aquí!
+            </p>
+            <div class="mb-3">
+              <label for="animeName" class="form-label text-granate"
+                >Nombre del Anime</label
+              >
+              <input
+                type="text"
+                class="form-control bg-dark text-white border-secondary"
+                id="animeName"
+                placeholder="Ej: Frieren o Solo Leveling"
+              />
+            </div>
+          </div>
+          <div class="modal-footer border-secondary">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn bg-granate btn-sm"
+              id="btnEnviar"
+              data-bs-dismiss="modal"
+            >
+              Enviar sugerencia
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const btnEnviar = document.getElementById('btnEnviar')
+      const inputAnime = document.getElementById('animeName')
+
+      btnEnviar.addEventListener('click', () => {
+        console.log('Sugerencia enviada: ' + inputAnime.value)
+        inputAnime.value = ''
+        alert('¡Gracias por tu sugerencia! La veré pronto.')
+      })
+    </script>
+
+    <script>
+      // Inicializar todos los tooltips de la página
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      )
+      const tooltipList = [...tooltipTriggerList].map(
+        tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+      )
+    </script>
   </body>
 </html>

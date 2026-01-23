@@ -56,3 +56,78 @@ body {
   object-fit: cover;
   object-position: center;
 }
+
+/* Estilos para el nuevo acordeón */
+.accordion-item {
+  background-color: #1a1a1a !important;
+  border: 1px solid #9d1b28 !important;
+}
+.accordion-button {
+  background-color: #1a1a1a !important;
+  color: white !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #9d1b28 !important;
+  background-color: #252525 !important;
+  box-shadow: none;
+}
+.accordion-button::after {
+  filter: invert(1);
+}
+
+/* Footer */
+footer {
+  background-color: #0a0a0a !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos de las columnas */
+footer h5 {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer h5::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 30px;
+  background-color: #9d1b28;
+}
+
+/* Estilos para los enlaces del footer */
+footer a {
+  color: #888 !important;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: #9d1b28 !important;
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+footer .text-secondary {
+  color: #6c757d !important;
+  line-height: 1.8;
+}
+
+footer hr {
+  border-top: 1px solid rgba(157, 27, 40, 0.3);
+  opacity: 1;
+}
+
+/* Estilos para los tooltips */
+.custom-tooltip .tooltip-inner {
+  background-color: #9d1b28;
+  color: white;
+  border: 1px solid white;
+}
+.custom-tooltip .tooltip-arrow::before {
+  border-top-color: #9d1b28;
+}
