@@ -1,5 +1,5 @@
 const userModel = require("../models/user.model")
-const bcrypt = require("../utils/bcrypt")
+const bcrypt = require("../utils/bcrypt") //npm i bcrypt
 const jwt = require("jsonwebtoken") //npm i jsonwebtoken
 
 //Devolver todos los comentarios
@@ -8,15 +8,15 @@ exports.getAll = async () => await userModel.find()
 exports.getById = async (id) => await userModel.findById(id)
 
 //Crear un nuevo usuario
-exports.create = async(datos) => {     
+exports.create = async(datos) => {
     datos.password = await bcrypt.hashPassword(datos.password)
-    const newUser = new userModel(datos)    
+    const newUser = new userModel(datos)
     return await newUser.save()
 }
 
 //exports.getByUsername = async (usernameParam) => await userModel.findOne({username:usernameParam})
 
-exports.login = async(usernameParam, passwordParam) => {    
+exports.login = async(usernameParam, passwordParam) => {
     const userFound = await userModel.findOne({username:usernameParam}).select("+password")//await this.getByUsername(usernameParam)
     if(userFound){
         console.log(userFound)
