@@ -1,0 +1,87 @@
+:root {
+  --f1-red: #e10600;
+  --asphalt: #15151e;
+  --carbon: #0b0b0f;
+  --glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--carbon);
+  color: #e0e0e0;
+  padding-top: 70px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.text-f1 {
+  color: var(--f1-red) !important;
+}
+.bg-f1 {
+  background-color: var(--f1-red) !important;
+  color: white !important;
+}
+
+.bg-dark-custom {
+  background-color: var(--asphalt) !important;
+  border: 1px solid #2d2d35 !important;
+}
+
+.border-f1 {
+  border-color: var(--f1-red) !important;
+}
+
+/* Efecto para imágenes de monoplazas */
+.img-f1 {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+  filter: grayscale(0.4) brightness(0.8);
+  transition: 0.4s ease-in-out;
+}
+
+.img-f1:hover {
+  filter: grayscale(0) brightness(1.1);
+  transform: scale(1.02);
+}
+
+/* Carousel */
+.carousel-item img {
+  height: 550px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.accordion-item {
+  background-color: var(--asphalt) !important;
+  border: 1px solid #2d2d35 !important;
+  margin-bottom: 5px;
+}
+.accordion-button {
+  background-color: var(--asphalt) !important;
+  color: white !important;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--f1-red) !important;
+  background-color: #1f1f29 !important;
+  box-shadow: none;
+}
+.accordion-button::after {
+  filter: invert(1);
+}
+
+/* Footer compacto */
+footer {
+  background-color: #050505 !important;
+  border-top: 3px solid var(--f1-red);
+}
+
+footer a:hover {
+  color: var(--f1-red) !important;
+  padding-left: 5px;
+  transition: 0.3s;
+}
+
+/* Tooltips */
+.custom-tooltip .tooltip-inner {
+  background-color: var(--f1-red);
+  font-weight: bold;
+}
