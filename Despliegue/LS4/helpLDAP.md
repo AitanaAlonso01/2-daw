@@ -166,7 +166,7 @@ En el caso de **/etc/hostname**, ejecutar el siguiente comando:
 
 ```
 
-sudo hostnamectl set-hostname ldapserver.somebooks.local
+sudo hostnamectl set-hostname ldapserver.aaldaw.local
 
 ```
 
@@ -184,8 +184,8 @@ Una vez que nos encontramos en el entorno del editor, modificamos la línea que 
 
 ```
 
-127.0.1.1 ldapserver.somebooks.local ldapserver
-192.168.1.10 ldapserver.somebooks.local ldapserver
+127.0.1.1 ldapserver.aaldaw.local ldapserver
+192.168.1.10 ldapserver.aaldaw.local ldapserver
 
 ```
 
@@ -228,7 +228,7 @@ Después, deberemos escribir el nombre DNS del dominio que usaremos en nuestro d
 
 ```
 
-somebooks.local
+aaldaw.local
 
 ```
 
@@ -298,7 +298,7 @@ Una vez abierto el editor, escribiremos un contenido como este:
 
 ```
 
-dn: ou=unidad,dc=somebooks,dc=local
+dn: ou=unidad,dc=aaldaw,dc=local
 objectClass: top
 objectClass: organizationalUnit
 ou: unidad
@@ -315,7 +315,7 @@ A continuación, deberemos añadir la información a la base de datos OpenLDAP. 
 
 ```
 
-sudo ldapadd -x -D cn=admin,dc=somebooks,dc=local -W -f ou.ldif
+sudo ldapadd -x -D cn=admin,dc=aaldaw,dc=local -W -f ou.ldif
 
 ```
 
@@ -359,7 +359,7 @@ En el área de trabajo del editor, escribiremos un contenido como este:
 
 ```
 
-dn: cn=grupo,ou=unidad,dc=somebooks,dc=local
+dn: cn=grupo,ou=unidad,dc=aaldaw,dc=local
 objectClass: top
 objectClass: posixGroup
 gidNumber: 10000
@@ -423,7 +423,7 @@ Una vez abierto el editor, escribiremos este contenido:
 
 ```
 
-dn: uid=jlopez,ou=unidad,dc=somebooks,dc=local
+dn: uid=jlopez,ou=unidad,dc=aaldaw,dc=local
 objectClass: top
 objectClass: posixAccount
 objectClass: inetOrgPerson
@@ -455,7 +455,7 @@ Con esto estamos listos para cargar el nuevo usuario en el directorio. Sólo ten
 
 ```
 
-sudo ldapadd -x -D cn=admin,dc=somebooks,dc=local -W -f usr.ldif
+sudo ldapadd -x -D cn=admin,dc=aaldaw,dc=local -W -f usr.ldif
 
 ```
 
@@ -484,7 +484,7 @@ correctamente. Para lograrlo podemos utilizar el comando **ldapsearch**, que nos
 
 ```
 
-ldapsearch -xLLL -b "dc=somebooks,dc=local" uid=jlopez sn givenName cn
+ldapsearch -xLLL -b "dc=aaldaw,dc=local" uid=jlopez sn givenName cn
 
 ```
 
@@ -510,7 +510,7 @@ Por ejemplo, podríamos buscar todos los usuarios usando la siguiente sintaxis:
 
 ```
 
-ldapsearch -xLLL -b "dc=somebooks,dc=local" uid=\* sn givenName mail
+ldapsearch -xLLL -b "dc=aaldaw,dc=local" uid=\* sn givenName mail
 
 ```
 
@@ -520,7 +520,7 @@ Aunque no vamos a entrar en muchos detalles, al menos vamos a explicar los argum
 
 - -LLL sirve para que la salida sea del tipo LDAPv1.
 
-- -b va seguida del punto del árbol donde debe comenzar la búsqueda. En este caso, dc=somebooks,dc=local.
+- -b va seguida del punto del árbol donde debe comenzar la búsqueda. En este caso, dc=aaldaw,dc=local.
 
 - Después se incluye la condición que deberán cumplir los objetos buscados. En el ejemplo, cualquier valor (\*) para el atributo uid.
 
@@ -538,7 +538,7 @@ El comando que usaremos en este caso es **ldapmodify**, que permite cambiar el c
 
 ```
 
-dn: uid=lgomez,ou=unidad,dc=somebooks,dc=local
+dn: uid=lgomez,ou=unidad,dc=aaldaw,dc=local
 changetype: modify
 replace: mail
 mail: luis.gomez@somebooks.local
@@ -563,7 +563,7 @@ Por último, ejecutamos la utilidad ldapmodify, indicándole el nombre del archi
 
 ```
 
-ldapmodify -x -D cn=admin,dc=somebooks,dc=local -W -f cambios.ldif
+ldapmodify -x -D cn=admin,dc=aaldaw,dc=local -W -f cambios.ldif
 
 ```
 
@@ -579,7 +579,7 @@ La utilidad que permite eliminar entradas del directorio se llama **ldapdelete**
 
 ```
 
-ldapdelete -x -W -D 'cn=admin,dc=somebooks,dc=local' "uid=lgomez,ou=unidad,dc=somebooks,dc=local"
+ldapdelete -x -W -D 'cn=admin,dc=aaldaw,dc=local' "uid=lgomez,ou=unidad,dc=aaldaw,dc=local"
 
 ```
 
@@ -588,31 +588,3 @@ Después de escribir la contraseña, parecerá que no ha ocurrido nada. Sin emba
 ![2](http://somebooks.es/wp-content/uploads/2022/02/ldap-parte4-Buscar-modificar-y-eliminar-elementos-del-directorio-009.png)
 
 ---
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
