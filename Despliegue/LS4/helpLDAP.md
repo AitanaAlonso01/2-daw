@@ -50,7 +50,7 @@ ip route
 resolvectl
 ```
 
-**IP A** --> 10.0.2.15
+**IP A** --> 10.0.2.15 (este es el rango de ip que tienes 10.0.2.x)
 
 **IP ROTE** --> 10.0.2.2
 
@@ -65,13 +65,13 @@ network:
     enp0s3:
 #      dhcp4: true
       addresses:
-        - 10.0.2.15/24
+        - 10.0.2.205/24
       routes:
         - to: default
           via: 10.0.2.2
       nameservers:
         addresses:
-          - 10.0.2.15
+          - 10.0.2.205
         search: [aaldaw.local]
     enp0s8:
 #      dhcp4: true
