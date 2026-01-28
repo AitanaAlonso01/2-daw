@@ -1,14 +1,2 @@
-[2026-01-26T19:43:33.968] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:43:40.935] [ERROR] error - Error Handler(401): Error: No autenticado
-[2026-01-26T19:43:41.079] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:43:45.831] [ERROR] error - Error Handler(404): Error: Ruta no existente: /api/v1/login
-[2026-01-26T19:43:45.903] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:43:50.417] [ERROR] error - Error Handler(401): Error: No autenticado
-[2026-01-26T19:43:50.485] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:44:02.373] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:55:35.631] [ERROR] error - Error Handler(401): Error: No autenticado
-[2026-01-26T19:55:35.684] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:55:48.579] [ERROR] error - Error Handler(401): Error: No autenticado
-[2026-01-26T19:55:48.760] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-26T19:56:29.211] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2026-01-26T19:56:37.194] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2026-01-28T16:06:21.782] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-01-28T16:20:44.559] [ERROR] error - Error Handler(403): Error: No pasarás!

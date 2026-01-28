@@ -1,6 +1,0 @@
-[2026-01-21T16:25:35.577] [ERROR] error - Error Handler(400): ValidationError: valoracion: Path `valoracion` is required., categoria: Path `categoria` is required., opinion: Path `opinion` is required., usuario: Path `usuario` is required.
-[2026-01-21T16:26:19.933] [ERROR] error - Error Handler(500): TypeError: Cannot read properties of undefined (reading 'password')
-[2026-01-21T16:26:26.084] [ERROR] error - Error Handler(401): Error: No autenticado
-[2026-01-21T16:26:31.208] [ERROR] error - Error Handler(404): Error: Sin comentarios
-[2026-01-21T16:30:10.031] [ERROR] error - Error Handler(500): MulterError: Unexpected field
-[2026-01-21T16:32:48.740] [ERROR] error - Error Handler(500): MulterError: Unexpected field

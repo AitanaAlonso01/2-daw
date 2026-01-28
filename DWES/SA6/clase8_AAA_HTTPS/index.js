@@ -32,7 +32,14 @@ const AppError = require('./utils/AppError')
 const cookieParser = require('cookie-parser')
 
 //SETUP - MIDDLEWARES
-const whiteList = ['https://localhost:5500', 'https://127.0.0.1:5500']
+const whiteList = [
+  'https://localhost:5500',
+  'https://127.0.0.1:5500',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'https://localhost:5173',
+  'https://127.0.0.1:5173',
+]
 const corsOptions = {
   origin: (origin, callback) => {
     console.log(origin)
