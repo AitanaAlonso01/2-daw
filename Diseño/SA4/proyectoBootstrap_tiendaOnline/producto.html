@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOKS | Calcetines Tetris</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/soks-logo.png" alt="SOKS Logo" height="40" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuSoks"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuSoks">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-3 text-white align-items-center">
+            <i class="bi bi-person"></i>
+            <div class="position-relative">
+              <i class="bi bi-cart"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >0</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html" class="text-decoration-none">Inicio</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none">Catálogo</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none">Retro Gamer</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Tetris Soks
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <main class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <img
+              src="https://statics.pampling.com/imagenes/productos/producto_5431.jpg"
+              class="img-fluid rounded"
+              alt="Calcetines Tetris"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h1 class="display-5 fw-bold">Tetris Soks</h1>
+          <p class="lead text-muted">"Eres informático 100%."</p>
+          <hr />
+
+          <p>
+            Encaja todas las piezas de tu outfit con estos calcetines inspirados
+            en el videojuego más adictivo de la historia. Comodidad nivel
+            experto para tus sesiones de código o de gaming.
+          </p>
+
+          <div class="mb-4">
+            <span class="badge bg-primary">Edición Limitada</span>
+            <span class="badge bg-success">Algodón 100%</span>
+            <span class="badge bg-info text-dark">Retro-Style</span>
+          </div>
+
+          <div class="mb-4 w-50">
+            <label class="form-label fw-bold">Selecciona tu talla:</label>
+            <select class="form-select border-2">
+              <option selected>36 - 40 (S/M)</option>
+              <option>41 - 45 (L/XL)</option>
+            </select>
+          </div>
+
+          <div
+            class="d-flex justify-content-between align-items-center bg-light p-4 rounded-3 border"
+          >
+            <div class="precio">
+              <span class="h2 fw-bold mb-0">4,79€</span>
+              <small class="d-block text-muted">IVA incluido</small>
+            </div>
+
+            <div class="acciones d-flex gap-2">
+              <button
+                class="btn btn-outline-danger btn-lg"
+                title="Añadir a deseados"
+              >
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="btn btn-dark btn-lg px-4">
+                <i class="bi bi-cart-plus me-2"></i>Añadir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+      <div class="container text-center">
+        <p>© 2026 Todos los derechos reservados: <strong>SOKS</strong></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
