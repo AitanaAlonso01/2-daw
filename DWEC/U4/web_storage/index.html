@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registro y Login</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
+      .container {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      #mensaje {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Registro y Login</h2>
+
+    <div class="container">
+      <input type="text" id="username" placeholder="Nombre de usuario" />
+      <input type="password" id="password" placeholder="Contraseña" />
+
+      <button onclick="registrar()">Registrarse</button>
+      <button onclick="login()">Iniciar Sesión</button>
+    </div>
+
+    <p id="mensaje"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
