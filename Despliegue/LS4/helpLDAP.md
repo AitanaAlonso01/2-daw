@@ -315,7 +315,7 @@ A continuación, deberemos añadir la información a la base de datos OpenLDAP. 
 
 ```
 
-sudo ldapadd -x -D cn=admin,dc=aaldaw,dc=local -W -f ou.ldif
+sudo ldapadd -x -H ldap://localhost   -D "cn=admin,dc=ldapserver,dc=aaldaw,dc=local" -W -f ou.ldif
 
 ```
 
