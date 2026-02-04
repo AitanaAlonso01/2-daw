@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calendario de Eventos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-screen" class="modal">
+      <div class="modal-content">
+        <h2 class="neon-text">ACCESO SISTEMA</h2>
+        <input type="email" id="email" placeholder="admin@system.com" />
+        <input type="password" id="password" placeholder="1234" />
+        <button onclick="app.login()">ENTRAR</button>
+      </div>
+    </div>
+
+    <div id="app" class="hidden">
+      <header class="main-header">
+        <div class="search-box">
+          <input type="date" id="search-date" />
+          <button onclick="app.searchDate()">BUSCAR DÍA</button>
+        </div>
+        <div class="nav-controls">
+          <button onclick="app.changeMonth(-1)">&#171;</button>
+          <h1 id="month-display">Noviembre 2022</h1>
+          <button onclick="app.changeMonth(1)">&#187;</button>
+        </div>
+        <button class="logout" onclick="location.reload()">SALIR</button>
+      </header>
+
+      <div class="container">
+        <section class="calendar-wrapper">
+          <div class="weekdays">
+            <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span
+            ><span>Jue</span><span>Vie</span><span>Sáb</span>
+          </div>
+          <div id="calendar-grid" class="grid"></div>
+        </section>
+
+        <aside class="event-sidebar">
+          <h2 id="selected-title">Selecciona un día</h2>
+          <div id="event-list"></div>
+
+          <div class="event-form">
+            <h3>Añadir / Modificar Evento</h3>
+            <input type="hidden" id="edit-id" />
+            <input type="text" id="ev-name" placeholder="Título del evento" />
+            <input type="time" id="ev-time" />
+            <button id="save-btn" onclick="app.saveEvent()">GUARDAR</button>
+            <button id="cancel-btn" class="hidden" onclick="app.clearForm()">
+              CANCELAR
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
