@@ -131,6 +131,21 @@ sudo named-checkzone aaldaw.local db.aaldaw.local
 sudo named-checkzone 205.168.192.in-addr.arpa db.205.168.192.in-addr.arpa
 ````
 
+## configurar cliente
+
+**NOTA:** acordarse que hay que cambiar las **ips** y el **dominio de busqueda**, si por un casual alguna comprobación no funciona, probar el **sudo netplan apply 90** en el cliente
+
+- comprobar que el cliente tiene interner: nslookup www.google.com (si es que si, esta bien configurada la red interna)
+- comprobar que hace ssh al dns,ns1,server y a la ip del dns
+
+si no funciona
+
+```
+ssh dns@dns
+```
+
+Pero si dns@192.168.205.50, entrar a configurar el archivo /etc/resolv.conf y cambiar el dominio de forma manual.
+
 # Hoja de Ruta Completa para Configurar LDAP (OpenLDAP) en Ubuntu
 
 Basado en los tutoriales de SomeBooks.es utilizados en clase.
@@ -149,8 +164,10 @@ Pasos:
 - Instalar paquetes:
 
 ```
+
 sudo apt update
 sudo apt install slapd ldap-utils
+
 ```
 
 - Reconfigurar OpenLDAP:
