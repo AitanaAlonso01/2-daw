@@ -1,0 +1,61 @@
+# Cambiar el email de dos usuarios
+dn: uid=dev1,ou=DEV,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+replace: mail
+mail: dev1Modificado@gmail.com
+
+dn: uid=dev2,ou=DEV,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+replace: mail
+mail: dev2Modificado@gmail.com
+
+# Añadir numero de telefono movil a todos los empleados
+# DEVs
+dn: uid=dev1,ou=DEV,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666777888
+
+dn: uid=dev2,ou=DEV,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666777889
+
+dn: uid=dev3,ou=DEV,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666777880
+
+# ADMINs
+dn: uid=admin1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666999000
+
+dn: uid=admin2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666999000
+
+# OPSs
+dn: uid=ops1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666111222
+
+dn: uid=ops2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666111222
+
+# SALESs
+dn: uid=sales1,ou=SALES,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: mobile
+mobile: 666222333
+
+# Modificar la descripción de un grupo (en mi caso añadir descripción)
+dn: cn=marketing,ou=SALES,ou=departments,dc=aaldaw,dc=local
+changetype: modify
+add: description
+description: Departamento encargado de la gestión de marca, publicidad y análisis del mercado.

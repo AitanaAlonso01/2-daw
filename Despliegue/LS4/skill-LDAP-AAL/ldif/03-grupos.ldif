@@ -1,0 +1,51 @@
+# GRUPOS-DEV
+# Backend Team
+dn: cn=backend,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10000
+cn: backend
+
+# Frontend Team
+dn: cn=frontend,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10001
+cn: frontend
+
+# DevOps Team
+dn: cn=devops,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10002
+cn: devops
+
+# GRUPOS-OPS
+# System Administrator
+dn: cn=sysAdmin,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10003
+cn: sysAdmin
+
+# Technical Support
+dn: cn=techSup,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10004
+cn: techSup
+
+# GRUPOS-SALES
+# Sales
+dn: cn=sales,ou=SALES,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10005
+cn: sales
+
+# Marketing
+dn: cn=marketing,ou=SALES,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: posixGroup
+gidNumber: 10006
+cn: marketing

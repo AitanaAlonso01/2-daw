@@ -1,0 +1,295 @@
+# Listar todo los usuarios en el departamento de DEV:
+dns@ldapserver:~$ ldapsearch -x -b "ou=DEV,ou=departments,dc=aaldaw,dc=local" "(objectClass=posixAccount)"
+# extended LDIF
+#
+# LDAPv3
+# base <ou=DEV,ou=departments,dc=aaldaw,dc=local> with scope subtree
+# filter: (objectClass=posixAccount)
+# requesting: ALL
+#
+
+# dev1, DEV, departments, aaldaw.local
+dn: uid=dev1,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev1
+sn: dev1
+uid: dev1
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/dev1
+loginShell: /bin/bash
+mail: dev1@gmail.com
+givenName: dev1
+
+# dev2, DEV, departments, aaldaw.local
+dn: uid=dev2,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev2
+sn: dev2
+uid: dev2
+uidNumber: 2001
+gidNumber: 10001
+homeDirectory: /home/dev2
+loginShell: /bin/bash
+mail: dev2@gmail.com
+givenName: dev2
+
+# dev3, DEV, departments, aaldaw.local
+dn: uid=dev3,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev3
+sn: dev3
+uid: dev3
+uidNumber: 2002
+gidNumber: 10002
+homeDirectory: /home/dev3
+loginShell: /bin/bash
+mail: dev3@gmail.com
+givenName: dev3
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 4
+# numEntries: 3
+
+# Buscar usuarios con UID superios a 1000:
+dns@ldapserver:~$ ldapsearch -x -b "dc=aaldaw,dc=local" "(uidNumber>=1001)"
+# extended LDIF
+#
+# LDAPv3
+# base <dc=aaldaw,dc=local> with scope subtree
+# filter: (uidNumber>=1001)
+# requesting: ALL
+#
+
+# dev1, DEV, departments, aaldaw.local
+dn: uid=dev1,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev1
+sn: dev1
+uid: dev1
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/dev1
+loginShell: /bin/bash
+mail: dev1@gmail.com
+givenName: dev1
+
+# dev2, DEV, departments, aaldaw.local
+dn: uid=dev2,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev2
+sn: dev2
+uid: dev2
+uidNumber: 2001
+gidNumber: 10001
+homeDirectory: /home/dev2
+loginShell: /bin/bash
+mail: dev2@gmail.com
+givenName: dev2
+
+# dev3, DEV, departments, aaldaw.local
+dn: uid=dev3,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev3
+sn: dev3
+uid: dev3
+uidNumber: 2002
+gidNumber: 10002
+homeDirectory: /home/dev3
+loginShell: /bin/bash
+mail: dev3@gmail.com
+givenName: dev3
+
+# admin1, OPS, departments, aaldaw.local
+dn: uid=admin1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: admin1
+sn: admin1
+uid: admin1
+uidNumber: 2003
+gidNumber: 10003
+homeDirectory: /home/admin1
+loginShell: /bin/bash
+mail: admin1@gmail.com
+givenName: admin1
+
+# admin2, OPS, departments, aaldaw.local
+dn: uid=admin2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: admin2
+sn: admin2
+uid: admin2
+uidNumber: 2004
+gidNumber: 10003
+homeDirectory: /home/admin2
+loginShell: /bin/bash
+mail: admin2@gmail.com
+givenName: admin2
+
+# ops1, OPS, departments, aaldaw.local
+dn: uid=ops1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: ops1
+sn: ops1
+uid: ops1
+uidNumber: 2005
+gidNumber: 10004
+homeDirectory: /home/ops1
+loginShell: /bin/bash
+mail: ops1@gmail.com
+givenName: ops1
+
+# ops2, OPS, departments, aaldaw.local
+dn: uid=ops2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: ops2
+sn: ops2
+uid: ops2
+uidNumber: 2006
+gidNumber: 10004
+homeDirectory: /home/ops2
+loginShell: /bin/bash
+mail: ops2@gmail.com
+givenName: ops2
+
+# sales1, SALES, departments, aaldaw.local
+dn: uid=sales1,ou=SALES,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: sales1
+sn: sales1
+uid: sales1
+uidNumber: 2007
+gidNumber: 10005
+homeDirectory: /home/sales1
+loginShell: /bin/bash
+mail: sales1@gmail.com
+givenName: sales1
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 9
+# numEntries: 8
+
+# Mostrar todos los administradores del sistema
+dns@ldapserver:~$ ldapsearch -x -b "dc=aaldaw,dc=local" "(uid=admin*)"
+# extended LDIF
+#
+# LDAPv3
+# base <dc=aaldaw,dc=local> with scope subtree
+# filter: (uid=admin*)
+# requesting: ALL
+#
+
+# admin1, OPS, departments, aaldaw.local
+dn: uid=admin1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: admin1
+sn: admin1
+uid: admin1
+uidNumber: 2003
+gidNumber: 10003
+homeDirectory: /home/admin1
+loginShell: /bin/bash
+mail: admin1@gmail.com
+givenName: admin1
+
+# admin2, OPS, departments, aaldaw.local
+dn: uid=admin2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: admin2
+sn: admin2
+uid: admin2
+uidNumber: 2004
+gidNumber: 10003
+homeDirectory: /home/admin2
+loginShell: /bin/bash
+mail: admin2@gmail.com
+givenName: admin2
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 3
+# numEntries: 2
+
+# Consultar información de un usuario especifico (sales1)
+dns@ldapserver:~$ ldapsearch -x -b "dc=aaldaw,dc=local" "(uid=sales1)"
+# extended LDIF
+#
+# LDAPv3
+# base <dc=aaldaw,dc=local> with scope subtree
+# filter: (uid=sales1)
+# requesting: ALL
+#
+
+# sales1, SALES, departments, aaldaw.local
+dn: uid=sales1,ou=SALES,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: sales1
+sn: sales1
+uid: sales1
+uidNumber: 2007
+gidNumber: 10005
+homeDirectory: /home/sales1
+loginShell: /bin/bash
+mail: sales1@gmail.com
+givenName: sales1
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 2
+# numEntries: 1
+
+# Contar el número total de entradas en el directorio
+dns@ldapserver:~$ ldapsearch -x -b "dc=aaldaw,dc=local" "(objectClass=*)" dn | grep "dn: " | wc -l
+23

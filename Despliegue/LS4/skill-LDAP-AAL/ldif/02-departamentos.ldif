@@ -1,0 +1,18 @@
+# SUB OUs
+# Development Department (DEV)
+dn: ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: DEV
+
+# Operations Department (OPS)
+dn: ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: OPS
+
+# Commercial Department (SALES)
+dn: ou=SALES,ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: SALES

@@ -1,0 +1,134 @@
+# USUARIOS
+# Usuarios Backend Team
+dn: uid=dev1,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev1
+sn: dev1
+uid: dev1
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/dev1
+loginShell: /bin/bash
+userPassword: {SSHA}I5oSjpUP8R/KRIM5JJHmyzUAMUNh+OhB
+mail: dev1@gmail.com
+givenName: dev1
+
+# Usuarios Frontend Team
+dn: uid=dev2,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev2
+sn: dev2
+uid: dev2
+uidNumber: 2001
+gidNumber: 10001
+homeDirectory: /home/dev2
+loginShell: /bin/bash
+userPassword: {SSHA}859T8Sozs8W1k2d2ozO/Y4MKvztrGlD4
+mail: dev2@gmail.com
+givenName: dev2
+
+# Usuarios DevOps Team
+dn: uid=dev3,ou=DEV,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: dev3
+sn: dev3
+uid: dev3
+uidNumber: 2002
+gidNumber: 10002
+homeDirectory: /home/dev3
+loginShell: /bin/bash
+userPassword: {SSHA}zH//tXUM6yzqtH/BRL/8vH+Wl8CGLc1N
+mail: dev3@gmail.com
+givenName: dev3
+
+# Usuarios System Administrator
+dn: uid=admin1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: admin1
+sn: admin1
+uid: admin1
+uidNumber: 2003
+gidNumber: 10003
+homeDirectory: /home/admin1
+loginShell: /bin/bash
+userPassword: {SSHA}m3sdlmvll8q58/fwUlxey7rY47ZD1uXh
+mail: admin1@gmail.com
+givenName: admin1
+
+dn: uid=admin2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: admin2
+sn: admin2
+uid: admin2
+uidNumber: 2004
+gidNumber: 10003
+homeDirectory: /home/admin2
+loginShell: /bin/bash
+userPassword: {SSHA}jNzbGkx4n3a6LiJknwjTyVPL9R/Nl034
+mail: admin2@gmail.com
+givenName: admin2
+
+# Usuarios Technical Support
+dn: uid=ops1,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: ops1
+sn: ops1
+uid: ops1
+uidNumber: 2005
+gidNumber: 10004
+homeDirectory: /home/ops1
+loginShell: /bin/bash
+userPassword: {SSHA}4G60u4wQMYpfKpcVNrSNenzCcXKATJ08
+mail: ops1@gmail.com
+givenName: ops1
+
+dn: uid=ops2,ou=OPS,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: ops2
+sn: ops2
+uid: ops2
+uidNumber: 2006
+gidNumber: 10004
+homeDirectory: /home/ops2
+loginShell: /bin/bash
+userPassword: {SSHA}B+Il6M7NuwHJPZk9rEvFxibD+uOK9RBI
+mail: ops2@gmail.com
+givenName: ops2
+
+# Usuarios Sales
+dn: uid=sales1,ou=SALES,ou=departments,dc=aaldaw,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+objectClass: person
+cn: sales1
+sn: sales1
+uid: sales1
+uidNumber: 2007
+gidNumber: 10005
+homeDirectory: /home/sales1
+loginShell: /bin/bash
+userPassword: {SSHA}4qMNtNtsUduJNwcmTZz8T6+uA2UsWetd
+mail: sales1@gmail.com
+givenName: sales1
