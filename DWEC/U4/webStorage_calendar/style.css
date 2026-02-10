@@ -1,0 +1,87 @@
+:root {
+  --black: #000000;
+  --dark: #121212;
+  --red: #ff0000;
+  --grey: #333;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Header y Buscador */
+.main-header {
+  background: var(--dark);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--red);
+}
+
+/* Grid del Calendario */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  background: var(--dark);
+  height: 100px;
+  padding: 10px;
+  border: 1px solid var(--grey);
+  cursor: pointer;
+}
+
+.day:hover {
+  background: #200000;
+  border-color: var(--red);
+}
+.day.active {
+  border: 2px solid var(--red);
+  background: #300000;
+}
+.day.has-event {
+  border-top: 3px solid var(--red);
+}
+
+/* Sidebar y Formularios */
+.event-sidebar {
+  width: 350px;
+  background: var(--dark);
+  padding: 20px;
+  border-left: 1px solid var(--red);
+}
+
+.event-item {
+  background: #1a1a1a;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}

@@ -37,11 +37,13 @@
         <div class="collapse navbar-collapse" id="menuSoks">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Inicio</a>
+              <a class="nav-link" href="index.html">Inicio</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="producto.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contacto.html">Contacto</a>
             </li>
           </ul>
 
@@ -66,7 +68,12 @@
     </nav>
 
     <div class="container my-5">
-      <h1 class="text-center mb-5 fw-bold">Contacta con SOKS 🧦</h1>
+      <h1 class="text-center mb-5 fw-bold">
+        Contacta con
+        <span>
+          <img src="img/soks-logo.png" alt="SOKS Logo" height="100" />
+        </span>
+      </h1>
 
       <div class="row g-5">
         <div class="col-lg-8">
@@ -196,7 +203,7 @@
         <div class="row text-center text-md-start">
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-              SOKS
+              <img src="img/soks-logo.png" alt="SOKS Logo" height="80" />
             </h5>
             <p>
               La tienda de calcetines con los diseños más locos y divertidos del
@@ -217,7 +224,14 @@
               >
             </p>
             <p>
-              <a href="#" class="text-white text-decoration-none">Privacidad</a>
+              <a
+                href="#"
+                class="text-white text-decoration-none"
+                data-bs-toggle="modal"
+                data-bs-target="#modalPrivacidad"
+              >
+                Privacidad
+              </a>
             </p>
           </div>
 
@@ -264,6 +278,62 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade"
+      id="modalPrivacidad"
+      tabindex="-1"
+      aria-labelledby="modalPrivacidadLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title" id="modalPrivacidadLabel">
+              Políticas y Condiciones SOKS
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5 class="fw-bold">1. Protección de Datos</h5>
+            <p>
+              En SOKS nos tomamos muy en serio tus pies y tus datos. Solo
+              utilizaremos tu información para gestionar tus pedidos de
+              calcetines y enviarte promos si así lo deseas.
+            </p>
+
+            <h5 class="fw-bold mt-4">2. Seguridad</h5>
+            <p>
+              Tus pagos están protegidos mediante cifrado SSL. No guardamos los
+              datos de tu tarjeta en nuestros servidores.
+            </p>
+
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle-fill me-2"></i>
+              Al navegar por nuestra web, aceptas el uso de cookies para mejorar
+              tu experiencia de usuario.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+              Entendido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

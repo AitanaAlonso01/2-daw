@@ -1,0 +1,24 @@
+# OUs
+# Employees
+dn: ou=employees,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: employees
+
+# Groups
+dn: ou=groups,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+# Departments
+dn: ou=departments,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: departments
+
+# Services
+dn: ou=services,dc=aaldaw,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: services

@@ -1,2 +1,4 @@
-[2026-01-28T16:06:21.782] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
-[2026-01-28T16:20:44.559] [ERROR] error - Error Handler(403): Error: No pasarás!
+[2026-02-04T15:59:37.164] [ERROR] error - Error Handler(404): Error: Ruta no existente: /favicon.ico
+[2026-02-04T16:26:51.374] [ERROR] error - Error Handler(406): MongoServerError: E11000 duplicate key error collection: 2526_2DAW_PI.comments index: _id_ dup key: { _id: ObjectId('697a1c0e7db129894691b529') }
+[2026-02-04T16:30:57.869] [ERROR] error - Error Handler(400): SyntaxError: Unexpected token '"', ""69833258f"... is not valid JSON
+[2026-02-04T16:31:51.643] [ERROR] error - Error Handler(400): SyntaxError: Unexpected token '"', ""69833258f"... is not valid JSON
