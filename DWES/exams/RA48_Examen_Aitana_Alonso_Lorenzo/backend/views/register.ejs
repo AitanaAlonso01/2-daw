@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<body>
+  <h1>Crear nueva cuenta</h1>
+  <form action="/api/v1/users/register" method="POST">
+    <div>
+      <label>Usuario:</label>
+      <input type="text" name="username" required />
+    </div>
+    <div>
+      <label>Contraseña:</label>
+      <input type="password" name="password" required />
+    </div>
+    <div>
+      <label>Nombre:</label>
+      <input type="text" name="nombre" required />
+    </div>
+    <div>
+      <label>Apellido:</label>
+      <input type="text" name="apellido" required />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email" required />
+    </div>
+    <div>
+      <label>Perfil:</label>
+      <select name="profile">
+        <option value="ADMIN">Administrador</option>
+        <option value="USER">Usuario</option>
+      </select>
+    </div>
+    <button type="submit">Registrarme</button>
+  </form>
+  <p><a href="/api/v2/users/login">¿Ya tienes cuenta? Entra aquí</a></p>
+</body>
+<%- include('partials/footer') %>

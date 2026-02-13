@@ -11,7 +11,7 @@ router.get('/', protect, userController.getAllUsers)
 // router.get('/', jwtMW.protect, userController.getAllUsers)
 
 //Mostrar usuario por id
-router.get('/:id', protect, restrictTo('ADMIN'), userController.getUserById)
+router.get('/:id', protect, restrictTo('ADMIN'), userController.getUserById) // solo puede ver usuarios de ADMIN
 
 //Crear/Registrar un nuevo usuario
 router.post('/', userController.registerUser)
