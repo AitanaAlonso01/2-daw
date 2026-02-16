@@ -67,8 +67,30 @@ UserModel.deleteUserById = async (id, result) => {
     .catch(err => result(err, null))
 }
 
-//Create - register
+//Create - register - Hecho en el controller
 
-//Login - find by username??
+// Login - Buscar por username
+UserModel.findByUsername = async (username, result) => {
+  try {
+    const usuario = await UserModel.findOne({ username: username })
+    if (usuario) {
+      result(null, usuario)
+    } else {
+      result({ error: 'Usuario no encontrado' }, null)
+    }
+  } catch (err) {
+    result(err, null)
+  }
+}
+
+// Configuración para que Mongoose cree el campo 'id' automáticamente al enviar JSON
+userSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function (doc, ret) {
+    ret.id = ret._id // Creamos 'id' a partir de '_id'
+    // Opcional: delete ret._id; // Si quieres limpiar el _id con guion
+  },
+})
 
 module.exports = UserModel
