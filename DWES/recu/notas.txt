@@ -1,0 +1,49 @@
+registro de usuarios -> username y pwd
+
+
+user.controller -> no ataca a base de datos
+//Registro
+const newUser = {
+  username,
+  password: hashedPassword
+}
+userService.create(newUser)
+
+//Login
+const usuario = await userService.getByUsername(username)
+
+rquire dotenv
+
+---
+
+user.service -> llamar por username
+exports.getByUsername = async usernamParam => await userModel.findOne({ username: usernameParam })
+
+findOne: devuelve el primer objeto que cumpla la condición
+find: devuelve ARRAY
+
+---
+
+jwt.mw -> middleware
+funcion protect
+protect -> comprobamos el token en cookies o postman
+decoded -> decodifica el ayload y lo manda al req.user
+
+rquire dotenv
+
+---
+
+payload -> objeto que se pase desde la creacion del token donde se guarda información no sesnible (ej. _id, profile, etc.)
+
+---
+
+profile.mw -> comprueba si el en req.user contiene el campo profile y si es ADMIN
+esAdmin -> comprueba si el usuario es admin
+
+---
+
+user.routes -> rutas de usuarios
+importamos el protects y el esAdmin
+
+router.get('/', protect,esAdmin, userController.getAllUsers)
+
