@@ -1,0 +1,1 @@
+//TO DO - 5 protección asíncrona
