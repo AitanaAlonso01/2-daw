@@ -8,7 +8,7 @@
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": true,
   "workbench.editor.highlightModifiedTabs": false,
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dark+",
   // "workbench.tree.renderIndentGuides": "none",
   // "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,

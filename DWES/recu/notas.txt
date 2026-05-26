@@ -47,3 +47,65 @@ importamos el protects y el esAdmin
 
 router.get('/', protect,esAdmin, userController.getAllUsers)
 
+---
+
+Si te piden proteger una ruta (routes.js)
+Si solo requiere estar logueado:
+router.get("/ruta", protect, controlador.metodo)
+
+Si requiere ser un perfil concreto (ej: ADMIN):
+router.delete("/ruta/:id", protect, restrictTo("ADMIN"), controlador.metodo)
+
+---
+
+Si te piden registrar o loguear en el servicio (user.service.js)
+Registrar: Validar con el regex de contraseña, hacer await hashPassword(password) y luego .save().
+
+Loguear: Buscar con findOne, comparar con await compareLogin(passPlano, passBD) y devolver el usuario o null.
+
+---
+
+Si te piden hacer el login en el controlador (user.controller.js)
+Este bloque es mecánico. Si el usuario es correcto tras pasar por el servicio:
+// 1. Crear Token
+const token = jwt.sign(
+    { id: user._id, username: user.username, profile: user.profile },
+    process.env.JWT_SECRET,
+    { expiresIn: '24h' }
+);
+// 2. Guardar en Cookie
+res.cookie("token", token, { httpOnly: true, secure: false }); // secure: true si es HTTPS estricto
+// 3. Guardar en Sesión
+req.session.user = { id: user._id, username: user.username, profile: user.profile };
+// 4. Responder
+res.json(user);
+
+---
+
+Si te piden aplicar el control de errores en un controlador CSR (comment.controller.js)
+Envuelves toda la función en wrapAsync.
+
+Añades next a los parámetros.
+
+Cambias los res.status().json() de error por next(new AppError("Mensaje", codigo)).
+
+exports.getAlgo = wrapAsync(async (req, res, next) => {
+    const resultado = await Service.getById(req.params.id);
+    if (!resultado) {
+        return next(new AppError("No encontrado", 404)); // ¡Limpio y seguro!
+    }
+    res.status(200).json(resultado);
+});
+
+---
+
+El Middleware de Errores por si acaso (errorHandler.mw.js)
+Si te dan el archivo vacío, la estructura blindada que aguanta errores nativos y controlados es:
+
+exports.errorHandler = (err, req, res, next) => {
+    const status = err.status || 500;
+    const message = err.message || "Error interno del servidor";
+
+    logger.error.error(`Status: ${status} - ${message}`); // Guarda en error.log
+    res.status(status).json({ error: message });
+};

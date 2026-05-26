@@ -1,0 +1,120 @@
+Cambio 1: El Middleware de CORS restringido (index.js)
+En tu index.js, donde ponga //TO DO - 6 cors , debes configurarlo así para cumplir con la restricción del puerto de Vite:
+
+const cors = require("cors");
+
+const corsOptions = {
+    origin: "http://localhost:5173", // El puerto por defecto de React Vite
+    credentials: true // Necesario para que React pueda enviar y recibir las cookies/tokens
+};
+
+app.use(cors(corsOptions));
+
+---
+
+Cambio 2: El Registro en el Servicio (user.service.js) con su Regex exacto
+En tu servicio de usuarios, la validación de la contraseña tiene que adaptarse a lo que pide el examen (mínimo 6 caracteres, mayúscula y minúscula):
+
+exports.register = async (username, password) => {
+    // REGLA: Mínimo 6 caracteres, al menos una mayúscula y una minúscula
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!passwordRegex.test(password)) {
+        return { err: "La contraseña debe tener al menos 6 caracteres, una mayúscula y una minúscula." };
+    }
+
+    // Si pasa el filtro, encriptamos (usando tu utilidad de bcrypt)
+    const hashedPassword = await bcryptUtils.hashPassword(password);
+
+    // Creamos el usuario guardándolo con el rol por defecto USER
+    const newUser = new User({
+        username,
+        password: hashedPassword,
+        profile: "USER" // Por defecto siempre USER según el enunciado
+    });
+
+    return await newUser.save();
+};
+
+---
+
+Cambio 3: Las Rutas de Comentarios CSR (comment.csr.routes.js)
+El enunciado dice que el usuario GUEST (no logueado) debe poder hacer GET a los comentarios para que React los pinte, pero para lo demás (POST, PATCH, DELETE) hace falta ser USER o ADMIN. Tu archivo de rutas de comentarios debe quedar así:
+
+// GET /api/v1/comments -> PÚBLICO (lo invoca React)
+router.get("/", commentController.getAllComments);
+
+// El resto de operaciones requieren estar logueado (protect)
+router.get("/:id", protect, commentController.getCommentById);
+router.post("/", protect, commentController.newComment);
+router.patch("/:id", protect, commentController.editCommentById);
+router.delete("/:id", protect, commentController.deleteCommentById);
+
+---
+
+1. El POST del Login y Registro (¡Ojo a las redirecciones!)Tus formularios apuntan por POST a /api/v1/users/login y /api/v1/users/register. Como estamos trabajando con vistas EJS (SSR), cuando el login o el registro salgan bien, el controlador no debe devolver un .json(), sino que debe redireccionar al usuario al listado de comentarios para que vea la interfaz protegida.  En tu user.controller.js, los TO DO 1 y TO DO 2 deben terminar así:
+
+// TO DO 1 - Register (Controlador)
+exports.register = wrapAsync(async (req, res, next) => {
+    const { username, password } = req.body;
+    const result = await userService.register(username, password);
+
+    if (result.err) {
+        return next(new AppError(result.err, 400));
+    }
+
+    // Si se registra bien, le mandamos al login o directamente al listado
+    res.redirect("/comentarios");
+});
+
+// TO DO 2 - Login (Controlador)
+exports.login = wrapAsync(async (req, res, next) => {
+    const { username, password } = req.body;
+    const user = await userService.login(username, password);
+
+    if (!user) {
+        return next(new AppError("Usuario o contraseña incorrectos", 401));
+    }
+
+    // 1. Crear Token JWT
+    const token = jwt.sign(
+        { id: user._id, username: user.username, profile: user.profile },
+        process.env.JWT_SECRET,
+        { expiresIn: "24h" }
+    );
+
+    // 2. Guardar en COOKIE (Obligatorio según el PDF)
+    res.cookie("token", token, { httpOnly: true, secure: false });
+
+    // 3. Guardar en SESIÓN (Obligatorio según el PDF)
+    req.session.user = { id: user._id, username: user.username, profile: user.profile };
+
+    // Como es SSR, redirigimos al listado de comentarios
+    res.redirect("/comentarios");
+});
+
+2. Mostrar los formularios (Las rutas GET)
+El enunciado dice: "Deberás crear obligatoriamente dos vistas EJS: Register.ejs y Login.ejs". Para que esas páginas se carguen cuando escribas en el navegador /login o /register, necesitas tener los métodos GET en tu controlador que simplemente hagan el render:
+
+exports.showLogin = (req, res) => {
+    res.render("login.ejs");
+};
+
+exports.showRegister = (req, res) => {
+    res.render("register.ejs");
+};
+
+(Y estas funciones las asocias a sus respectivas rutas router.get("/login", ...) en user.routes.js ).
+
+3. La "Trastada" del botón Eliminar en index.ejs
+Si te fijas en tu index.ejs, el botón de borrar usa un truco clásico de Express:
+
+<form action="<%= baseUrlComentarios %>/<%= c.id %>?_method=DELETE" method="POST">
+
+Para que ese ?_method=DELETE funcione y Express sepa que tiene que transformarlo en una petición DELETE (ya que los formularios HTML solo soportan GET y POST), necesitas tener instalado y configurado el middleware method-override en tu index.js.  Asegúrate de que en tu index.js aparezca esto instalado si no viene por defecto:
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+
+***Los mecanismos de cómo encriptas (bcrypt), cómo proteges (protect), cómo restringes (restrictTo) y cómo atrapas errores (wrapAsync) son estructuras fijas que puedes clonar en cualquier examen de este estilo.***
