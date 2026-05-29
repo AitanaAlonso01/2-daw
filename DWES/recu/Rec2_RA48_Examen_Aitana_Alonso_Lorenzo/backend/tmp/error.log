@@ -1,0 +1,23 @@
+[2026-05-29T16:28:09.340] [ERROR] error - Ruta no existente: /favicon.ico
+[2026-05-29T16:28:35.936] [ERROR] error - Cannot set properties of undefined (setting 'user')
+[2026-05-29T16:35:32.060] [ERROR] error - validatePasswordPolicy is not defined
+[2026-05-29T16:35:53.447] [ERROR] error - validatePasswordPolicy is not defined
+[2026-05-29T16:36:47.042] [ERROR] error - validatePasswordPolicy is not defined
+[2026-05-29T16:37:01.091] [ERROR] error - validatePasswordPolicy is not defined
+[2026-05-29T16:39:02.889] [ERROR] error - Formato de contraseña no válido (mayúsculas, minúsculas y 8 caracteres)
+[2026-05-29T16:39:16.275] [ERROR] error - Formato de contraseña no válido (mayúsculas, minúsculas y 8 caracteres)
+[2026-05-29T16:42:07.212] [ERROR] error - No tienes permisos
+[2026-05-29T16:42:39.686] [ERROR] error - Ruta no existente: /api/v1/logout
+[2026-05-29T16:42:47.812] [ERROR] error - Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "user"
+[2026-05-29T16:43:04.202] [ERROR] error - No tienes permisos
+[2026-05-29T16:43:08.240] [ERROR] error - No tienes permisos
+[2026-05-29T16:43:26.298] [ERROR] error - No tienes permisos
+[2026-05-29T16:49:00.179] [ERROR] error - Ruta no existente: /api/v1/u
+[2026-05-29T16:49:03.034] [ERROR] error - Ruta no existente: /api/v1/
+[2026-05-29T16:49:14.219] [ERROR] error - Ruta no existente: /api/v1/login
+[2026-05-29T16:50:18.959] [ERROR] error - Formato de contraseña no válido (mayúsculas, minúsculas y 6 caracteres)
+[2026-05-29T16:54:28.130] [ERROR] error - No tienes permisos
+[2026-05-29T16:54:31.807] [ERROR] error - No tienes permisos
+[2026-05-29T16:54:40.780] [ERROR] error - Formato de contraseña no válido (mayúsculas, minúsculas y 6 caracteres)
+[2026-05-29T16:54:52.606] [ERROR] error - No tienes permisos
+[2026-05-29T16:54:56.076] [ERROR] error - No tienes permisos
