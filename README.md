@@ -33,13 +33,28 @@ Todo lo que voy a ir aprendiendo en 2º Año de Desarrollo de Aplicaciones Web.
 
 | Asignatura                                    | Nota Media |
 | --------------------------------------------- | ---------- |
-| Desarrollo Web en Entorno Servidor            |    4       |
-| Desarrollo Web en Entorno Cliente             |    8       |
-| Despliegue de Aplicaciones Web                |    9       |
-| Sostenibilidad Aplicada al Sistema Productivo |    9       |
-| Diseño de Interfaces Web                      |    7       |
-| Digitalización Aplicada al Sistema Productivo |    9       |
-| Proyecto Intermodular                         |    8       |
-| Inglés Oral                                   |    9       |
+| Desarrollo Web en Entorno Servidor            | 4          |
+| Desarrollo Web en Entorno Cliente             | 8          |
+| Despliegue de Aplicaciones Web                | 9          |
+| Sostenibilidad Aplicada al Sistema Productivo | 9          |
+| Diseño de Interfaces Web                      | 7          |
+| Digitalización Aplicada al Sistema Productivo | 9          |
+| Proyecto Intermodular                         | 8          |
+| Inglés Oral                                   | 9          |
 
 ![2ª Evaluación](https://i.pinimg.com/736x/b2/18/dd/b218ddbe35339c944809eb2ec0fe14db.jpg)
+
+## Evaluación Final
+
+| Asignatura                                    | Nota Media |
+| --------------------------------------------- | ---------- |
+| Desarrollo Web en Entorno Servidor            | 7          |
+| Desarrollo Web en Entorno Cliente             | 8          |
+| Despliegue de Aplicaciones Web                | 9          |
+| Sostenibilidad Aplicada al Sistema Productivo | 9          |
+| Diseño de Interfaces Web                      | 8          |
+| Digitalización Aplicada al Sistemo Productivo | 9          |
+| Proyecto Intermodular                         | 6          |
+| Inglés Oral                                   | 10         |
+
+![Evaluación Final](https://i.pinimg.com/originals/93/b8/45/93b84536a6fc76fe064ff502d074375b.gif)
